@@ -1,82 +1,69 @@
 #!/usr/bin/env python3
-"""IA SinHumo - motor de render de Shorts verticales (1080x1920, 30 fps).
+"""IA SinHumo - motor de render v2 (estilo explainer ilustrado, 1080x1920, 30 fps).
+Revision 3: voces Edge (neuronales de Microsoft), ElevenLabs o Kokoro offline.
 
 Uso:
     python3 engine.py guion.json salida.mp4 [--voices DIR]
 
-El guion es un JSON con escenas; cada escena tiene un tipo visual y una o
-mas lineas de narracion. La voz se genera offline con sherpa-onnx (Piper).
+Cada escena trae una o mas lineas de narracion y capas SVG (ilustraciones
+vectoriales) que aparecen animadas al ritmo de la voz. Voz offline con
+Kokoro (sherpa-onnx). Subtitulos palabra por palabra dibujados por el motor.
 """
 import argparse
-import glob
+import asyncio
+import base64
+import io
 import json
 import math
 import os
+import random
 import subprocess
 import sys
 import tempfile
+import urllib.request
+import wave
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 W, H, FPS = 1080, 1920, 30
-SR = 22050
-GAP = 0.14          # silencio entre lineas (s)
-SCENE_GAP = 0.10    # silencio extra al cambiar de escena (s)
+SR = 24000
+GAP = 0.16
+SCENE_GAP = 0.12
 
-C_BG1 = (9, 13, 28)
-C_BG2 = (20, 28, 58)
-C_PANEL = (20, 29, 60)
-C_BORDER = (46, 64, 120)
+C_BG1 = (8, 11, 24)
+C_BG2 = (17, 24, 52)
 C_TEXT = (245, 247, 255)
 C_MUTED = (150, 163, 205)
 C_CYAN = (61, 220, 255)
 C_YELLOW = (255, 210, 63)
-C_RED = (255, 90, 110)
-C_GREEN = (61, 220, 151)
 
 FONT_DIR = "/usr/share/fonts/truetype/google-fonts"
 F_BOLD = os.path.join(FONT_DIR, "Poppins-Bold.ttf")
 F_MED = os.path.join(FONT_DIR, "Poppins-Medium.ttf")
 
-PANEL = (60, 230, 1020, 1120)   # x0, y0, x1, y1
-MASCOT_Y = 1135
-CAPTION_MARGIN_V = 380          # distancia desde abajo para subtitulos
+ART = (0, 610, 1080, 1582)       # area de ilustracion (viewBox 1000x900 escalado a 1080x972)
+CAP_Y = 520                      # centro vertical de los subtitulos
 
-_font_cache = {}
+SVG_STYLE = """
+<style>
+text { font-family: Poppins, sans-serif; font-weight: 700; }
+.t { fill: #F5F7FF; } .m { fill: #96A3CD; } .c { fill: #3DDCFF; } .y { fill: #FFD23F; }
+.r { fill: #FF5A6E; } .g { fill: #3DDC97; } .p { fill: #1C2A55; } .p2 { fill: #26386E; }
+.sc { stroke: #3DDCFF; } .sy { stroke: #FFD23F; } .sr { stroke: #FF5A6E; } .sg { stroke: #3DDC97; } .st { stroke: #F5F7FF; }
+</style>
+"""
+
+VOICES = {"A": 29, "B": 28}      # Kokoro v1.0: 29 em_alex (narrador), 28 ef_dora, 53 em_santa
+
+_fonts = {}
 
 
 def font(path, size):
-    key = (path, size)
-    if key not in _font_cache:
-        _font_cache[key] = ImageFont.truetype(path, size)
-    return _font_cache[key]
-
-
-def wrap(text, fnt, max_w):
-    words, lines, cur = text.split(), [], ""
-    for w in words:
-        test = (cur + " " + w).strip()
-        if fnt.getlength(test) <= max_w or not cur:
-            cur = test
-        else:
-            lines.append(cur)
-            cur = w
-    if cur:
-        lines.append(cur)
-    return lines
-
-
-def fit_text(text, path, max_w, max_h, start, minimum, spacing=1.12):
-    size = start
-    while size > minimum:
-        f = font(path, size)
-        lines = wrap(text, f, max_w)
-        if len(lines) * size * spacing <= max_h:
-            return f, lines, size
-        size -= 4
-    f = font(path, minimum)
-    return f, wrap(text, f, max_w), minimum
+    k = (path, size)
+    if k not in _fonts:
+        _fonts[k] = ImageFont.truetype(path, size)
+    return _fonts[k]
 
 
 def ease_out(x):
@@ -84,95 +71,183 @@ def ease_out(x):
     return 1 - (1 - x) ** 3
 
 
+def ease_back(x):
+    x = max(0.0, min(1.0, x))
+    c1, c3 = 1.70158, 2.70158
+    return 1 + c3 * (x - 1) ** 3 + c1 * (x - 1) ** 2
+
+
 # ---------------------------------------------------------------- voz
 
-class Voices:
+class Voice:
     def __init__(self, voices_dir):
-        import sherpa_onnx
-        self.engines = {}
-        self.sherpa = sherpa_onnx
-        self.dir = voices_dir
+        import sherpa_onnx as s
+        d = os.path.join(voices_dir, "kokoro-multi-lang-v1_0")
+        kc = s.OfflineTtsKokoroModelConfig(
+            model=os.path.join(d, "model.onnx"), voices=os.path.join(d, "voices.bin"),
+            tokens=os.path.join(d, "tokens.txt"), data_dir=os.path.join(d, "espeak-ng-data"),
+            dict_dir=os.path.join(d, "dict"),
+            lexicon=os.path.join(d, "lexicon-us-en.txt") + "," + os.path.join(d, "lexicon-zh.txt"))
+        kc.lang = "es"
+        self.tts = s.OfflineTts(s.OfflineTtsConfig(model=s.OfflineTtsModelConfig(kokoro=kc, num_threads=2)))
 
-    def get(self, name):
-        if name not in self.engines:
-            d = os.path.join(self.dir, name)
-            onnx = glob.glob(os.path.join(d, "*.onnx"))[0]
-            s = self.sherpa
-            cfg = s.OfflineTtsConfig(model=s.OfflineTtsModelConfig(
-                vits=s.OfflineTtsVitsModelConfig(
-                    model=onnx, tokens=os.path.join(d, "tokens.txt"),
-                    data_dir=os.path.join(d, "espeak-ng-data")),
-                num_threads=2))
-            self.engines[name] = s.OfflineTts(cfg)
-        return self.engines[name]
-
-    def say(self, name, text, speed):
-        a = self.get(name).generate(text, sid=0, speed=speed)
+    def say(self, text, sid, speed):
+        a = self.tts.generate(text, sid=sid, speed=speed)
         x = np.array(a.samples, dtype=np.float32)
-        # recorta silencios de los extremos
-        idx = np.where(np.abs(x) > 0.01)[0]
+        idx = np.where(np.abs(x) > 0.008)[0]
         if len(idx):
-            x = x[max(0, idx[0] - 200): idx[-1] + 400]
+            x = x[max(0, idx[0] - 240): idx[-1] + 600]
         if a.sample_rate != SR:
             n = int(len(x) * SR / a.sample_rate)
             x = np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x).astype(np.float32)
         return x
 
 
-# ---------------------------------------------------------------- audio extra
+def decode_audio(data):
+    """Decodifica mp3/wav en memoria a float32 mono a SR con ffmpeg."""
+    p = subprocess.run(["ffmpeg", "-v", "error", "-i", "pipe:0", "-f", "f32le", "-ac", "1", "-ar", str(SR), "pipe:1"],
+                       input=data, stdout=subprocess.PIPE, check=True)
+    return np.frombuffer(p.stdout, dtype=np.float32).copy()
 
-def synth_music(dur):
+
+class EdgeVoice:
+    """Voces neuronales de Microsoft Edge (requiere internet). Devuelve tiempos por palabra."""
+
+    def __init__(self, voice="es-MX-JorgeNeural", rate="+6%", pitch="+0Hz"):
+        import edge_tts  # noqa: F401
+        self.voice, self.rate, self.pitch = voice, rate, pitch
+
+    async def _run(self, text, voice):
+        import edge_tts
+        comm = edge_tts.Communicate(text, voice, rate=self.rate, pitch=self.pitch, boundary="WordBoundary")
+        audio, words = bytearray(), []
+        async for ch in comm.stream():
+            if ch["type"] == "audio":
+                audio.extend(ch["data"])
+            elif ch["type"] == "WordBoundary":
+                words.append((ch["text"], ch["offset"] / 1e7, (ch["offset"] + ch["duration"]) / 1e7))
+        return bytes(audio), words
+
+    def say(self, text, voice=None):
+        for intento in range(4):
+            try:
+                data, words = asyncio.run(self._run(text, voice or self.voice))
+                return decode_audio(data), words
+            except Exception as e:  # reintento ante cortes de red
+                if intento == 3:
+                    raise
+                print("edge-tts reintento:", e, file=sys.stderr)
+
+
+class ElevenVoice:
+    """ElevenLabs con marcas de tiempo por caracter (requiere ELEVENLABS_API_KEY)."""
+
+    def __init__(self, voice_id, model="eleven_multilingual_v2", stability=0.45, similarity=0.8, style=0.25):
+        self.key = os.environ["ELEVENLABS_API_KEY"]
+        self.voice_id, self.model = voice_id, model
+        self.settings = {"stability": stability, "similarity_boost": similarity, "style": style, "use_speaker_boost": True}
+
+    def say(self, text, voice=None):
+        vid = voice or self.voice_id
+        body = json.dumps({"text": text, "model_id": self.model, "voice_settings": self.settings}).encode()
+        req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{vid}/with-timestamps",
+                                     data=body, headers={"xi-api-key": self.key, "Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            res = json.loads(r.read())
+        audio = decode_audio(base64.b64decode(res["audio_base64"]))
+        al = res.get("alignment") or {}
+        chars, st, en = al.get("characters", []), al.get("character_start_times_seconds", []), al.get("character_end_times_seconds", [])
+        words, cur, ws = [], "", None
+        for c, a, b in zip(chars, st, en):
+            if c.isspace():
+                if cur:
+                    words.append((cur, ws, prev))
+                cur, ws = "", None
+            else:
+                if ws is None:
+                    ws = a
+                cur += c
+                prev = b
+        if cur:
+            words.append((cur, ws, prev))
+        return audio, words
+
+
+class KokoroVoice:
+    def __init__(self, voices_dir, sid=29, speed=1.0):
+        self.v = Voice(voices_dir)
+        self.sid, self.speed = sid, speed
+
+    def say(self, text, voice=None):
+        return self.v.say(text, int(voice) if voice is not None else self.sid, self.speed), None
+
+
+def make_tts(spec, voices_dir):
+    cfg = spec.get("tts", {})
+    prov = os.environ.get("ISH_TTS", cfg.get("provider", "edge"))
+    if prov == "elevenlabs":
+        return ElevenVoice(os.environ.get("ELEVENLABS_VOICE_ID", cfg.get("voice_id", ""))), cfg.get("voice_b")
+    if prov == "kokoro":
+        return KokoroVoice(voices_dir, int(cfg.get("sid", 29)), float(spec.get("speed", 1.0))), cfg.get("sid_b", 28)
+    return EdgeVoice(os.environ.get("ISH_VOICE") or cfg.get("voice", "es-MX-JorgeNeural"), cfg.get("rate", "+6%"), cfg.get("pitch", "+0Hz")), cfg.get("voice_b", "es-MX-DaliaNeural")
+
+
+# ---------------------------------------------------------------- audio
+
+def synth_music(dur, seed=0):
+    rng = np.random.default_rng(seed)
     t = np.arange(int(dur * SR)) / SR
-    bpm = 104
+    bpm = 96
     beat = 60 / bpm
-    chords = [(220.0, 277.18, 329.63), (196.0, 246.94, 293.66),
-              (174.61, 220.0, 261.63), (196.0, 246.94, 329.63)]
-    out = np.zeros_like(t)
     bar = beat * 4
-    for i, ch in enumerate(chords * int(dur / (bar * 4) + 2)):
-        s0 = i * bar
-        if s0 > dur:
-            break
-        m = (t >= s0) & (t < s0 + bar)
-        tt = t[m] - s0
-        env = np.minimum(1, tt / 0.4) * np.minimum(1, (bar - tt) / 0.4)
+    progs = [[(220.0, 261.63, 329.63), (174.61, 220.0, 261.63), (130.81, 196.0, 261.63), (196.0, 246.94, 293.66)],
+             [(196.0, 246.94, 293.66), (164.81, 196.0, 246.94), (130.81, 164.81, 196.0), (146.83, 185.0, 220.0)]]
+    prog = progs[seed % len(progs)]
+    out = np.zeros_like(t)
+    i = 0
+    while i * bar < dur:
+        ch = prog[i % 4]
+        m = (t >= i * bar) & (t < (i + 1) * bar)
+        tt = t[m] - i * bar
+        env = np.minimum(1, tt / 0.6) * np.minimum(1, (bar - tt) / 0.6)
         for f in ch:
-            out[m] += 0.05 * env * np.sin(2 * np.pi * f * tt) * (1 + 0.2 * np.sin(2 * np.pi * 0.5 * tt))
-    # bombo suave y hi-hat
-    for k in range(int(dur / beat) + 1):
-        s0 = k * beat
-        n0 = int(s0 * SR)
-        n = int(0.18 * SR)
-        if n0 + n > len(out):
+            out[m] += 0.035 * env * (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(2 * np.pi * 2 * f * tt))
+        i += 1
+    k = 0
+    while k * beat < dur:
+        n0 = int(k * beat * SR)
+        n = int(0.16 * SR)
+        if n0 + n >= len(out):
             break
         tt = np.arange(n) / SR
-        kick = 0.35 * np.sin(2 * np.pi * (55 + 90 * np.exp(-tt * 30)) * tt) * np.exp(-tt * 18)
-        out[n0:n0 + n] += kick
-        h0 = int((s0 + beat / 2) * SR)
-        hn = int(0.04 * SR)
+        out[n0:n0 + n] += 0.22 * np.sin(2 * np.pi * (50 + 80 * np.exp(-tt * 35)) * tt) * np.exp(-tt * 20)
+        h0 = int((k * beat + beat / 2) * SR)
+        hn = int(0.03 * SR)
         if h0 + hn < len(out):
-            out[h0:h0 + hn] += 0.04 * np.random.randn(hn) * np.exp(-np.arange(hn) / SR * 80)
+            out[h0:h0 + hn] += 0.025 * rng.standard_normal(hn) * np.exp(-np.arange(hn) / SR * 90)
+        k += 1
     return out.astype(np.float32)
 
 
 def synth_whoosh():
-    n = int(0.3 * SR)
-    noise = np.random.randn(n).astype(np.float32)
-    # filtro paso bajo que se abre (barrido)
+    n = int(0.32 * SR)
+    noise = np.random.default_rng(1).standard_normal(n).astype(np.float32)
     out = np.zeros(n, dtype=np.float32)
     y = 0.0
     for i in range(n):
-        a = 0.02 + 0.5 * (i / n)
-        y += a * (noise[i] - y)
+        y += (0.015 + 0.4 * i / n) * (noise[i] - y)
         out[i] = y
-    env = np.sin(np.pi * np.arange(n) / n) ** 2
-    return 0.5 * out * env
+    return 0.45 * out * np.sin(np.pi * np.arange(n) / n) ** 2
+
+
+def synth_pop():
+    n = int(0.09 * SR)
+    tt = np.arange(n) / SR
+    return (0.18 * np.sin(2 * np.pi * (900 - 2500 * tt) * tt) * np.exp(-tt * 45)).astype(np.float32)
 
 
 def write_wav(path, x):
-    x = np.clip(x, -1, 1)
-    pcm = (x * 32767).astype(np.int16)
-    import wave
+    pcm = (np.clip(x, -1, 1) * 32767).astype(np.int16)
     with wave.open(path, "wb") as w:
         w.setnchannels(1)
         w.setsampwidth(2)
@@ -182,432 +257,297 @@ def write_wav(path, x):
 
 # ---------------------------------------------------------------- graficos
 
+def svg_layer(fragment, w, h):
+    import cairosvg
+    doc = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="{w}" height="{h}">'
+           f"{SVG_STYLE}{fragment}</svg>")
+    png = cairosvg.svg2png(bytestring=doc.encode("utf-8"), output_width=w, output_height=h)
+    return Image.open(io.BytesIO(png)).convert("RGBA")
+
+
 def make_background():
-    y = np.linspace(0, 1, H)[:, None]
-    grad = (np.array(C_BG1)[None, None, :] * (1 - y[..., None]) + np.array(C_BG2)[None, None, :] * y[..., None])
-    img = np.repeat(grad, W, axis=1).astype(np.uint8)
-    bg = Image.fromarray(img, "RGB")
-    d = ImageDraw.Draw(bg)
-    for x in range(0, W, 72):
-        d.line([(x, 0), (x, H)], fill=(24, 33, 66), width=1)
-    for yy in range(0, H, 72):
-        d.line([(0, yy), (W, yy)], fill=(24, 33, 66), width=1)
+    y = np.linspace(0, 1, H)[:, None, None]
+    grad = np.array(C_BG1)[None, None] * (1 - y) + np.array(C_BG2)[None, None] * y
+    bg = Image.fromarray(np.repeat(grad, W, axis=1).astype(np.uint8), "RGB")
     glow = Image.new("RGB", (W, H), (0, 0, 0))
     gd = ImageDraw.Draw(glow)
-    gd.ellipse((-200, 900, 700, 1800), fill=(20, 60, 110))
-    gd.ellipse((600, -100, 1400, 700), fill=(40, 30, 90))
-    glow = glow.filter(ImageFilter.GaussianBlur(160))
-    bg = Image.blend(bg, Image.fromarray(np.clip(np.array(bg, dtype=np.int16) + np.array(glow, dtype=np.int16), 0, 255).astype(np.uint8)), 0.8)
-    return bg
+    gd.ellipse((-250, 900, 650, 1900), fill=(18, 45, 95))
+    gd.ellipse((550, 300, 1450, 1200), fill=(34, 26, 80))
+    glow = glow.filter(ImageFilter.GaussianBlur(170))
+    arr = np.clip(np.array(bg, dtype=np.int16) + np.array(glow, dtype=np.int16), 0, 255).astype(np.uint8)
+    bg = Image.fromarray(arr)
+    # vineta
+    v = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(v).ellipse((-300, -200, W + 300, H + 200), fill=255)
+    v = v.filter(ImageFilter.GaussianBlur(220))
+    dark = Image.new("RGB", (W, H), (4, 6, 14))
+    return Image.composite(bg, dark, v)
 
 
-def draw_topbar(img, tag, source=""):
+def draw_header(img, tag, source):
     d = ImageDraw.Draw(img)
-    if source:
-        d.text((W / 2, 207), source, font=font(F_MED, 28), fill=C_MUTED, anchor="mm")
-    f = font(F_BOLD, 40)
-    label = "IA SIN HUMO"
+    f = font(F_BOLD, 34)
+    label = "IA SIN HUMO" + (f"  ·  {tag}" if tag else "")
     tw = f.getlength(label)
-    d.rounded_rectangle((60, 110, 60 + tw + 110, 186), radius=38, fill=(16, 24, 50), outline=C_CYAN, width=3)
-    d.ellipse((84, 132, 116, 164), fill=C_CYAN)
-    d.text((132, 148), label, font=f, fill=C_TEXT, anchor="lm")
-    if tag:
-        f2 = font(F_BOLD, 34)
-        tw2 = f2.getlength(tag)
-        x1 = 1020
-        d.rounded_rectangle((x1 - tw2 - 60, 116, x1, 180), radius=32, fill=C_YELLOW)
-        d.text((x1 - 30 - tw2 / 2, 148), tag, font=f2, fill=(20, 20, 30), anchor="mm")
+    x0 = (W - tw) / 2 - 34
+    d.rounded_rectangle((x0, 150, x0 + tw + 68, 212), radius=31, fill=(14, 20, 44), outline=(46, 64, 120), width=2)
+    d.text((W / 2, 181), label, font=f, fill=C_MUTED, anchor="mm")
+    if source:
+        d.text((W / 2, 250), source, font=font(F_MED, 26), fill=(110, 122, 160), anchor="mm")
 
 
-def make_mascot(mouth, blink, look=0):
-    """Mascota original 'Bit': robot redondo con antena. Devuelve RGBA 300x260."""
+def make_mascot(mouth, blink):
     im = Image.new("RGBA", (300, 260), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    # antena
     d.line([(150, 52), (150, 18)], fill=C_MUTED, width=6)
     d.ellipse((136, 4, 164, 32), fill=C_CYAN)
-    # cuerpo
     d.rounded_rectangle((40, 50, 260, 240), radius=70, fill=(232, 238, 255), outline=(120, 140, 200), width=5)
-    # pantalla cara
     d.rounded_rectangle((70, 85, 230, 200), radius=45, fill=(14, 20, 44))
-    ex = 6 * look
     if blink:
-        d.line([(102 + ex, 130), (128 + ex, 130)], fill=C_CYAN, width=7)
-        d.line([(172 + ex, 130), (198 + ex, 130)], fill=C_CYAN, width=7)
+        d.line([(102, 130), (128, 130)], fill=C_CYAN, width=7)
+        d.line([(172, 130), (198, 130)], fill=C_CYAN, width=7)
     else:
-        d.ellipse((100 + ex, 112, 130 + ex, 148), fill=C_CYAN)
-        d.ellipse((170 + ex, 112, 200 + ex, 148), fill=C_CYAN)
-    # boca
+        d.ellipse((100, 112, 130, 148), fill=C_CYAN)
+        d.ellipse((170, 112, 200, 148), fill=C_CYAN)
     mh = int(4 + mouth * 22)
     d.rounded_rectangle((128, 168 - mh // 2, 172, 168 + mh // 2 + 2), radius=8, fill=C_CYAN)
-    # mejillas
     d.ellipse((76, 150, 96, 164), fill=(255, 120, 150))
     d.ellipse((204, 150, 224, 164), fill=(255, 120, 150))
-    return im
+    return im.resize((210, 182), Image.LANCZOS)
 
 
-# --- escenas: cada una produce una lista de elementos (imagen RGBA, x, y, t_aparicion)
+# ---------------------------------------------------------------- subtitulos
 
-def panel_base(accent=C_BORDER):
-    x0, y0, x1, y1 = PANEL
-    im = Image.new("RGBA", (x1 - x0 + 40, y1 - y0 + 40), (0, 0, 0, 0))
-    sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
-    ImageDraw.Draw(sh).rounded_rectangle((20, 30, im.width - 20, im.height - 10), radius=56, fill=(0, 0, 0, 150))
-    sh = sh.filter(ImageFilter.GaussianBlur(14))
-    im.alpha_composite(sh)
-    ImageDraw.Draw(im).rounded_rectangle((20, 20, im.width - 20, im.height - 20), radius=52, fill=C_PANEL + (255,), outline=accent, width=4)
-    return im
-
-
-def text_block(lines, fnt, color, line_h, align="mm", width=880):
-    h = int(line_h * len(lines)) + 20
-    im = Image.new("RGBA", (width, h), (0, 0, 0, 0))
-    d = ImageDraw.Draw(im)
-    for i, ln in enumerate(lines):
-        y = int(line_h * i + line_h / 2) + 10
-        if align == "mm":
-            d.text((width / 2, y), ln, font=fnt, fill=color, anchor="mm")
-        else:
-            d.text((0, y), ln, font=fnt, fill=color, anchor="lm")
-    return im
-
-
-def highlight_text(text, path, max_w, max_h, start, minimum, color, hl_color):
-    """Texto centrado donde las palabras entre *asteriscos* van resaltadas."""
-    raw = text.replace("*", "")
-    fnt, lines, size = fit_text(raw, path, max_w, max_h, start, minimum)
-    marked = set()
-    inside = False
-    for tok in text.split():
-        st = tok.startswith("*")
-        if st:
-            inside = True
-        if inside:
-            marked.add(tok.strip("*").strip(".,:;!?¿¡"))
-        if tok.endswith("*") or tok.rstrip(".,:;!?").endswith("*"):
-            inside = False
-    lh = size * 1.14
-    im = Image.new("RGBA", (max_w, int(lh * len(lines)) + 30), (0, 0, 0, 0))
-    d = ImageDraw.Draw(im)
-    for i, ln in enumerate(lines):
-        y = int(lh * i + lh / 2) + 12
-        total = fnt.getlength(ln)
-        x = (max_w - total) / 2
-        for j, w in enumerate(ln.split()):
-            key = w.strip(".,:;!?¿¡")
-            ww = fnt.getlength(w)
-            if key in marked:
-                d.rounded_rectangle((x - 10, y - size * 0.62, x + ww + 10, y + size * 0.58), radius=14, fill=hl_color)
-                d.text((x, y), w, font=fnt, fill=(15, 15, 25), anchor="lm")
-            else:
-                d.text((x, y), w, font=fnt, fill=color, anchor="lm")
-            x += ww + fnt.getlength(" ")
-    return im
-
-
-def build_scene(sc, line_starts, dur):
-    """Devuelve (accent, elementos). line_starts: tiempos relativos de cada linea."""
-    typ = sc.get("type", "title")
-    x0, y0, x1, y1 = PANEL
-    cx = (x0 + x1) // 2
-    inner_w = x1 - x0 - 120
-    els = []
-    accent = C_BORDER
-
-    def add(img, y, t, x=None):
-        els.append((img, cx - img.width // 2 if x is None else x, y, t))
-
-    def t_at(i):
-        return line_starts[min(i, len(line_starts) - 1)] if line_starts else 0
-
-    if sc.get("kicker"):
-        f = font(F_BOLD, 40)
-        add(text_block([sc["kicker"].upper()], f, C_CYAN, 56, width=inner_w), y0 + 50, 0)
-
-    if typ in ("hook", "title", "cta"):
-        accent = C_CYAN if typ != "cta" else C_YELLOW
-        hl = highlight_text(sc.get("headline", ""), F_BOLD, inner_w, 600, 134, 60, C_TEXT, C_YELLOW)
-        add(hl, y0 + 130 + max(0, (560 - hl.height) // 2), 0)
-        if sc.get("sub"):
-            f = font(F_MED, 44)
-            ls = wrap(sc["sub"], f, inner_w)
-            add(text_block(ls, f, C_MUTED, 58, width=inner_w), y1 - 90 - 58 * len(ls), t_at(1) if len(line_starts) > 1 else 0.4)
-    elif typ == "stat":
-        accent = C_CYAN
-        f, ls, s = fit_text(sc.get("value", ""), F_BOLD, inner_w, 280, 230, 90)
-        add(text_block(ls, f, C_CYAN, s * 1.05, width=inner_w), y0 + 170, 0)
-        f2, ls2, s2 = fit_text(sc.get("label", ""), F_BOLD, inner_w, 300, 72, 44)
-        add(text_block(ls2, f2, C_TEXT, s2 * 1.18, width=inner_w), y0 + 520, 0.35)
-    elif typ == "bullets":
-        accent = C_CYAN
-        y = y0 + 60
-        if sc.get("headline"):
-            f, ls, s = fit_text(sc["headline"], F_BOLD, inner_w, 200, 70, 48)
-            blk = text_block(ls, f, C_TEXT, s * 1.15, width=inner_w)
-            add(blk, y + (60 if sc.get("kicker") else 0), 0)
-            y += blk.height + (90 if sc.get("kicker") else 30)
-        items = sc.get("items", [])[:4]
-        avail = y1 - 50 - y
-        step = avail / max(1, len(items))
-        for i, it in enumerate(items):
-            im = Image.new("RGBA", (inner_w, int(step) - 16), (0, 0, 0, 0))
-            d = ImageDraw.Draw(im)
-            d.rounded_rectangle((0, 0, im.width, im.height), radius=30, fill=(28, 40, 82))
-            d.ellipse((24, im.height / 2 - 36, 96, im.height / 2 + 36), fill=C_YELLOW)
-            d.text((60, im.height / 2), str(i + 1), font=font(F_BOLD, 44), fill=(20, 20, 30), anchor="mm")
-            f, ls, s = fit_text(it, F_BOLD, inner_w - 160, im.height - 20, 58, 34)
-            tb = text_block(ls, f, C_TEXT, s * 1.15, align="lm", width=inner_w - 150)
-            im.alpha_composite(tb, (126, (im.height - tb.height) // 2))
-            when = t_at(i + 1) if len(line_starts) > i + 1 else 0.25 + i * max(0.4, dur / (len(items) + 1))
-            add(im, int(y + i * step), when)
-    elif typ == "chat":
-        accent = C_GREEN
-        y = y0 + (130 if sc.get("kicker") else 60)
-        msgs = sc.get("messages", [])[:4]
-        for i, m in enumerate(msgs):
-            user = m.get("role") == "user"
-            f, ls, s = fit_text(m.get("text", ""), F_MED, 700, 300, 56, 36)
-            tb = text_block(ls, f, (15, 15, 25) if user else C_TEXT, s * 1.2, align="lm", width=720)
-            bw = int(max(f.getlength(l) for l in ls)) + 70
-            bh = tb.height + 40
-            im = Image.new("RGBA", (bw + 10, bh + 50), (0, 0, 0, 0))
-            d = ImageDraw.Draw(im)
-            d.text((10, 18), m.get("name", "Tu" if user else "IA"), font=font(F_BOLD, 28), fill=C_MUTED, anchor="lm")
-            d.rounded_rectangle((0, 40, bw, 40 + bh), radius=34, fill=C_CYAN if user else (36, 50, 98))
-            im.alpha_composite(tb.crop((0, 0, bw - 40, tb.height)), (35, 60))
-            xx = x1 - 50 - im.width if user else x0 + 50
-            when = t_at(i) if i < len(line_starts) else 0.3 + i * 0.8
-            els.append((im, xx, y, when))
-            y += im.height + 24
-            if y > y1 - 120:
-                break
-    elif typ == "versus":
-        accent = C_YELLOW
-        colw = (inner_w - 40) // 2
-        for k, (lab, col, txt) in enumerate([(sc.get("left_label", "HUMO"), C_RED, sc.get("left", "")),
-                                             (sc.get("right_label", "REALIDAD"), C_GREEN, sc.get("right", ""))]):
-            im = Image.new("RGBA", (colw, 700), (0, 0, 0, 0))
-            d = ImageDraw.Draw(im)
-            d.rounded_rectangle((0, 0, colw, 700), radius=36, fill=(28, 40, 82), outline=col, width=5)
-            d.rounded_rectangle((30, 30, colw - 30, 120), radius=26, fill=col)
-            d.text((colw / 2, 75), lab, font=font(F_BOLD, 44), fill=(15, 15, 25), anchor="mm")
-            f, ls, s = fit_text(txt, F_BOLD, colw - 60, 520, 52, 32)
-            tb = text_block(ls, f, C_TEXT, s * 1.2, width=colw - 60)
-            im.alpha_composite(tb, (30, 150 + (520 - tb.height) // 2))
-            when = 0 if k == 0 else (t_at(1) if len(line_starts) > 1 else 0.8)
-            els.append((im, x0 + 60 + k * (colw + 40), y0 + (150 if sc.get("kicker") else 90), when))
-    return accent, els
-
-
-# ---------------------------------------------------------------- subtitulos ASS
-
-def ass_time(t):
-    t = max(0, t)
-    h = int(t // 3600)
-    m = int(t % 3600 // 60)
-    s = t % 60
-    return f"{h}:{m:02d}:{s:05.2f}"
-
-
-def ass_escape(s):
-    return s.replace("{", "(").replace("}", ")").replace("\\", "/")
-
-
-def build_ass(word_events, path):
-    head = (
-        "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 0\n\n"
-        "[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, "
-        "Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, "
-        "Alignment, MarginL, MarginR, MarginV, Encoding\n"
-        f"Style: Cap,Poppins,92,&H00FFFFFF,&H00FFFFFF,&H00140A05,&H96000000,-1,0,0,0,100,100,0,0,1,7,3,2,90,90,{CAPTION_MARGIN_V},1\n\n"
-        "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
-    )
-    out = [head]
-    for chunk in word_events:
-        words = chunk["words"]
-        for i, (w, ws, we) in enumerate(words):
-            end = words[i + 1][1] if i + 1 < len(words) else chunk["end"]
-            parts = []
-            for j, (w2, _, _) in enumerate(words):
-                if j == i:
-                    parts.append("{\\c&H3FD2FF&\\fscx112\\fscy112}" + ass_escape(w2) + "{\\c&HFFFFFF&\\fscx100\\fscy100}")
-                else:
-                    parts.append(ass_escape(w2))
-            txt = " ".join(parts)
-            if i == 0:
-                txt = "{\\fad(60,0)}" + txt
-            out.append(f"Dialogue: 0,{ass_time(ws)},{ass_time(end)},Cap,,0,0,0,,{txt}\n")
-    with open(path, "w", encoding="utf-8") as f:
-        f.writelines(out)
-
-
-def word_timing(text, start, dur):
+def word_timing(text, start, dur, spoken=None):
     words = text.split()
-    weights = np.array([len(w.strip(".,;:!?¿¡")) + 2.5 for w in words], dtype=float)
-    weights = weights / weights.sum() * dur
-    out, t = [], start
-    for w, d in zip(words, weights):
-        out.append((w, t, t + d))
-        t += d
-    # agrupa en bloques de max 3 palabras / 20 caracteres, corta tras puntuacion
+    if spoken and len(spoken) == len(words):
+        out = [(w, start + a, start + b) for w, (_, a, b) in zip(words, spoken)]
+    else:
+        wts = np.array([len(w.strip(".,;:!?¿¡\"")) + 2.2 for w in words], dtype=float)
+        wts = wts / wts.sum() * dur
+        out, t = [], start
+        for w, d in zip(words, wts):
+            out.append((w, t, t + d))
+            t += d
     chunks, cur = [], []
     for item in out:
         cur.append(item)
         txt = " ".join(x[0] for x in cur)
-        if len(cur) >= 3 or len(txt) >= 18 or item[0][-1] in ".,;:!?":
-            chunks.append({"words": cur, "end": cur[-1][2]})
+        if len(cur) >= 4 or len(txt) >= 22 or item[0][-1] in ".,;:!?":
+            chunks.append(cur)
             cur = []
     if cur:
-        chunks.append({"words": cur, "end": cur[-1][2]})
+        chunks.append(cur)
     return chunks
+
+
+def caption_image(words, hi):
+    f = font(F_BOLD, 66)
+    sp = f.getlength(" ") + 14
+    widths = [f.getlength(w) for w, _, _ in words]
+    total = sum(widths) + sp * (len(words) - 1)
+    im = Image.new("RGBA", (W, 130), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    x = (W - total) / 2
+    for i, (w, _, _) in enumerate(words):
+        if i == hi:
+            d.rounded_rectangle((x - 12, 22, x + widths[i] + 12, 108), radius=16,
+                                fill=(61, 220, 255, 55), outline=C_CYAN + (255,), width=3)
+        d.text((x + 3, 68), w, font=f, fill=(0, 0, 0, 170), anchor="lm")
+        d.text((x, 65), w, font=f, fill=C_TEXT + (255,), anchor="lm")
+        x += widths[i] + sp
+    return im
 
 
 # ---------------------------------------------------------------- render
 
 def render(script_path, out_path, voices_dir):
     spec = json.load(open(script_path, encoding="utf-8"))
-    vmap = spec.get("voices", {"A": "vits-piper-es_MX-claude-high", "B": "vits-piper-es_MX-ald-medium"})
-    speed = float(spec.get("speed", 1.12))
-    voices = Voices(voices_dir)
+    tts, voice_b = make_tts(spec, voices_dir)
     tmp = tempfile.mkdtemp(prefix="ish_")
 
     # 1) voz y linea de tiempo
-    voice_track = []
-    t = 0.15
-    timeline = []      # por escena: (inicio, fin, [inicios_lineas_relativos])
-    word_events = []
-    talk_mask = []     # (inicio, fin, speaker)
-    for si, sc in enumerate(spec["scenes"]):
-        s_start = t
+    track, scenes_t, chunks, talk = [], [], [], []
+    t = 0.2
+    for sc in spec["scenes"]:
+        s0 = t
         starts = []
         for ln in sc.get("lines", []):
             spk = ln.get("spk", "A")
-            audio = voices.say(vmap.get(spk, vmap["A"]), ln.get("say", ln["text"]), speed)
-            d = len(audio) / SR
-            voice_track.append((t, audio))
-            starts.append(t - s_start)
-            word_events += word_timing(ln["text"], t, d)
-            talk_mask.append((t, t + d, spk))
+            spoken_text = ln.get("say", ln["text"])
+            a, spoken = tts.say(spoken_text, voice_b if spk == "B" else None)
+            if spoken and spoken_text != ln["text"]:
+                spoken = None
+            idx = np.where(np.abs(a) > 0.008)[0]
+            cut = max(0, idx[0] - 240) if len(idx) else 0
+            if len(idx):
+                a = a[cut: idx[-1] + 600]
+            if spoken:
+                spoken = [(w, x - cut / SR, y - cut / SR) for w, x, y in spoken]
+            d = len(a) / SR
+            track.append((t, a))
+            starts.append(t)
+            chunks += word_timing(ln["text"], t, d, spoken)
+            talk.append((t, t + d))
             t += d + GAP
-        t = max(t, s_start + float(sc.get("min_dur", 1.2)))
-        timeline.append((s_start, t, starts))
+        t = max(t, s0 + float(sc.get("min_dur", 1.5)))
+        scenes_t.append((s0, t, starts))
         t += SCENE_GAP
-    total = t + float(spec.get("tail", 0.6))
+    total = t + float(spec.get("tail", 0.5))
 
     n = int(total * SR) + SR
-    voice = np.zeros(n, dtype=np.float32)
-    for st, a in voice_track:
+    vo = np.zeros(n, dtype=np.float32)
+    for st, a in track:
         i = int(st * SR)
-        voice[i:i + len(a)] += a[: n - i]
-    peak = np.max(np.abs(voice)) or 1.0
-    voice = voice / peak * 0.92
+        vo[i:i + len(a)] += a[: n - i]
+    vo = vo / (np.max(np.abs(vo)) or 1) * 0.9
 
-    music = synth_music(total + 1)[:n]
+    # 2) capas por escena
+    scenes = []
+    pop_times = []
+    aw, ah = ART[2] - ART[0], ART[3] - ART[1]
+    for sc, (s0, s1, starts) in zip(spec["scenes"], scenes_t):
+        layers = []
+        for ly in sc.get("layers", []):
+            img = svg_layer(ly["svg"], aw, ah)
+            if "t" in ly:
+                at = s0 + float(ly["t"])
+            else:
+                k = int(ly.get("at", 0))
+                at = starts[min(k, len(starts) - 1)] if starts else s0
+            at = max(s0, at) + float(ly.get("delay", 0))
+            layers.append((img, at, ly.get("anim", "up"), bool(ly.get("clear", False))))
+            if at > s0 + 0.05:
+                pop_times.append(at)
+        scenes.append((s0, s1, layers, bool(sc.get("bit", False)), float(sc.get("zoom", 0.05))))
+
+    music = synth_music(total + 1, seed=len(spec.get("title", "")))[:n]
     music = np.pad(music, (0, max(0, n - len(music))))
-    # ducking: baja la musica cuando hay voz
-    env = np.convolve(np.abs(voice), np.ones(2205) / 2205, mode="same")
-    duck = 1 - 0.6 * np.clip(env * 8, 0, 1)
-    whoosh = synth_whoosh()
+    env = np.convolve(np.abs(vo), np.ones(2400) / 2400, mode="same")
+    duck = 1 - 0.65 * np.clip(env * 8, 0, 1)
     fx = np.zeros(n, dtype=np.float32)
-    for (s0, _, _) in timeline[1:]:
+    wh, pp = synth_whoosh(), synth_pop()
+    for s0, _, _, _, _ in scenes[1:]:
         i = max(0, int((s0 - 0.12) * SR))
-        fx[i:i + len(whoosh)] += whoosh[: n - i]
-    mix = voice + 0.55 * music * duck + 0.35 * fx
+        fx[i:i + len(wh)] += wh[: n - i]
+    for pt in pop_times:
+        i = int(pt * SR)
+        fx[i:i + len(pp)] += pp[: n - i]
+    mix = vo + 0.5 * music * duck + 0.3 * fx
     mix = mix / max(1.0, np.max(np.abs(mix)) / 0.97)
-    wav_path = os.path.join(tmp, "mix.wav")
-    write_wav(wav_path, mix[: int(total * SR)])
+    wav = os.path.join(tmp, "mix.wav")
+    write_wav(wav, mix[: int(total * SR)])
 
-    # energia de voz por frame para animar la boca
     nf = int(total * FPS)
     hop = SR // FPS
-    energy = np.array([np.sqrt(np.mean(voice[i * hop:(i + 1) * hop] ** 2)) for i in range(nf)])
-    energy = np.clip(energy / (np.percentile(energy[energy > 0], 90) if np.any(energy > 0) else 1), 0, 1)
+    energy = np.array([np.sqrt(np.mean(vo[i * hop:(i + 1) * hop] ** 2)) for i in range(nf)])
+    p90 = np.percentile(energy[energy > 0], 90) if np.any(energy > 0) else 1
+    energy = np.clip(energy / p90, 0, 1)
 
-    # 2) capas estaticas
     bg = make_background()
-    draw_topbar(bg, spec.get("tag", ""), spec.get("source", ""))
+    draw_header(bg, spec.get("tag", ""), spec.get("source", ""))
     bg = bg.convert("RGBA")
     mascots = {(m, b): make_mascot(m / 3, b) for m in range(4) for b in (0, 1)}
-    scenes = []
-    for sc, (s0, s1, starts) in zip(spec["scenes"], timeline):
-        accent, els = build_scene(sc, starts, s1 - s0)
-        scenes.append((s0, s1, panel_base(accent), els))
+    rnd = random.Random(7)
+    dust = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(0.2, 0.9), rnd.uniform(1, 3)) for _ in range(70)]
+    cap_cache = {}
+    chunk_spans = [(c[0][1], c[-1][2], ci) for ci, c in enumerate(chunks)]
 
-    ass_path = os.path.join(tmp, "subs.ass")
-    build_ass(word_events, ass_path)
-
-    # 3) frames -> ffmpeg
-    raw_path = os.path.join(tmp, "video.mp4")
+    out_tmp = os.path.join(tmp, "video.mp4")
     ff = subprocess.Popen([
         "ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
-        "-i", "-", "-i", wav_path,
-        "-vf", f"ass={ass_path}:fontsdir={FONT_DIR}",
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", raw_path],
-        stdin=subprocess.PIPE)
-    fade_cache = {}
-
-    def faded(img, a):
-        key = (id(img), int(a * 10))
-        if key not in fade_cache:
-            im = img.copy()
-            al = im.getchannel("A").point(lambda v: int(v * a))
-            im.putalpha(al)
-            fade_cache[key] = im
-        return fade_cache[key]
-
-    blink_frames = set()
-    for k in range(int(total / 3.1) + 1):
-        f0 = int((1.7 + k * 3.1) * FPS)
-        blink_frames.update(range(f0, f0 + 4))
+        "-i", "-", "-i", wav, "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+        "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out_tmp], stdin=subprocess.PIPE)
 
     for fi in range(nf):
         tt = fi / FPS
         frame = bg.copy()
-        cur = None
-        for s in scenes:
-            if s[0] - 0.001 <= tt < s[1] + SCENE_GAP:
-                cur = s
-        if cur is None:
-            cur = scenes[-1]
-        s0, s1, pbase, els = cur
-        lt = tt - s0
-        slide = int((1 - ease_out(lt / 0.28)) * 220)
-        px, py = PANEL[0] - 20 + slide, PANEL[1] - 20
-        pb = pbase if px + pbase.width <= W else pbase.crop((0, 0, W - px, pbase.height))
-        frame.alpha_composite(pb, (px, py))
-        for img, ex, ey, et in els:
-            if lt < et:
-                continue
-            p = ease_out((lt - et) / 0.25)
-            dy = int((1 - p) * 40)
-            im = img if p >= 1 else faded(img, max(0.05, p))
-            x = ex + slide
-            if x + im.width > W:
-                im = im.crop((0, 0, max(1, W - x), im.height))
-            frame.alpha_composite(im, (x, ey + dy))
-        # mascota
-        speaking_a = any(a <= tt <= b and spk == "A" for a, b, spk in talk_mask)
-        m = int(round(energy[fi] * 3)) if speaking_a else 0
-        mas = mascots[(min(3, m), 1 if fi in blink_frames else 0)]
-        bob = int(math.sin(tt * 2 * math.pi * 0.9) * 8)
-        frame.alpha_composite(mas, ((W - mas.width) // 2, MASCOT_Y + bob))
-        # barra de progreso
         d = ImageDraw.Draw(frame)
-        d.rectangle((0, 0, W, 10), fill=(30, 40, 80, 255))
-        d.rectangle((0, 0, int(W * tt / total), 10), fill=C_CYAN + (255,))
+        for (x, y, sp, r) in dust:
+            yy = (y - tt * sp * 25) % H
+            d.ellipse((x - r, yy - r, x + r, yy + r), fill=(120, 150, 220, 70))
+        cur = scenes[-1]
+        for s in scenes:
+            if s[0] - 0.001 <= tt:
+                cur = s
+        s0, s1, layers, bit, zoom = cur
+        lt = tt - s0
+        canvas = Image.new("RGBA", (aw, ah), (0, 0, 0, 0))
+        for li, (img, at, anim, _clr) in enumerate(layers):
+            if tt < at:
+                continue
+            hide = [l2[1] for l2 in layers[li + 1:] if l2[3] and l2[1] <= tt]
+            if hide:
+                q = (tt - min(hide)) / 0.25
+                if q >= 1:
+                    continue
+                im = img.copy()
+                im.putalpha(im.getchannel("A").point(lambda v, a=1 - q: int(v * a)))
+                canvas.alpha_composite(im)
+                continue
+            p = (tt - at) / 0.35
+            if p >= 1:
+                canvas.alpha_composite(img)
+                continue
+            e = ease_out(p)
+            if anim == "pop":
+                sc_ = 0.6 + 0.4 * ease_back(p)
+                w2, h2 = max(1, int(aw * sc_)), max(1, int(ah * sc_))
+                im = img.resize((w2, h2), Image.BILINEAR)
+                ox, oy = (aw - w2) // 2, (ah - h2) // 2
+            else:
+                im = img
+                ox = int((1 - e) * (-120 if anim == "left" else 120 if anim == "right" else 0))
+                oy = int((1 - e) * (70 if anim == "up" else 0))
+            if e < 1:
+                im = im.copy()
+                im.putalpha(im.getchannel("A").point(lambda v, a=e: int(v * a)))
+            tmp_l = Image.new("RGBA", (aw, ah), (0, 0, 0, 0))
+            tmp_l.paste(im, (ox, oy), im)
+            canvas.alpha_composite(tmp_l)
+        z = 1 + zoom * min(1.0, lt / max(0.5, s1 - s0))
+        if abs(z - 1) > 0.002:
+            w2, h2 = int(aw * z), int(ah * z)
+            canvas = canvas.resize((w2, h2), Image.BILINEAR).crop(((w2 - aw) // 2, (h2 - ah) // 2, (w2 - aw) // 2 + aw, (h2 - ah) // 2 + ah))
+        if lt < 0.25:
+            e = ease_out(lt / 0.25)
+            canvas.putalpha(canvas.getchannel("A").point(lambda v, a=e: int(v * a)))
+            frame.alpha_composite(canvas, (ART[0] + int((1 - e) * 80), ART[1]))
+        else:
+            frame.alpha_composite(canvas, (ART[0], ART[1]))
+        if bit:
+            speaking = any(a <= tt <= b for a, b in talk)
+            m = int(round(energy[fi] * 3)) if speaking else 0
+            blink = (fi % 95) < 4
+            mas = mascots[(min(3, m), int(blink))]
+            frame.alpha_composite(mas, (40, ART[3] - mas.height + 40 + int(math.sin(tt * 5.5) * 6)))
+        for a, b, ci in chunk_spans:
+            if a <= tt < b + 0.15:
+                words = chunks[ci]
+                hi = 0
+                for wi, (_, ws, we) in enumerate(words):
+                    if tt >= ws:
+                        hi = wi
+                key = (ci, hi)
+                if key not in cap_cache:
+                    cap_cache[key] = caption_image(words, hi)
+                ci_img = cap_cache[key]
+                ap = min(1.0, (tt - a) / 0.08)
+                frame.alpha_composite(ci_img, (0, CAP_Y - 65 + int((1 - ap) * 10)))
+                break
+        d.rectangle((0, 0, W, 8), fill=(24, 32, 66, 255))
+        d.rectangle((0, 0, int(W * tt / total), 8), fill=C_CYAN + (255,))
         ff.stdin.write(frame.convert("RGB").tobytes())
     ff.stdin.close()
     ff.wait()
     if ff.returncode != 0:
         sys.exit("ffmpeg fallo")
-    os.replace(raw_path, out_path)
-    meta = os.path.splitext(out_path)[0] + "_publicacion.txt"
-    with open(meta, "w", encoding="utf-8") as f:
+    os.replace(out_tmp, out_path)
+    with open(os.path.splitext(out_path)[0] + "_publicacion.txt", "w", encoding="utf-8") as f:
         f.write("TITULO:\n" + spec.get("title", "") + "\n\n")
         f.write("DESCRIPCION:\n" + spec.get("description", "") + "\n\n")
         f.write("HASHTAGS:\n" + " ".join(spec.get("hashtags", [])) + "\n\n")
-        f.write("FUENTE:\n" + spec.get("source_url", spec.get("source", "")) + "\n")
+        f.write("FUENTE:\n" + spec.get("source_url", "") + "\n")
         f.write(f"\nDURACION: {total:.1f} s\n")
     return total
 
@@ -618,8 +558,7 @@ def main():
     ap.add_argument("out")
     ap.add_argument("--voices", default=os.environ.get("ISH_VOICES", "/home/claude/tts"))
     a = ap.parse_args()
-    dur = render(a.script, a.out, a.voices)
-    print(f"OK {a.out} {dur:.1f}s")
+    print(f"OK {a.out} {render(a.script, a.out, a.voices):.1f}s")
 
 
 if __name__ == "__main__":

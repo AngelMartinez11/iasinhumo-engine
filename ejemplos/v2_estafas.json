@@ -1,0 +1,204 @@
+{
+ "tag": "TRUCO",
+ "source": "Fuente: blog.google, resumen de octubre 2026",
+ "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+ "title": "Tu Android puede avisarte de estafas por chat (hay que activarlo)",
+ "description": "Google Messages tiene un modo de protección mejorada que usa IA para detectar estafas en conversaciones. Es opcional: hay que activarlo.\nFuente: https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/\n¿Ya te intentaron estafar por mensaje? Cuéntanos.",
+ "hashtags": [
+  "#IASinHumo",
+  "#inteligenciaartificial",
+  "#Android",
+  "#estafas"
+ ],
+ "scenes": [
+  {
+   "lines": [
+    {
+     "text": "Este mensaje parece de tu banco.",
+     "say": "Este mensaje parece de tu banco."
+    },
+    {
+     "text": "Y es una estafa."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "up",
+     "svg": "<rect x='300' y='60' width='400' height='780' rx='60' class='p'/><rect x='325' y='130' width='350' height='640' rx='24' fill='#0E1430'/><rect x='450' y='88' width='100' height='14' rx='7' class='p2'/><circle cx='370' cy='175' r='26' class='p2'/><text x='410' y='170' class='t' font-size='24'>Banco Seguro</text><text x='410' y='198' class='m' font-size='18'>ahora</text><rect x='345' y='240' width='300' height='150' rx='26' class='p2'/><text x='370' y='290' class='t' font-size='24'>Tu cuenta fue</text><text x='370' y='325' class='t' font-size='24'>bloqueada.</text><text x='370' y='365' class='c' font-size='22'>Responde YA</text>"
+    },
+    {
+     "at": 1,
+     "anim": "pop",
+     "svg": "<g transform='translate(640 420)'><polygon points='110,0 220,190 0,190' class='r'/><rect x='100' y='55' width='20' height='80' rx='10' fill='#0E1430'/><circle cx='110' cy='160' r='13' fill='#0E1430'/></g><text x='500' y='800' text-anchor='middle' class='r' font-size='64'>ESTAFA</text>"
+    }
+   ]
+  },
+  {
+   "lines": [
+    {
+     "text": "Primero te asustan."
+    },
+    {
+     "text": "Y luego te piden el código que te llegó por mensaje."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "left",
+     "svg": "<rect x='80' y='120' width='620' height='160' rx='40' class='p2'/><text x='120' y='190' class='t' font-size='38'>Detectamos un acceso</text><text x='120' y='240' class='t' font-size='38'>sospechoso.</text><text x='80' y='100' class='m' font-size='26'>Número desconocido</text>"
+    },
+    {
+     "at": 1,
+     "anim": "left",
+     "svg": "<rect x='80' y='330' width='700' height='160' rx='40' class='p2'/><text x='120' y='400' class='t' font-size='38'>Mándame el código</text><text x='120' y='450' class='t' font-size='38'>que te llegó por SMS.</text>"
+    },
+    {
+     "at": 1,
+     "delay": 0.9,
+     "anim": "pop",
+     "svg": "<rect x='300' y='580' width='400' height='170' rx='34' class='y'/><text x='500' y='640' text-anchor='middle' fill='#0E1430' font-size='30'>CÓDIGO</text><text x='500' y='715' text-anchor='middle' fill='#0E1430' font-size='72' letter-spacing='12'>4821</text>"
+    }
+   ]
+  },
+  {
+   "lines": [
+    {
+     "text": "Google Messages tiene un modo de protección mejorada.",
+     "say": "Google Messages tiene un modo de protección mejorada."
+    },
+    {
+     "text": "Usa los modelos Gemini para detectar estafas en plena conversación.",
+     "say": "Usa los modelos Gemini para detectar estafas en plena conversación."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "up",
+     "svg": "<path d='M500 90 L760 190 L760 430 C760 610 640 720 500 790 C360 720 240 610 240 430 L240 190 Z' class='p2' stroke='#3DDCFF' stroke-width='10'/><path d='M390 430 L470 510 L630 340' fill='none' stroke='#3DDC97' stroke-width='36' stroke-linecap='round' stroke-linejoin='round'/>"
+    },
+    {
+     "at": 0,
+     "delay": 0.5,
+     "anim": "fade",
+     "svg": "<text x='500' y='870' text-anchor='middle' class='t' font-size='46'>Enhanced protection mode</text>"
+    },
+    {
+     "at": 1,
+     "anim": "pop",
+     "svg": "<g transform='translate(780 120)'><path d='M70 0 C80 50 90 60 140 70 C90 80 80 90 70 140 C60 90 50 80 0 70 C50 60 60 50 70 0 Z' class='c'/></g><g transform='translate(130 560) scale(0.6)'><path d='M70 0 C80 50 90 60 140 70 C90 80 80 90 70 140 C60 90 50 80 0 70 C50 60 60 50 70 0 Z' class='y'/></g>"
+    }
+   ]
+  },
+  {
+   "lines": [
+    {
+     "text": "Según Google, su detección ya marca más de cinco millones de llamadas y mensajes sospechosos al mes.",
+     "say": "Según Google, su detección ya marca más de cinco millones de llamadas y mensajes sospechosos al mes."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "pop",
+     "svg": "<text x='500' y='330' text-anchor='middle' class='c' font-size='190'>+5 M</text><text x='500' y='420' text-anchor='middle' class='t' font-size='44'>llamadas y mensajes</text><text x='500' y='475' text-anchor='middle' class='t' font-size='44'>sospechosos al mes</text>"
+    },
+    {
+     "t": 1.6,
+     "anim": "up",
+     "svg": "<g class='p2'><rect x='150' y='580' width='90' height='160' rx='18'/><rect x='270' y='580' width='90' height='160' rx='18'/><rect x='390' y='580' width='90' height='160' rx='18'/><rect x='510' y='580' width='90' height='160' rx='18'/><rect x='630' y='580' width='90' height='160' rx='18'/><rect x='750' y='580' width='90' height='160' rx='18'/></g><g class='r'><circle cx='195' cy='620' r='16'/><circle cx='315' cy='620' r='16'/><circle cx='435' cy='620' r='16'/><circle cx='555' cy='620' r='16'/><circle cx='675' cy='620' r='16'/><circle cx='795' cy='620' r='16'/></g><text x='500' y='820' text-anchor='middle' class='m' font-size='30'>según Google</text>"
+    }
+   ]
+  },
+  {
+   "lines": [
+    {
+     "text": "Pero ojo: no viene activado."
+    },
+    {
+     "text": "Tienes que encenderlo tú."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "up",
+     "svg": "<rect x='250' y='300' width='500' height='240' rx='120' class='p2'/><circle cx='370' cy='420' r='95' fill='#96A3CD'/><text x='500' y='660' text-anchor='middle' class='m' font-size='54'>APAGADO</text>"
+    },
+    {
+     "at": 1,
+     "anim": "fade",
+     "svg": "<rect x='250' y='300' width='500' height='240' rx='120' class='g'/><circle cx='630' cy='420' r='95' class='t'/><text x='500' y='660' text-anchor='middle' class='g' font-size='54'>ACTIVADO</text>",
+     "clear": true
+    }
+   ]
+  },
+  {
+   "lines": [
+    {
+     "text": "Y puede que todavía no aparezca en tu país."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "up",
+     "svg": "<circle cx='500' cy='430' r='300' class='p2'/><path d='M330 300 C380 250 460 260 470 320 C480 380 420 400 400 460 C380 520 330 500 300 440 C280 390 300 330 330 300 Z M560 220 C640 200 720 260 730 330 C740 400 680 420 640 400 C600 380 560 330 560 220 Z M590 500 C650 480 700 520 690 590 C680 650 620 670 590 630 C560 590 560 520 590 500 Z' class='p'/>"
+    },
+    {
+     "at": 0,
+     "delay": 1.0,
+     "anim": "pop",
+     "svg": "<circle cx='760' cy='200' r='90' class='y'/><text x='760' y='245' text-anchor='middle' fill='#0E1430' font-size='130'>?</text>"
+    }
+   ]
+  },
+  {
+   "lines": [
+    {
+     "text": "Así que la regla de oro sigue igual:"
+    },
+    {
+     "text": "ningún banco te pide códigos por chat."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "up",
+     "svg": "<polygon points='500,110 800,260 200,260' class='p2'/><rect x='230' y='280' width='540' height='40' class='p2'/><g class='p2'><rect x='260' y='340' width='60' height='260'/><rect x='380' y='340' width='60' height='260'/><rect x='560' y='340' width='60' height='260'/><rect x='680' y='340' width='60' height='260'/></g><rect x='210' y='620' width='580' height='50' class='p2'/>"
+    },
+    {
+     "at": 1,
+     "anim": "pop",
+     "svg": "<rect x='330' y='360' width='340' height='150' rx='34' class='y'/><text x='500' y='455' text-anchor='middle' fill='#0E1430' font-size='54'>CÓDIGO</text><line x1='300' y1='560' x2='700' y2='310' stroke='#FF5A6E' stroke-width='34' stroke-linecap='round'/><text x='500' y='790' text-anchor='middle' class='t' font-size='46'>Nunca por chat</text>"
+    }
+   ]
+  },
+  {
+   "bit": true,
+   "lines": [
+    {
+     "text": "Veredicto: real, pero actívalo y no bajes la guardia."
+    },
+    {
+     "text": "Mándaselo a quien siempre cae en estos mensajes."
+    }
+   ],
+   "layers": [
+    {
+     "at": 0,
+     "anim": "pop",
+     "svg": "<g transform='rotate(-8 500 360)'><rect x='170' y='230' width='660' height='240' rx='30' fill='none' stroke='#3DDC97' stroke-width='16'/><text x='500' y='335' text-anchor='middle' class='g' font-size='96'>REAL,</text><text x='500' y='430' text-anchor='middle' class='g' font-size='70'>PERO...</text></g>"
+    },
+    {
+     "at": 1,
+     "anim": "up",
+     "svg": "<rect x='300' y='620' width='600' height='120' rx='60' class='c'/><text x='600' y='698' text-anchor='middle' fill='#0E1430' font-size='44'>Envíaselo a alguien</text>"
+    }
+   ]
+  }
+ ]
+}
