@@ -1,0 +1,11 @@
+{"tag":"MITO","source":"IA SinHumo: explicación general","source_url":"",
+"title":"No, la IA no siempre dice la verdad",
+"description":"Los chatbots de IA pueden inventar datos con total seguridad: se llaman alucinaciones. Así te proteges.\n¿Alguna vez una IA te inventó algo? Comenta.",
+"hashtags":["#IASinHumo","#inteligenciaartificial","#ChatGPT","#IA"],
+"scenes":[
+{"type":"hook","kicker":"Mito o realidad","headline":"Si lo dice la IA, *es verdad*","lines":[{"spk":"B","text":"Si lo dice la IA, es verdad, ¿no?"},{"spk":"A","text":"Humo. Y del peligroso."}]},
+{"type":"versus","kicker":"Mito o realidad","left_label":"HUMO","left":"La IA consulta un dato y te lo copia","right_label":"REAL","right":"Predice la respuesta palabra por palabra","lines":[{"spk":"A","text":"Un chatbot no siempre busca el dato y te lo copia."},{"spk":"A","text":"Predice la respuesta más probable, palabra por palabra."}]},
+{"type":"title","kicker":"Por eso","headline":"Puede *inventar* datos con total seguridad","sub":"A eso se le llama alucinación","lines":[{"spk":"A","text":"Por eso a veces inventa datos, citas o fuentes."},{"spk":"A","text":"Y lo dice con la misma seguridad. Se llama alucinación."}]},
+{"type":"bullets","kicker":"Sin humo","headline":"Cómo protegerte","items":["Pídele las fuentes","Abre las fuentes y verifica","Desconfía de cifras y citas exactas"],"lines":[{"spk":"B","text":"¿Y entonces cómo la uso?"},{"spk":"A","text":"Pídele las fuentes."},{"spk":"A","text":"Ábrelas y verifica que existan."},{"spk":"A","text":"Y desconfía de cifras y citas demasiado exactas."}]},
+{"type":"cta","kicker":"Veredicto: humo","headline":"Mándaselo a quien copia *todo* de la IA","lines":[{"spk":"A","text":"Úsala como asistente, no como oráculo."},{"spk":"A","text":"Mándaselo a quien copia todo de la IA."}]}
+]}

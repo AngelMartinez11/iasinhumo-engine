@@ -1,0 +1,11 @@
+{"tag":"NOTICIA","source":"Fuente: blog.google, resumen de octubre 2026","source_url":"https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+"title":"Google ya detecta imágenes hechas con IA (con letra pequeña)",
+"description":"SynthID Detector de Google revisa si una imagen, video o audio fue generado con IA. Te explicamos qué sí detecta y qué no.\nFuente: https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/\n¿Humo o real? Comenta una palabra.",
+"hashtags":["#IASinHumo","#inteligenciaartificial","#IA","#Google"],
+"scenes":[
+{"type":"hook","kicker":"Humo o real","headline":"Google ya te dice si una imagen la hizo una *IA*","lines":[{"spk":"B","text":"¿Google ya puede saber si una foto es falsa?","say":"¿Gugel ya puede saber si una foto es falsa?"},{"spk":"A","text":"Sí... pero con letra pequeña."}]},
+{"type":"title","kicker":"Qué es","headline":"*SynthID* Detector","sub":"Revisa imágenes, videos y audios","lines":[{"spk":"A","text":"Se llama SynthID Detector.","say":"Se llama Sintaid Detector."},{"spk":"A","text":"Revisa si una imagen, un video o un audio fue generado con IA."}]},
+{"type":"bullets","kicker":"La letra pequeña","headline":"Antes de confiar","items":["Por ahora solo funciona en inglés","Detecta la marca de agua SynthID","Google y socios: OpenAI, NVIDIA, Kakao, Apple"],"lines":[{"spk":"B","text":"¿Y cuál es la trampa?"},{"spk":"A","text":"Primero: por ahora solo está en inglés."},{"spk":"A","text":"Segundo: detecta la marca de agua de SynthID.","say":"Segundo: detecta la marca de agua de Sintaid."},{"spk":"A","text":"Que usan Google y socios como OpenAI, NVIDIA, Kakao y Apple.","say":"Que usan Gugel y socios como Open ei ai, Envidia, Cacao y Ápol."}]},
+{"type":"versus","kicker":"Veredicto","left_label":"HUMO","left":"Detecta cualquier imagen falsa","right_label":"REAL","right":"Detecta contenido con marca de agua","lines":[{"spk":"B","text":"O sea, ¿no detecta todo?"},{"spk":"A","text":"No. Si la imagen viene de otra herramienta, puede pasar sin aviso."}]},
+{"type":"cta","kicker":"Real, pero...","headline":"Mándaselo a quien cree *todo* lo que ve","lines":[{"spk":"A","text":"Real, pero no es un detector mágico."},{"spk":"A","text":"Mándaselo a quien cree todo lo que ve."}]}
+]}
