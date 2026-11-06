@@ -36,7 +36,7 @@ y hace que todos los videos tengan el mismo estilo.
  "a": {"ropa": "traje", "cara": "risa", "brazos": "cruzados"}}
 ```
 
-- La voz sale de `canales/<canal>.json` -> `tts` (hoy `es-ES-AlvaroNeural`). No pongas `tts` en el guion salvo que se pida otra voz.
+- La voz sale de `canales/<canal>.json` -> `tts` (Historias Sin Filtro: `it-IT-GiuseppeMultilingualNeural`; IA SinHumo: `es-ES-AlvaroNeural`). No pongas `tts` en el guion salvo que se pida otra voz.
 - `x`, `y`: punto de anclaje en el lienzo de 1080 x 1920. Personas, tiendas, edificios, graficas,
   bolsas y lapidas se anclan en los PIES (abajo al centro); lo demas en su CENTRO.
 - `s`: escala. `at`: indice de la linea con la que aparece. `delay`: segundos extra. `t`: segundo exacto dentro de la escena (en vez de `at`).
@@ -111,9 +111,9 @@ la columna notas para que se agregue a la biblioteca.
 **Historias Sin Filtro** (1 video al dia, FORMATO LARGO de 3 a 5 minutos, 600 a 760 palabras, 50 a 70 escenas, musica de intriga).
 Referencia: el video de D. B. Cooper de Empty (@emptymind63). No basta con contar la historia: hay que INFORMAR.
 1. Gancho (2 a 4 escenas): el contraste o dato mas fuerte ("hoy pesa un kilo; la primera pesaba 25") y una pregunta.
-2. La historia en 3 a 5 capitulos, en orden, con fechas, lugares, cifras y nombres concretos en casi cada escena.
+2. La historia en 3 a 5 bloques, en orden (SIN tarjetas de capitulo: el canal tiene `"capitulos": false` y el motor las quita; los bloques se marcan con cambio de fondo), con fechas, lugares, cifras y nombres concretos en casi cada escena.
    Explica COMO funcionaba la cosa (la estructura del avion, por que la pantalla era chica, que tenia adentro).
-3. Un capitulo "DATOS QUE NO SABIAS" con 3 o 4 curiosidades verificadas y numeradas ("Uno...", "Dos...").
+3. Un bloque de datos curiosos (se abre con una frase como "Y ahora, cosas que casi nadie sabe") con 3 o 4 curiosidades verificadas y numeradas ("Uno...", "Dos...").
 4. "Que paso despues": consecuencias, lo que se descubrio anos despues, el estado actual.
 5. Cierre: vuelve al contraste del gancho y termina con una pregunta personal para comentarios.
 Reglas de informacion: cada cifra con fuente seria (minimo dos para datos clave); si algo se discute, dilo ("segun X", "se discute").
