@@ -204,8 +204,8 @@ def mesa(ancho=760):
 
 # ------------------------------------------------------------------ objetos
 
-def sobre(color="#d81f26", texto=""):
-    o = [f'<circle cx="40" cy="-60" r="95" fill="#e5e7eb"/><circle cx="40" cy="-60" r="22" fill="#94a3b8"/>',
+def sobre(color="#d81f26", texto="", disco=True):
+    o = [f'<circle cx="40" cy="-60" r="95" fill="#e5e7eb"/><circle cx="40" cy="-60" r="22" fill="#94a3b8"/>' if disco else "",
          f'<rect x="-170" y="-110" width="340" height="220" rx="12" fill="{color}"/>',
          f'<path d="M-170 -100 L0 20 L170 -100" fill="none" stroke="#7f1d1d"/>']
     if texto:
@@ -426,3 +426,118 @@ PIEZAS = {
     "flecha": flecha, "linea_tiempo": linea_tiempo, "robot": robot, "etiqueta": etiqueta,
     "nombre": nombre, "texto": texto, "oficina_interior": oficina_interior,
 }
+
+
+# ------------------------------------------------------------------ piezas agregadas (historias)
+
+def camara(tipo="antigua", color="#1f2937", texto=""):
+    """tipo: antigua (de rollo), digital (compacta) o prototipo (caja grande con cassette)."""
+    if tipo == "prototipo":
+        o = ['<rect x="-230" y="-150" width="460" height="300" rx="18" fill="#94a3b8"/>',
+             '<rect x="-210" y="-120" width="150" height="110" rx="10" fill="#475569"/>',
+             '<circle cx="140" cy="-20" r="70" fill="#1f2937"/><circle cx="140" cy="-20" r="38" fill="#60a5fa"/>',
+             '<rect x="-210" y="20" width="200" height="100" rx="8" fill="#1f2937"/>',
+             '<circle cx="-160" cy="70" r="22" fill="#94a3b8"/><circle cx="-60" cy="70" r="22" fill="#94a3b8"/>',
+             '<rect x="30" y="80" width="170" height="40" rx="6" fill="#64748b"/>']
+        if texto:
+            o.append(_txt(0, 210, texto, 44))
+        return _g("".join(o)), (-240, -160, 240, 230 if texto else 160)
+    cuerpo = "#e5e7eb" if tipo == "digital" else color
+    o = [f'<rect x="-200" y="-110" width="400" height="230" rx="26" fill="{cuerpo}"/>',
+         f'<rect x="-150" y="-150" width="110" height="50" rx="10" fill="{cuerpo}"/>']
+    if tipo == "antigua":
+        o.append('<rect x="-200" y="-20" width="400" height="40" fill="#a16207" stroke-width="4"/>')
+    o += ['<circle cx="20" cy="5" r="88" fill="#334155"/><circle cx="20" cy="5" r="56" fill="#60a5fa"/>',
+          '<circle cx="0" cy="-15" r="14" fill="#e0f2fe" stroke="none"/>',
+          '<rect x="120" y="-90" width="56" height="30" rx="6" fill="#fde68a"/>']
+    if texto:
+        o.append(_txt(0, 200, texto, 44))
+    return _g("".join(o)), (-210, -160, 210, 230 if texto else 130)
+
+
+def rollo(texto="", color="#facc15"):
+    o = [f'<rect x="-120" y="-150" width="240" height="300" rx="20" fill="{color}"/>',
+         '<rect x="-150" y="-100" width="40" height="200" rx="8" fill="#1f2937"/>',
+         '<path d="M120 -60 L300 -60 L300 60 L120 60 Z" fill="#7c2d12"/>']
+    for k in range(5):
+        o.append(f'<rect x="{140 + k * 32}" y="-50" width="18" height="16" fill="#fde68a" stroke-width="3"/>')
+        o.append(f'<rect x="{140 + k * 32}" y="34" width="18" height="16" fill="#fde68a" stroke-width="3"/>')
+    if texto:
+        o.append(_txt(0, 20, texto, 54))
+    return _g("".join(o)), (-160, -160, 310, 160)
+
+
+def celda(ancho=520, alto=640, barrotes=7):
+    """Rejas de una celda (transparente por dentro). Origen al centro abajo."""
+    w, h = ancho, alto
+    o = [f'<rect x="{-w / 2}" y="{-h}" width="{w}" height="{h}" fill="none" stroke-width="18"/>',
+         f'<rect x="{-w / 2}" y="{-h}" width="{w}" height="{h}" fill="none" stroke="#64748b" stroke-width="10"/>']
+    for k in range(1, barrotes):
+        x = -w / 2 + k * w / barrotes
+        o.append(f'<path d="M{x:.0f} {-h} L{x:.0f} 0" fill="none" stroke-width="16"/>')
+        o.append(f'<path d="M{x:.0f} {-h} L{x:.0f} 0" fill="none" stroke="#94a3b8" stroke-width="8"/>')
+    o.append(f'<path d="M{-w / 2} {-h * 0.55} L{w / 2} {-h * 0.55}" fill="none" stroke-width="16"/>')
+    o.append(f'<path d="M{-w / 2} {-h * 0.55} L{w / 2} {-h * 0.55}" fill="none" stroke="#94a3b8" stroke-width="8"/>')
+    return _g("".join(o)), (-w / 2 - 15, -h - 15, w / 2 + 15, 15)
+
+
+def cama(cabeza=True, pelo="#3a2a1e", cobija="#64748b"):
+    """Litera de celda con bulto bajo la cobija. Origen al centro abajo."""
+    o = ['<rect x="-260" y="-210" width="520" height="40" rx="8" fill="#94a3b8"/>',
+         '<rect x="-260" y="-170" width="24" height="170" fill="#64748b"/><rect x="236" y="-170" width="24" height="170" fill="#64748b"/>',
+         '<rect x="-250" y="-250" width="120" height="44" rx="18" fill="#f8fafc"/>',
+         f'<path d="M-140 -210 Q-120 -290 40 -285 Q220 -280 250 -210 Z" fill="{cobija}"/>']
+    if cabeza:
+        o.append('<ellipse cx="-175" cy="-280" rx="58" ry="52" fill="#f2c49b"/>')
+        o.append(f'<path d="M-232 -285 Q-230 -345 -175 -342 Q-118 -342 -118 -290 Q-150 -318 -232 -285 Z" fill="{pelo}"/>')
+        o.append('<path d="M-200 -278 L-180 -278 M-160 -278 L-140 -278" fill="none" stroke-width="5"/>')
+    return _g("".join(o)), (-270, -360, 270, 10)
+
+
+def isla(texto="", edificio=True, faro=True):
+    """Isla rocosa con prision y faro. Origen al centro (nivel del agua)."""
+    o = ['<path d="M-420 0 Q-380 -120 -220 -150 L220 -160 Q380 -130 430 0 Z" fill="#78716c"/>',
+         '<path d="M-300 -140 Q-200 -175 0 -170 Q200 -175 300 -150" fill="none" stroke="#57534e" stroke-width="10"/>']
+    if edificio:
+        o.append('<rect x="-230" y="-330" width="380" height="180" fill="#e7e5e4"/>')
+        for k in range(8):
+            o.append(f'<rect x="{-205 + k * 44}" y="-300" width="22" height="40" fill="#334155" stroke-width="3"/>')
+            o.append(f'<rect x="{-205 + k * 44}" y="-230" width="22" height="40" fill="#334155" stroke-width="3"/>')
+    if faro:
+        o.append('<path d="M200 -160 L220 -420 L260 -420 L280 -160 Z" fill="#f5f5f4"/>')
+        o.append('<rect x="210" y="-470" width="60" height="50" fill="#fde047"/><path d="M200 -470 L240 -510 L280 -470 Z" fill="#1f2937"/>')
+    if texto:
+        o.append(_txt(0, 90, texto, 60, "#ffffff"))
+    return _g("".join(o)), (-440, -520, 440, 120 if texto else 20)
+
+
+def balsa(personas=3, color="#facc15"):
+    """Balsa inflable de impermeables con personas. Origen al centro (nivel del agua)."""
+    o = [f'<path d="M-280 -20 Q-300 -90 -230 -100 L230 -100 Q300 -90 280 -20 Q260 30 0 30 Q-260 30 -280 -20 Z" fill="{color}"/>',
+         '<path d="M-200 -60 L200 -60" fill="none" stroke="#a16207" stroke-width="8"/>']
+    for k in range(personas):
+        x = -150 + k * 150
+        o.append(f'<rect x="{x - 32}" y="-200" width="64" height="110" rx="20" fill="#475569"/>')
+        o.append(f'<circle cx="{x}" cy="-235" r="38" fill="#f2c49b"/>')
+        o.append(f'<path d="M{x - 38} -240 Q{x} -290 {x + 38} -240 Z" fill="#3a2a1e"/>')
+    o.append('<path d="M150 -150 L260 -10" fill="none" stroke="#7c4a2d" stroke-width="14"/>')
+    return _g("".join(o)), (-310, -290, 310, 40)
+
+
+def cuchara():
+    o = ['<ellipse cx="0" cy="-150" rx="55" ry="80" fill="#cbd5e1"/>',
+         '<path d="M-14 -80 L-10 150 Q0 170 10 150 L14 -80 Z" fill="#cbd5e1"/>']
+    return _g("".join(o)), (-70, -240, 70, 175)
+
+
+def olas(ancho=1200, color="#1e3a8a"):
+    """Franja de mar en primer plano. Origen arriba al centro."""
+    w = ancho
+    pts = " ".join(f"Q{-w / 2 + i * 100 + 50} {-30 if i % 2 else 10} {-w / 2 + (i + 1) * 100} 0" for i in range(int(w / 100)))
+    o = [f'<path d="M{-w / 2} 0 {pts} L{w / 2} 500 L{-w / 2} 500 Z" fill="{color}"/>',
+         f'<path d="M{-w / 2 + 80} 90 q60 -30 120 0 M{-w / 2 + 520} 170 q60 -30 120 0 M{-w / 2 + 900} 110 q60 -30 120 0" fill="none" stroke="#93c5fd" stroke-width="8"/>']
+    return _g("".join(o)), (-w / 2 - 10, -40, w / 2 + 10, 510)
+
+
+PIEZAS.update({"camara": camara, "rollo": rollo, "celda": celda, "cama": cama, "isla": isla,
+               "balsa": balsa, "cuchara": cuchara, "olas": olas})

@@ -127,6 +127,22 @@ def fondo(spec):
             x, yy, rr = rnd.uniform(0, W), rnd.uniform(0, H * 0.75), rnd.uniform(1, 3.5)
             d.ellipse((x - rr, yy - rr, x + rr, yy + rr), fill=(255, 255, 255))
         suelo = "#2b2440" if suelo is None else suelo
+    elif t == "mar":
+        y = np.linspace(0, 1, H)[:, None, None]
+        top, bot = np.array(hexrgb(spec.get("cielo", "#141a3a"))), np.array(hexrgb(spec.get("horizonte", "#4b3f7a")))
+        arr = (top * (1 - y) + bot * y).astype(np.uint8)
+        img = Image.fromarray(np.repeat(arr, W, axis=1), "RGB")
+        d = ImageDraw.Draw(img)
+        rnd = random.Random(5)
+        for _ in range(90):
+            x, yy, rr = rnd.uniform(0, W), rnd.uniform(0, 1100), rnd.uniform(1, 3)
+            d.ellipse((x - rr, yy - rr, x + rr, yy + rr), fill=(255, 255, 255))
+        d.ellipse((780, 640, 900, 760), fill=(254, 249, 195))
+        y0 = spec.get("agua_y", 1300)
+        for k in range(H - y0):
+            c = tuple(int(a + (b - a) * k / (H - y0)) for a, b in zip(hexrgb("#1e3a8a"), hexrgb("#0b1640")))
+            d.line((0, y0 + k, W, y0 + k), fill=c)
+        suelo = None
     elif t == "oficina":
         svg, caja = P.oficina_interior(**spec.get("a", {}))
         img = render_svg(svg, caja, 1.0).convert("RGB")
@@ -206,9 +222,12 @@ def formato_num(n, pre="", suf=""):
 
 
 def tarjeta_capitulo(titulo, n=""):
-    f1 = e1.font(e1.F_BOLD, 110)
+    t1 = 110
+    while t1 > 60 and e1.font(e1.F_BOLD, t1).getlength(titulo) > 860:
+        t1 -= 4
+    f1 = e1.font(e1.F_BOLD, t1)
     f2 = e1.font(e1.F_BOLD, 42)
-    w = max(760, int(f1.getlength(titulo)) + 140)
+    w = min(1000, max(760, int(f1.getlength(titulo)) + 140))
     h = 300
     im = Image.new("RGBA", (w + 24, h + 24), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
