@@ -88,14 +88,15 @@ def modo_cola():
     files = []
     for r in rows:
         rid = (r.get("id") or "").strip()
-        if (r.get("estado") or "").strip() != "guion_listo" or not (r.get("guion_json") or "").strip():
+        guion = "".join((r.get(k) or "") for k in ("guion_json", "guion_json2", "guion_json3")).strip()
+        if (r.get("estado") or "").strip() != "guion_listo" or not guion:
             continue
         if f"{rid}.mp4" in hechos:
             print("ya renderizado:", rid)
             continue
         js = os.path.join(OUT, f"{rid}.json")
         with open(js, "w", encoding="utf-8") as f:
-            f.write(r["guion_json"])
+            f.write(guion)
         try:
             files += render(js, os.path.join(OUT, f"{rid}.mp4"))
             files.append(js)
@@ -114,10 +115,16 @@ def modo_ejemplo(voz):
 
 def modo_archivo(ruta):
     """Renderiza un guion del repositorio (por ejemplo ejemplos/hsf_blockbuster.json)."""
-    ruta = ruta or "ejemplos/hsf_blockbuster.json"
-    js = os.path.join(ROOT, ruta)
-    nombre = os.path.splitext(os.path.basename(js))[0]
-    subir(render(js, os.path.join(OUT, nombre + ".mp4")))
+    rutas = [r.strip() for r in (ruta or "ejemplos/hsf_blockbuster.json").split(",") if r.strip()]
+    files = []
+    for r in rutas:
+        js = os.path.join(ROOT, r)
+        nombre = os.path.splitext(os.path.basename(js))[0]
+        try:
+            files += render(js, os.path.join(OUT, nombre + ".mp4"))
+        except Exception as e:
+            print("FALLO", r, e, flush=True)
+    subir(files)
 
 
 def modo_muestra():
