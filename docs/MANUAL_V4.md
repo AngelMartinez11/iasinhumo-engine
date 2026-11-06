@@ -1,4 +1,9 @@
-# Manual del motor v4 (guionistas de IA SinHumo e Historias Sin Filtro)
+# Manual del motor v4 (guionistas del canal Dato Bomba)
+
+Desde el 6 de noviembre de 2026 los dos formatos se publican en UN solo canal: **Dato Bomba** (YouTube y TikTok).
+- `canal: "iasinhumo"` = videos de TECNOLOGIA (2 al dia, 07:30 y 17:30).
+- `canal: "historias"` = videos GENERALES de formato largo (2 al dia, 12:30 y 20:30).
+Los dos usan la marca DATO BOMBA, la voz `it-IT-GiuseppeMultilingualNeural` y no usan tarjetas de capitulo.
 
 El motor v4 (`engine4.py`) arma cada escena con piezas reutilizables de `piezas.py`.
 El guion NO dibuja SVG: solo nombra piezas, posiciones y tiempos. Eso ahorra tokens
