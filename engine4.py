@@ -364,6 +364,11 @@ def con_alpha(img, a):
 def render(script_path, out_path, voices_dir):
     spec = json.load(open(script_path, encoding="utf-8"))
     canal = cargar_canal(spec.get("canal", ""))
+    if canal.get("capitulos") is False:
+        # el canal no usa tarjetas de capitulo: se quitan y se pasa directo a la siguiente escena
+        spec["scenes"] = [sc for sc in spec["scenes"] if not (sc.get("capitulo") and not sc.get("lines"))]
+        for sc in spec["scenes"]:
+            sc.pop("capitulo", None)
     if os.environ.get("ISH_TTS") == "mudo":
         tts, voice_b = VozMuda(), None
     else:
