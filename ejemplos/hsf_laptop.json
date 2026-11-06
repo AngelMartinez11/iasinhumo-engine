@@ -1,0 +1,2052 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "La primera laptop pesaba 25 kilos: así nació la computadora portátil",
+ "description": "De la idea de Alan Kay en 1972 a la Osborne 1 de 11 kilos, la GRiD Compass que voló al espacio, la Epson HX-20 con 50 horas de batería y el día de 2008 en que las laptops superaron a las de escritorio.\nFuentes: Computer History Museum; IEEE (hito Toshiba T1100); Epson (historia corporativa HX-20); IEEE Spectrum (GRiD Compass en el transbordador); InfoWorld 1981; iSuppli (envios Q3 2008).",
+ "hashtags": [
+  "#HistoriasSinFiltro",
+  "#laptop",
+  "#tecnologia",
+  "#historia",
+  "#computadoras"
+ ],
+ "source_url": "https://www.computerhistory.org/revolution/mobile-computing/18/316",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Hoy una laptop cabe en tu mochila y pesa poco más de un kilo."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop_moderna",
+     "x": 540,
+     "y": 1500,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "HOY"
+     },
+     "anim": "pop",
+     "id": "lap"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "~1 KG",
+      "sub": "laptop actual"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Pero la primera computadora que se vendió como portátil pesaba veinticinco kilos."
+    }
+   ],
+   "items": [
+    {
+     "p": "bascula",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "25 KG"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1450,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.9,
+     "a": {
+      "texto": "5100"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 25,
+    "pre": "",
+    "suf": " KG",
+    "texto": "KILOS",
+    "y": 640,
+    "delay": 2.2,
+    "cuenta": true
+   },
+   "cam": {
+    "z": [
+     1.12,
+     1.0
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y costaba lo mismo que un carro."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "HASTA $19.975",
+      "fondo": "#ef4444",
+      "rot": -5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo pasamos de máquinas que se cargaban como maletas a algo que se abre como un libro?"
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 290,
+     "y": 1500,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1240,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "laptop_moderna",
+     "x": 800,
+     "y": 1500,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.6,
+     "a": {},
+     "anim": "right"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 820,
+     "s": 1.1,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "EL SUEÑO",
+    "n": 1
+   },
+   "min_dur": 1.8
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "A finales de los sesenta, un investigador llamado Alan Kay tuvo una idea rara para su época.",
+     "say": "A finales de los sesenta, un investigador llamado Álan Kéi tuvo una idea rara para su época."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "brazos": "cabeza",
+      "camisa": "#7c3aed",
+      "pelo": "#6b4423",
+      "peinado": "corto",
+      "lentes": true
+     },
+     "anim": "up",
+     "id": "kay"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 700,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "Alan Kay",
+      "sub": "cientifico de la computacion"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Una computadora del tamaño de un cuaderno."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 830,
+     "y": 1150,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "DYNA"
+     },
+     "anim": "pop",
+     "id": "libro"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "La llamó Dynabook, y la pensó para niños.",
+     "say": "La llamó Dáinabuk, y la pensó para niños."
+    }
+   ],
+   "items": [
+    {
+     "p": "nino",
+     "x": 230,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "camisa": "#22c55e"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "etiqueta",
+     "x": 830,
+     "y": 860,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "DYNABOOK",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "En 1972 la describió en un artículo: una computadora personal para niños de todas las edades."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "texto": "1972"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 720,
+     "s": 1.35,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "1972",
+      "sub": "el articulo de Kay"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Su equipo en Xerox intentó construirla. El prototipo se llamó NoteTaker.",
+     "say": "Su equipo en Sérox intentó construirla. El prototipo se llamó Nout téiker."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "XEROX PARC",
+      "pisos": 6,
+      "ancho": 520
+     },
+     "anim": "crece"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "liso",
+    "c": "#e4e4ea"
+   },
+   "lines": [
+    {
+     "text": "¿El problema? Pesaba unos veintidós kilos."
+    }
+   ],
+   "items": [
+    {
+     "p": "bascula",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1450,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "color": "#cbd5e1",
+      "texto": "ST-78"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 22,
+    "pre": "",
+    "suf": " KG",
+    "texto": "EL NOTETAKER, 1976",
+    "y": 640,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Nunca salió a la venta. Pero la semilla ya estaba plantada.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "NO SE VENDIÓ",
+      "fondo": "#ef4444",
+      "rot": 7
+     }
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "COMPUTADORAS MALETA",
+    "n": 2
+   },
+   "min_dur": 1.8
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En 1975, IBM sacó su modelo 5100 y lo llamó computadora portátil."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "IBM"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 760,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "1975"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Pesaba veinticinco kilos y había que enchufarla. Portátil, con mucha fe."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "25 KG"
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1640,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "SIN BATERÍA",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Seis años después llegó un hombre que cambió el juego: Adam Osborne.",
+     "say": "Seis años después llegó un hombre que cambió el juego: Ádam Ósborn."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "risa",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#f0c448",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso"
+     },
+     "anim": "up",
+     "id": "adam"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 700,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "Adam Osborne",
+      "sub": "escritor de libros de computacion"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "El 3 de abril de 1981 presentó la Osborne 1.",
+     "say": "El 3 de abril de 1981 presentó la Ósborn uan."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 1.05,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "CP/M"
+     },
+     "anim": "drop",
+     "id": "osb"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "1981"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Tenía una pantalla de apenas cinco pulgadas, dos disqueteras y un asa para cargarla."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 760,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "texto": "5\"",
+      "sub": "pantalla"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 800,
+     "y": 760,
+     "s": 1.25,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "2",
+      "sub": "disqueteras"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Pero lo que hizo ruido fue el precio: mil setecientos noventa y cinco dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "bolsa_dinero",
+     "x": 540,
+     "y": 1560,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "$"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 1795,
+    "pre": "$",
+    "suf": "",
+    "texto": "LA OSBORNE 1",
+    "y": 640,
+    "delay": 1.6,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y traía programas que, por separado, costaban unos mil quinientos dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "sobre",
+     "x": 250,
+     "y": 1150,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#3b82f6",
+      "texto": "SOFT"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "sobre",
+     "x": 830,
+     "y": 1150,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "color": "#22c55e",
+      "texto": "SOFT"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "La revista InfoWorld repitió el precio en su portada, por si los lectores pensaban que era un error.",
+     "say": "La revista Info uórld repitió el precio en su portada, por si los lectores pensaban que era un error."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1250,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "texto": "1981"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "$1795",
+      "rot": -4
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 960,
+     "s": 1.1,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "SÍ, $1795",
+      "fondo": "#ef4444",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "La publicidad decía que cabía debajo del asiento de un avión."
+    }
+   ],
+   "items": [
+    {
+     "p": "avion",
+     "x": 540,
+     "y": 820,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.2,
+     "a": {},
+     "anim": "up"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "liso",
+    "c": "#e4e4ea"
+   },
+   "lines": [
+    {
+     "text": "Pesaba once kilos, como una máquina de coser. Y no tenía batería."
+    }
+   ],
+   "items": [
+    {
+     "p": "bascula",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "11 KG"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1450,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "texto": "CP/M"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 11,
+    "pre": "",
+    "suf": " KG",
+    "texto": "KILOS",
+    "y": 640,
+    "delay": 1.0,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Aun así, fue un éxito. En su mejor momento vendía unas diez mil al mes."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1520,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "sube",
+      "color": "#22c55e"
+     },
+     "anim": "crece"
+    }
+   ],
+   "dato": {
+    "num": 10000,
+    "pre": "",
+    "suf": "",
+    "texto": "UNIDADES AL MES",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": true
+   }
+  },
+  {
+   "capitulo": {
+    "t": "EL ERROR QUE TIENE NOMBRE",
+    "n": 3
+   },
+   "min_dur": 1.8
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "A principios de 1983, Osborne empezó a mostrarle a la prensa su siguiente modelo, más potente."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1640,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "brazos": "senala",
+      "ropa": "traje",
+      "corbata": "#f0c448",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 760,
+     "y": 1560,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "color": "#94a3b8",
+      "texto": "EXEC"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y pasó algo que no esperaba."
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Las tiendas cancelaron sus pedidos de la Osborne 1. ¿Para qué comprar la vieja, si venía una mejor?"
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "COMPUTADORAS",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "icono",
+     "x": 820,
+     "y": 820,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Las máquinas se acumularon. Bajaron el precio, y aun así no se vendían."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 230,
+     "y": 1560,
+     "s": 0.42,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1560,
+     "s": 0.42,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "abierto": false
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 850,
+     "y": 1560,
+     "s": 0.42,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "abierto": false
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "El 13 de septiembre de 1983, la empresa se declaró en quiebra.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "lapida",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "OSBORNE",
+      "sub": "1983"
+     },
+     "anim": "crece"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.12,
+     1.0
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Hoy, en el mundo de los negocios, anunciar un producto antes de tiempo y matar las ventas del actual se llama el efecto Osborne.",
+     "say": "Hoy, en el mundo de los negocios, anunciar un producto antes de tiempo y matar las ventas del actual se llama el efecto Ósborn."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1100,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "EFECTO OSBORNE",
+      "fondo": "#f0c448",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Aunque ex empleados dicen que la empresa ya venía con problemas de dinero."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1400,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "texto": "SE DISCUTE",
+      "fondo": "#ffffff",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "NACE LA LAPTOP",
+    "n": 4
+   },
+   "min_dur": 1.8
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Pero la verdadera revolución venía de Japón. Epson presentó la HX-20.",
+     "say": "Pero la verdadera revolución venía de Japón. Épson presentó la hache equis veinte."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop",
+     "x": 540,
+     "y": 1350,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "HX-20",
+      "color": "#facc15"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Del tamaño de una hoja de papel, con su propia impresora integrada."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "IMPRESORA INCLUIDA",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Y lo más loco: con una carga, la batería duraba unas cincuenta horas."
+    }
+   ],
+   "items": [
+    {
+     "p": "bateria",
+     "x": 540,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "nivel": 1.0
+     },
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 50,
+    "pre": "",
+    "suf": " H",
+    "texto": "HORAS DE BATERÍA",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "liso",
+    "c": "#e4e4ea"
+   },
+   "lines": [
+    {
+     "text": "Pesaba un kilo y seiscientos gramos, cuando la Osborne pesaba once."
+    }
+   ],
+   "items": [
+    {
+     "p": "bascula",
+     "x": 290,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1.6 KG"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "laptop",
+     "x": 290,
+     "y": 1300,
+     "s": 0.62,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "HX-20",
+      "color": "#facc15"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "bascula",
+     "x": 800,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.9,
+     "a": {
+      "texto": "11 KG"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 800,
+     "y": 1470,
+     "s": 0.62,
+     "at": 0,
+     "delay": 1.3,
+     "a": {},
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Y en 1982 apareció otra máquina, diseñada por el británico Bill Moggridge: la GRiD Compass.",
+     "say": "Y en 1982 apareció otra máquina, diseñada por el británico Bil Móguerich: la Grid Cómpas."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 260,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "senala",
+      "camisa": "#0ea5e9",
+      "pelo": "#a16207",
+      "peinado": "calvo",
+      "lentes": true
+     },
+     "anim": "left"
+    },
+    {
+     "p": "nombre",
+     "x": 360,
+     "y": 720,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "Bill Moggridge",
+      "sub": "disenador industrial"
+     }
+    },
+    {
+     "p": "clamshell",
+     "x": 760,
+     "y": 1500,
+     "s": 0.6,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "abierto": false
+     },
+     "anim": "pop",
+     "id": "grid"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "grid"
+   ],
+   "lines": [
+    {
+     "text": "Su gran idea fue la bisagra: una pantalla que se cierra sobre el teclado como una concha."
+    }
+   ],
+   "items": [
+    {
+     "p": "clamshell",
+     "x": 760,
+     "y": 1500,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true
+     },
+     "anim": "fade"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     760,
+     1300
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Casi todas las laptops de hoy usan esa forma."
+    }
+   ],
+   "items": [
+    {
+     "p": "clamshell",
+     "x": 290,
+     "y": 1560,
+     "s": 0.62,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "laptop_moderna",
+     "x": 800,
+     "y": 1560,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.8,
+     "a": {},
+     "anim": "right"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Costaba ocho mil ciento cincuenta dólares. Era tan cara que su gran cliente fue el gobierno de Estados Unidos."
+    }
+   ],
+   "items": [
+    {
+     "p": "clamshell",
+     "x": 540,
+     "y": 1500,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 8150,
+    "pre": "$",
+    "suf": "",
+    "texto": "LA GRID COMPASS, 1982",
+    "y": 640,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Y en noviembre de 1983 voló al espacio en el transbordador Columbia."
+    }
+   ],
+   "items": [
+    {
+     "p": "transbordador",
+     "x": 540,
+     "y": 1100,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1480,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "1983",
+      "sub": "transbordador Columbia"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1100
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Fue la primera laptop usada en una misión espacial.",
+     "pausa": 0.3
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Faltaba una cosa: que fuera para todos. En 1985, Toshiba lanzó la T1100."
+    }
+   ],
+   "items": [
+    {
+     "p": "clamshell",
+     "x": 540,
+     "y": 1500,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#475569",
+      "tinta": "#cbd5e1",
+      "texto": "T1100"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "1985"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Batería recargable, pantalla plana, disquete pequeño, y compatible con los programas de la IBM PC.",
+     "say": "Batería recargable, pantalla plana, disquete pequeño, y compatible con los programas de la I B M P C."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 760,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "4.1 KG"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 800,
+     "y": 760,
+     "s": 1.25,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "$1899"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Toshiba la llama la primera laptop para el mercado masivo.",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "EL DISEÑO QUE COPIAMOS TODOS",
+    "n": 5
+   },
+   "min_dur": 1.8
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "En octubre de 1991, Apple presentó sus primeras PowerBook.",
+     "say": "En octubre de 1991, Ápol presentó sus primeras Páuer buk."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop_moderna",
+     "x": 540,
+     "y": 1500,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#64748b",
+      "pantalla": "#0f172a"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Su truco fue mover el teclado hacia atrás y dejar espacio para apoyar las manos, con el control del cursor en el centro."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1640,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "REPOSAMANOS",
+      "rot": -3
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1450
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Mira tu laptop: todavía es así."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 820,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "check"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "En su primer año, esas computadoras le dejaron a Apple más de mil millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "billetes",
+     "x": 300,
+     "y": 1450,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 4
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "bolsa_dinero",
+     "x": 780,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.4,
+     "a": {},
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 1000,
+    "pre": "$",
+    "suf": "",
+    "texto": "MILLONES EL PRIMER AÑO",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": true
+   }
+  },
+  {
+   "capitulo": {
+    "t": "EL DÍA QUE GANARON",
+    "n": 6
+   },
+   "min_dur": 1.8
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Durante décadas, la computadora de verdad era la de escritorio. La portátil era un lujo."
+    }
+   ],
+   "items": [
+    {
+     "p": "pc_escritorio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Hasta 2008. Ese año, por primera vez, en el mundo se enviaron más laptops que computadoras de escritorio en un trimestre."
+    }
+   ],
+   "items": [
+    {
+     "p": "pc_escritorio",
+     "x": 280,
+     "y": 1560,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "laptop_moderna",
+     "x": 800,
+     "y": 1560,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "right"
+    },
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 760,
+     "s": 0.6,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "2008"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "DATOS QUE NO SABÍAS",
+    "n": 7
+   },
+   "min_dur": 1.8
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Uno. Epson anunciaba la HX-20 con una foto en dos páginas de revista y un título: tamaño real.",
+     "say": "Uno. Épson anunciaba la hache equis veinte con una foto en dos páginas de revista y un título: tamaño real."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1200,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "texto": "1:1"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Dos. En la T1100, la pantalla funcionaba con solo cinco chips. En la IBM PC de escritorio hacían falta casi cien.",
+     "say": "Dos. En la te mil cien, la pantalla funcionaba con solo cinco chips. En la I B M P C de escritorio hacían falta casi cien."
+    }
+   ],
+   "items": [
+    {
+     "p": "clamshell",
+     "x": 290,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#475569",
+      "tinta": "#cbd5e1",
+      "texto": "T1100"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 820,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "5",
+      "sub": "chips"
+     }
+    },
+    {
+     "p": "pc_escritorio",
+     "x": 800,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 2.0,
+     "a": {},
+     "anim": "right"
+    },
+    {
+     "p": "chapa",
+     "x": 800,
+     "y": 820,
+     "s": 1.5,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "~100",
+      "sub": "chips"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Y tres. Alan Kay dice que su Dynabook todavía no se ha inventado, porque lo importante no era la máquina, sino aprender con ella.",
+     "say": "Y tres. Álan Kéi dice que su Dáinabuk todavía no se ha inventado, porque lo importante no era la máquina, sino aprender con ella."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "camisa": "#7c3aed",
+      "pelo": "#6b4423",
+      "peinado": "corto",
+      "lentes": true
+     },
+     "anim": "up"
+    },
+    {
+     "p": "libro",
+     "x": 830,
+     "y": 1150,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "DYNA"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "De veinticinco kilos y enchufada a la pared, a poco más de un kilo y horas de batería."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 270,
+     "y": 1560,
+     "s": 0.45,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1300,
+     "s": 0.4,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "laptop_moderna",
+     "x": 810,
+     "y": 1560,
+     "s": 0.45,
+     "at": 0,
+     "delay": 1.6,
+     "a": {},
+     "anim": "right"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1350
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Todo empezó con un dibujo de un niño con una computadora en las manos.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "nino",
+     "x": 540,
+     "y": 1560,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "camisa": "#22c55e"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "libro",
+     "x": 700,
+     "y": 1060,
+     "s": 0.32,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": ""
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Y tú? ¿Cuál fue tu primera computadora? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1200,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "¿LA TUYA?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}
