@@ -44,7 +44,14 @@ jobs:
         with:
           python-version: "3.11"
       - name: Dependencias del sistema
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg libcairo2
+        timeout-minutes: 15
+        run: |
+          if command -v ffmpeg >/dev/null 2>&1 && ldconfig -p | grep -q libcairo.so.2; then
+            echo "ffmpeg y cairo ya instalados"
+          else
+            sudo apt-get update -o Acquire::Retries=3
+            sudo apt-get install -y --no-install-recommends ffmpeg libcairo2
+          fi
       - name: Fuentes Poppins
         run: |
           sudo mkdir -p /usr/share/fonts/truetype/google-fonts
