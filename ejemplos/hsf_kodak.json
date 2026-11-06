@@ -1,0 +1,818 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "Kodak inventó la cámara digital... y la escondió en un cajón",
+ "description": "En 1975 un ingeniero de Kodak, Steven Sasson, inventó la cámara digital. Kodak la guardó para proteger su negocio de rollos. En 2012 quebró, el mismo año en que Instagram, con 13 empleados, se vendió por mil millones.\nFuentes: IEEE Milestones (ETHW), NBC News, AFP/VOA sobre la quiebra de Kodak (2012).",
+ "hashtags": [
+  "#HistoriasSinFiltro",
+  "#Kodak",
+  "#historiasreales",
+  "#negocios",
+  "#tecnologia"
+ ],
+ "source_url": "https://ethw.org/Milestones:Handheld_Digital_Camera,_1975",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "En 1975, un ingeniero de Kodak inventó algo que iba a cambiar el mundo: la cámara digital."
+    }
+   ],
+   "items": [
+    {
+     "p": "camara",
+     "x": 600,
+     "y": 1150,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "prototipo"
+     },
+     "anim": "pop",
+     "id": "proto"
+    },
+    {
+     "p": "persona",
+     "x": 200,
+     "y": 1600,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "cara": "feliz",
+      "brazos": "arriba",
+      "ropa": "bata",
+      "lentes": true,
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "left"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y Kodak decidió guardarla en un cajón.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 640,
+     "y": 820,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "SECRETO",
+      "fondo": "#ef4444",
+      "rot": -6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Treinta y siete años después, Kodak estaba en bancarrota."
+    }
+   ],
+   "items": [
+    {
+     "p": "lapida",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "KODAK",
+      "sub": "2012"
+     },
+     "anim": "crece"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.12,
+     1.0
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo termina destruida por la foto digital la misma empresa que la inventó?"
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1080,
+     "s": 1.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "EL GIGANTE AMARILLO",
+    "n": 1
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Durante casi un siglo, decir foto era decir Kodak."
+    }
+   ],
+   "items": [
+    {
+     "p": "rollo",
+     "x": 380,
+     "y": 1100,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "KODAK",
+      "color": "#facc15"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "camara",
+     "x": 760,
+     "y": 1420,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "tipo": "antigua"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "A finales de los años ochenta, llegó a tener 145 mil empleados."
+    }
+   ],
+   "items": [
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1640,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 27,
+      "filas": 3,
+      "escala": 0.36,
+      "ancho": 960,
+      "cara": "feliz"
+     },
+     "anim": "up"
+    }
+   ],
+   "dato": {
+    "num": 145000,
+    "texto": "EMPLEADOS",
+    "y": 590,
+    "delay": 1.4
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Y en 1996 vendía más de 16 mil millones de dólares al año."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "KODAK",
+      "pisos": 8,
+      "ancho": 440,
+      "letrero": "#b45309"
+     },
+     "anim": "crece"
+    }
+   ],
+   "dato": {
+    "num": 16000,
+    "pre": "$",
+    "suf": " MILLONES",
+    "texto": "VENTAS EN 1996",
+    "y": 590,
+    "delay": 1.2
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Su gran negocio era el rollo: cada foto que tomabas era dinero para Kodak."
+    }
+   ],
+   "items": [
+    {
+     "p": "rollo",
+     "x": 260,
+     "y": 1000,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#facc15"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "rollo",
+     "x": 560,
+     "y": 1150,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "color": "#facc15"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "rollo",
+     "x": 820,
+     "y": 980,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "color": "#facc15"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "billetes",
+     "x": 540,
+     "y": 1500,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "n": 4
+     },
+     "anim": "up"
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "EL INVENTO",
+    "n": 2
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En 1975, un ingeniero de 24 años, Steven Sasson, armó un aparato del tamaño de una tostadora.",
+     "say": "En 1975, un ingeniero de 24 años, Stíven Sásson, armó un aparato del tamaño de una tostadora."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 270,
+     "y": 1600,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "brazos": "senala",
+      "ropa": "bata",
+      "lentes": true,
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "camara",
+     "x": 760,
+     "y": 1180,
+     "s": 0.95,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "tipo": "prototipo"
+     },
+     "anim": "pop",
+     "id": "proto"
+    },
+    {
+     "p": "nombre",
+     "x": 300,
+     "y": 700,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "Steven Sasson",
+      "sub": "ingeniero de Kodak"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Pesaba casi cuatro kilos, y tardaba 23 segundos en guardar una sola foto en un cassette."
+    }
+   ],
+   "dato": {
+    "num": 23,
+    "suf": " SEGUNDOS",
+    "texto": "POR CADA FOTO",
+    "y": 620,
+    "delay": 1.8
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "La foto salía en blanco y negro, de apenas cien por cien pixeles."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 1420,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "0,01 MEGAPIXELES",
+      "rot": 5,
+      "size": 54
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "Según Sasson, cuando la mostró, la reacción fue: es bonita, pero no se lo digas a nadie."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 250,
+     "y": 1680,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "ropa": "bata",
+      "lentes": true,
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 820,
+     "y": 1680,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "cara": "risa",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#facc15",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "etiqueta",
+     "x": 820,
+     "y": 820,
+     "s": 0.95,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "SECRETO",
+      "fondo": "#ef4444",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "¿Por qué? Porque una cámara sin rollo amenazaba el negocio que les daba de comer."
+    }
+   ],
+   "items": [
+    {
+     "p": "rollo",
+     "x": 540,
+     "y": 1180,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#facc15"
+     },
+     "anim": "pop",
+     "id": "rl"
+    },
+    {
+     "p": "icono",
+     "x": 600,
+     "y": 1180,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "LA CAÍDA",
+    "n": 3
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "A inicios de los dos mil, las cámaras digitales le ganaron a las de rollo."
+    }
+   ],
+   "items": [
+    {
+     "p": "camara",
+     "x": 300,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "antigua"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "camara",
+     "x": 780,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "tipo": "digital"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "icono",
+     "x": 300,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 780,
+     "y": 900,
+     "s": 0.6,
+     "at": 0,
+     "delay": 2.1,
+     "a": {
+      "tipo": "check"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Después llegaron los teléfonos con cámara, y el rollo dejó de importar."
+    }
+   ],
+   "items": [
+    {
+     "p": "telefono",
+     "x": 330,
+     "y": 1250,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "CÁMARA",
+      "color": "#6d5dfc"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "grafica",
+     "x": 760,
+     "y": 1500,
+     "s": 0.75,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "tipo": "baja"
+     },
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "En enero de 2012, Kodak se declaró en bancarrota."
+    },
+    {
+     "text": "De 145 mil empleados, le quedaban unos 19 mil."
+    }
+   ],
+   "items": [
+    {
+     "p": "lapida",
+     "x": 540,
+     "y": 1560,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "KODAK",
+      "sub": "2012"
+     },
+     "anim": "crece"
+    }
+   ],
+   "dato": {
+    "num": 19000,
+    "texto": "EMPLEADOS EN 2012",
+    "y": 620,
+    "at": 1,
+    "delay": 0.6
+   }
+  },
+  {
+   "capitulo": {
+    "t": "LA IRONÍA",
+    "n": 4
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Y aquí viene lo más loco."
+    },
+    {
+     "text": "Ese mismo año, una app de fotos con solo 13 empleados se vendió por mil millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "telefono",
+     "x": 540,
+     "y": 1180,
+     "s": 1.0,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "texto": "APP DE FOTOS",
+      "color": "#ec4899"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1700,
+     "s": 1.0,
+     "at": 1,
+     "delay": 1.6,
+     "a": {
+      "n": 13,
+      "filas": 1,
+      "escala": 0.3,
+      "ancho": 1000
+     },
+     "anim": "up"
+    }
+   ],
+   "dato": {
+    "num": 1000,
+    "pre": "$",
+    "suf": " MILLONES",
+    "y": 560,
+    "at": 1,
+    "delay": 3.2
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Se llamaba Instagram, y la compró Facebook."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1520,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "INSTAGRAM",
+      "fondo": "#ffffff",
+      "tinta": "#be185d",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Kodak tuvo el futuro en sus manos en 1975, y lo guardó en un cajón.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "camara",
+     "x": 540,
+     "y": 1150,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "prototipo"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 820,
+     "s": 0.95,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "1975",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "¿Tú todavía tienes fotos en rollo? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1480,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "¿Y TÚ?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}

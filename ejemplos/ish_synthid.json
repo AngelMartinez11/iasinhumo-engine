@@ -1,0 +1,343 @@
+{
+ "motor": 4,
+ "canal": "iasinhumo",
+ "title": "¿Ese video es IA? Google ya te deja comprobarlo (con letra pequeña)",
+ "description": "Google está ampliando su detector SynthID: revisa si una imagen, video o audio trae la marca invisible de IA, incluso de OpenAI, NVIDIA, Kakao y Apple. Por ahora en inglés.\nFuente: https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/\n¿Lo usarías?",
+ "hashtags": [
+  "#IASinHumo",
+  "#inteligenciaartificial",
+  "#Google",
+  "#deepfake",
+  "#IA"
+ ],
+ "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "¿Ese video lo hizo una inteligencia artificial? Google quiere que lo puedas comprobar."
+    }
+   ],
+   "items": [
+    {
+     "p": "robot",
+     "x": 250,
+     "y": 1560,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left",
+     "id": "bot"
+    },
+    {
+     "p": "telefono",
+     "x": 720,
+     "y": 1230,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "play": true,
+      "color": "#3b82f6"
+     },
+     "anim": "pop",
+     "id": "tel"
+    },
+    {
+     "p": "icono",
+     "x": 720,
+     "y": 820,
+     "s": 0.7,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop",
+     "id": "preg"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "preg"
+   ],
+   "lines": [
+    {
+     "text": "Está ampliando a todo el mundo su detector SynthID.",
+     "say": "Está ampliando a todo el mundo su detector Sinz ai di."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "SYNTHID DETECTOR",
+      "rot": -5,
+      "size": 58
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Le das una imagen, un video o un audio, y revisa si trae la marca de agua invisible que pone la IA."
+    }
+   ],
+   "items": [
+    {
+     "p": "camara",
+     "x": 260,
+     "y": 1000,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "digital"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "tv",
+     "x": 760,
+     "y": 1000,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "VIDEO"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "disco",
+     "x": 540,
+     "y": 1380,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.8,
+     "a": {},
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1650,
+     "s": 0.9,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "MARCA INVISIBLE",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Y no solo reconoce lo hecho con Google: también contenido de OpenAI, NVIDIA, Kakao y Apple.",
+     "say": "Y no solo reconoce lo hecho con Google: también contenido de Open ei ai, Envidia, Kakao y Apple."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 300,
+     "y": 820,
+     "s": 0.85,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "OPENAI",
+      "fondo": "#ffffff",
+      "rot": -6
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 920,
+     "s": 0.85,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "NVIDIA",
+      "fondo": "#86efac",
+      "rot": 5
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 330,
+     "y": 1180,
+     "s": 0.85,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "KAKAO",
+      "fondo": "#ffd23f",
+      "rot": 4
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 1300,
+     "s": 0.85,
+     "at": 0,
+     "delay": 3.4,
+     "a": {
+      "texto": "APPLE",
+      "fondo": "#e5e7eb",
+      "rot": -4
+     }
+    },
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1720,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "sorpresa",
+      "brazos": "arriba",
+      "camisa": "#8b5cf6"
+     },
+     "anim": "up"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Google dice que ya marcó más de 180 mil millones de imágenes y videos."
+    }
+   ],
+   "items": [
+    {
+     "p": "telefono",
+     "x": 540,
+     "y": 1300,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#f59e0b",
+      "texto": "IMÁGENES"
+     },
+     "anim": "up"
+    }
+   ],
+   "dato": {
+    "num": 180000,
+    "suf": " MILLONES",
+    "texto": "IMÁGENES Y VIDEOS MARCADOS",
+    "y": 600,
+    "delay": 1.4
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Pero ojo: por ahora funciona en inglés, y solo reconoce lo que trae esa marca."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1080,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1450,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "SOLO EN INGLÉS",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "¿Real o humo? Sirve, pero no es magia."
+    },
+    {
+     "text": "¿Lo usarías antes de compartir un video?"
+    }
+   ],
+   "items": [
+    {
+     "p": "robot",
+     "x": 540,
+     "y": 1560,
+     "s": 1.7,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "s": 1.05,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "texto": "¿LO USARÍAS?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}

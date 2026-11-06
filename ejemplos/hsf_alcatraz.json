@@ -1,0 +1,829 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "Escaparon de Alcatraz con cucharas... y nunca los encontraron",
+ "description": "El 11 de junio de 1962, Frank Morris y los hermanos John y Clarence Anglin escaparon de Alcatraz con cabezas falsas y una balsa de impermeables. El FBI cerró el caso en 1979, pero una carta de 2013 reabrió el misterio.\nFuentes: FBI (archivos del caso), Britannica, History.com, WTOP (2025).",
+ "hashtags": [
+  "#HistoriasSinFiltro",
+  "#Alcatraz",
+  "#misterio",
+  "#historiasreales",
+  "#fuga"
+ ],
+ "source_url": "https://www.britannica.com/event/Alcatraz-escape-of-June-1962",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "mar"
+   },
+   "lines": [
+    {
+     "text": "En 1962, tres presos escaparon de la cárcel más segura de Estados Unidos."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1310,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ALCATRAZ"
+     },
+     "anim": "up"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y hasta hoy, nadie sabe si sobrevivieron.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "A la mañana siguiente, los guardias solo encontraron cabezas falsas en sus camas."
+    }
+   ],
+   "items": [
+    {
+     "p": "cama",
+     "x": 540,
+     "y": 1500,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 380,
+     "y": 900,
+     "s": 0.95,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "CABEZA FALSA",
+      "fondo": "#ef4444",
+      "rot": -6
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     400,
+     1150
+    ]
+   }
+  },
+  {
+   "capitulo": {
+    "t": "LA ROCA",
+    "n": 1
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "mar",
+    "cielo": "#7dd3fc",
+    "horizonte": "#e0f2fe"
+   },
+   "lines": [
+    {
+     "text": "Alcatraz era una prisión en una isla de la bahía de San Francisco."
+    },
+    {
+     "text": "Rodeada de agua helada y corrientes fuertes."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1310,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "texto": "AGUA HELADA",
+      "fondo": "#7dd3fc",
+      "rot": -5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Ahí llegaron tres hombres que ya habían intentado escapar de otras cárceles."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 200,
+     "y": 1600,
+     "s": 0.68,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "camisa": "#94a3b8",
+      "pantalon": "#475569",
+      "pelo": "#1f1f1f"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1600,
+     "s": 0.68,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "cara": "serio",
+      "camisa": "#94a3b8",
+      "pantalon": "#475569",
+      "pelo": "#a16207"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "persona",
+     "x": 880,
+     "y": 1600,
+     "s": 0.68,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "cara": "serio",
+      "camisa": "#94a3b8",
+      "pantalon": "#475569",
+      "pelo": "#6b4423"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "nombre",
+     "x": 220,
+     "y": 720,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "Frank Morris"
+     }
+    },
+    {
+     "p": "nombre",
+     "x": 700,
+     "y": 860,
+     "s": 0.8,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "John y Clarence Anglin",
+      "sub": "hermanos"
+     }
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "EL PLAN",
+    "n": 2
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Durante meses, rasparon la pared detrás de sus celdas con cucharas del comedor."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "cuchara",
+     "x": 540,
+     "y": 1150,
+     "s": 1.2,
+     "at": 0,
+     "delay": 1.8,
+     "a": {},
+     "anim": "pop",
+     "id": "cuchara"
+    },
+    {
+     "p": "etiqueta",
+     "x": 790,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "CUCHARAS",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y hasta armaron un taladro con el motor de una aspiradora."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1420,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "MOTOR DE ASPIRADORA",
+      "fondo": "#ffffff",
+      "rot": -4,
+      "size": 52
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Para que nadie notara su ausencia, fabricaron cabezas falsas con jabón, pasta de dientes y papel higiénico."
+    }
+   ],
+   "items": [
+    {
+     "p": "cama",
+     "x": 540,
+     "y": 1560,
+     "s": 1.35,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 230,
+     "y": 800,
+     "s": 0.8,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "JABÓN",
+      "rot": -6
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 560,
+     "y": 700,
+     "s": 0.8,
+     "at": 0,
+     "delay": 3.6,
+     "a": {
+      "texto": "PASTA",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 860,
+     "y": 820,
+     "s": 0.8,
+     "at": 0,
+     "delay": 4.2,
+     "a": {
+      "texto": "PAPEL",
+      "fondo": "#7dd3fc",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y les pegaron pelo de verdad, recogido del piso de la barbería."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1000,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "PELO REAL",
+      "fondo": "#ef4444",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Con más de 50 impermeables, armaron una balsa inflable y chalecos salvavidas."
+    }
+   ],
+   "items": [
+    {
+     "p": "balsa",
+     "x": 540,
+     "y": 1400,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "personas": 0
+     },
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 50,
+    "pre": "+",
+    "texto": "IMPERMEABLES",
+    "y": 600,
+    "delay": 1.2
+   }
+  },
+  {
+   "capitulo": {
+    "t": "LA NOCHE",
+    "n": 3
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "La noche del 11 de junio de 1962, dejaron las cabezas falsas en sus camas."
+    }
+   ],
+   "items": [
+    {
+     "p": "cama",
+     "x": 540,
+     "y": 1560,
+     "s": 1.35,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "fade"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.15
+    ],
+    "f": [
+     380,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Subieron por los ductos hasta el techo, y bajaron hasta el agua."
+    }
+   ],
+   "items": [
+    {
+     "p": "flecha",
+     "x": 860,
+     "y": 980,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "rot": -90
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Un cuarto compañero, Allen West, no logró abrir a tiempo la rejilla de su celda. Se quedó atrás."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "triste",
+      "brazos": "cabeza",
+      "camisa": "#94a3b8",
+      "pantalon": "#475569"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1580,
+     "s": 1.35,
+     "at": 0,
+     "delay": 0.2,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 700,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "Allen West",
+      "sub": "se quedó en su celda"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "mar"
+   },
+   "lines": [
+    {
+     "text": "Los otros tres se perdieron en la oscuridad de la bahía.",
+     "pausa": 0.4
+    }
+   ],
+   "items": [
+    {
+     "p": "balsa",
+     "x": 600,
+     "y": 1340,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "personas": 3
+     },
+     "anim": "left"
+    },
+    {
+     "p": "isla",
+     "x": 120,
+     "y": 1310,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "fade"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "x": [
+     0,
+     60
+    ],
+    "f": [
+     600,
+     1200
+    ]
+   }
+  },
+  {
+   "capitulo": {
+    "t": "EL MISTERIO",
+    "n": 4
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Días después aparecieron en el agua un remo, chalecos salvavidas y una bolsa con fotos de la familia Anglin."
+    }
+   ],
+   "items": [
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1420,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 300,
+     "y": 900,
+     "s": 0.95,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "REMO",
+      "rot": -6
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 1050,
+     "s": 0.95,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "CHALECOS",
+      "fondo": "#ef4444",
+      "rot": 5
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 420,
+     "y": 1300,
+     "s": 0.95,
+     "at": 0,
+     "delay": 3.4,
+     "a": {
+      "texto": "FOTOS",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "En 1979, el FBI cerró el caso: dijo que lo más probable es que se ahogaron."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 1120,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1979"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1500,
+     "s": 0.95,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "CASO CERRADO",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Pero en 2013, la policía de San Francisco recibió una carta firmada como John Anglin."
+    },
+    {
+     "text": "Decía que los tres habían sobrevivido."
+    }
+   ],
+   "items": [
+    {
+     "p": "sobre",
+     "x": 540,
+     "y": 1180,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#f8fafc",
+      "texto": "",
+      "disco": false
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "texto": "SOBREVIVIMOS",
+      "fondo": "#22c55e",
+      "rot": -5
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "El FBI la analizó, y no pudo confirmar si era real.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 800,
+     "y": 1450,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "mar"
+   },
+   "lines": [
+    {
+     "text": "Alcatraz cerró como prisión en 1963. Y para los Marshals de Estados Unidos, el caso sigue abierto.",
+     "say": "Alcatraz cerró como prisión en 1963. Y para los Marsals de Estados Unidos, el caso sigue abierto."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1310,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ALCATRAZ"
+     },
+     "anim": "fade"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.0
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "¿Tú crees que lo lograron? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "¿LO LOGRARON?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}
