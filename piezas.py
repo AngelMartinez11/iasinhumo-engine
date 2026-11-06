@@ -23,8 +23,9 @@ def _esc(t):
 
 
 def _txt(x, y, t, size, color=L, peso=800, anchor="middle", extra=""):
+    trazo = "" if "stroke=" in extra else 'stroke="none" '
     return (f'<text x="{x}" y="{y}" text-anchor="{anchor}" font-family="{FONT}" font-weight="{peso}" '
-            f'font-size="{size}" fill="{color}" stroke="none" {extra}>{_esc(t)}</text>')
+            f'font-size="{size}" fill="{color}" {trazo}{extra}>{_esc(t)}</text>')
 
 
 def _g(contenido, sw=SW):
@@ -541,3 +542,150 @@ def olas(ancho=1200, color="#1e3a8a"):
 
 PIEZAS.update({"camara": camara, "rollo": rollo, "celda": celda, "cama": cama, "isla": isla,
                "balsa": balsa, "cuchara": cuchara, "olas": olas})
+
+
+# ------------------------------------------------------------------ piezas agregadas (tecnologia y datos)
+
+def pc_escritorio(texto="", pantalla="#0f172a", tinta="#4ade80", torre=True):
+    """Computadora de escritorio de los 80: monitor CRT, teclado y torre. Ancla en la base."""
+    o = []
+    if torre:
+        o += ['<rect x="250" y="-430" width="150" height="430" rx="10" fill="#e7e1cf"/>',
+              '<rect x="270" y="-390" width="110" height="20" rx="4" fill="#94a3b8"/>',
+              '<rect x="270" y="-350" width="110" height="20" rx="4" fill="#94a3b8"/>',
+              '<circle cx="325" cy="-60" r="14" fill="#22c55e"/>']
+    o += ['<rect x="-300" y="-560" width="500" height="400" rx="26" fill="#e7e1cf"/>',
+          f'<rect x="-262" y="-524" width="424" height="300" rx="30" fill="{pantalla}"/>',
+          '<rect x="-150" y="-160" width="200" height="50" fill="#d6cfb8"/>',
+          '<rect x="-330" y="-110" width="560" height="110" rx="12" fill="#d6cfb8"/>']
+    for f in range(3):
+        for c in range(9):
+            o.append(f'<rect x="{-310 + c * 58}" y="{-95 + f * 32}" width="46" height="22" rx="4" fill="#f5f1e6" stroke-width="3"/>')
+    if texto:
+        o.append(_txt(-50, -360, texto, 56, tinta))
+    else:
+        o.append(f'<rect x="-230" y="-380" width="40" height="40" fill="{tinta}" stroke="none"/>')
+    return _g("".join(o)), (-340, -570, 410 if torre else 240, 10)
+
+
+def maletin_pc(texto="", color="#d6cfb8", pantalla="#0f172a", tinta="#4ade80", abierto=True):
+    """Computadora 'portatil' de maletin (Osborne, Compaq Portable): asa, pantallita y teclado al frente."""
+    o = ['<path d="M-110 -470 Q-110 -540 0 -540 Q110 -540 110 -470" fill="none" stroke-width="18"/>',
+         f'<rect x="-330" y="-470" width="660" height="470" rx="26" fill="{color}"/>',
+         '<rect x="-290" y="-420" width="300" height="230" rx="12" fill="#a8a08a"/>',
+         f'<rect x="-262" y="-396" width="244" height="182" rx="14" fill="{pantalla}"/>',
+         '<rect x="50" y="-420" width="240" height="90" rx="8" fill="#a8a08a"/>',
+         '<rect x="70" y="-390" width="200" height="16" rx="4" fill="#1f2937"/>',
+         '<rect x="50" y="-310" width="240" height="90" rx="8" fill="#a8a08a"/>',
+         '<rect x="70" y="-280" width="200" height="16" rx="4" fill="#1f2937"/>']
+    if texto:
+        o.append(_txt(-140, -290, texto, 40, tinta))
+    if abierto:
+        o.append('<path d="M-330 -150 L330 -150 L360 0 L-360 0 Z" fill="#cfc7ae"/>')
+        for f in range(3):
+            for c in range(12):
+                o.append(f'<rect x="{-320 + c * 54}" y="{-135 + f * 42}" width="42" height="28" rx="4" fill="#f5f1e6" stroke-width="3"/>')
+    return _g("".join(o)), (-370, -560, 370, 10)
+
+
+def laptop_moderna(color="#cbd5e1", pantalla="#1e3a8a", texto=""):
+    """Laptop delgada y abierta vista de frente. Ancla en la base."""
+    o = [f'<path d="M-300 -430 L300 -430 Q316 -430 316 -414 L316 -30 L-316 -30 L-316 -414 Q-316 -430 -300 -430 Z" fill="{color}"/>',
+         f'<rect x="-290" y="-406" width="580" height="356" rx="8" fill="{pantalla}"/>',
+         f'<path d="M-380 -30 L380 -30 L360 0 L-360 0 Z" fill="{color}"/>',
+         '<rect x="-60" y="-30" width="120" height="12" rx="6" fill="#94a3b8" stroke-width="3"/>']
+    if texto:
+        o.append(_txt(0, -205, texto, 64, "#ffffff"))
+    return _g("".join(o)), (-390, -440, 390, 10)
+
+
+def clamshell(abierto=True, color="#1f2937", tinta="#facc15", texto=""):
+    """Laptop de bisagra de los 80 (GRiD Compass): pantalla de texto ambar sobre el teclado."""
+    if not abierto:
+        o = [f'<rect x="-330" y="-90" width="660" height="90" rx="14" fill="{color}"/>',
+             '<path d="M-330 -45 L330 -45" fill="none" stroke-width="5"/>']
+        return _g("".join(o)), (-340, -100, 340, 10)
+    o = [f'<path d="M-300 -110 L-260 -470 L260 -470 L300 -110 Z" fill="{color}"/>',
+         '<path d="M-250 -150 L-222 -430 L222 -430 L250 -150 Z" fill="#111827"/>',
+         f'<rect x="-340" y="-110" width="680" height="110" rx="12" fill="{color}"/>']
+    for f in range(2):
+        for c in range(12):
+            o.append(f'<rect x="{-322 + c * 54}" y="{-95 + f * 44}" width="42" height="30" rx="4" fill="#4b5563" stroke-width="3"/>')
+    if texto:
+        o.append(_txt(0, -280, texto, 46, tinta))
+    else:
+        for k in range(4):
+            o.append(f'<rect x="-190" y="{-400 + k * 55}" width="{300 - k * 50}" height="16" fill="{tinta}" stroke="none"/>')
+    return _g("".join(o)), (-350, -480, 350, 10)
+
+
+def transbordador(color="#f8fafc"):
+    """Transbordador espacial de lado, apuntando a la derecha. Origen en el centro."""
+    o = [f'<path d="M-330 -40 L200 -40 Q330 -30 360 0 Q330 30 200 40 L-330 40 Z" fill="{color}"/>',
+         '<path d="M-200 40 L0 40 L-150 150 L-270 150 Z" fill="#cbd5e1"/>',
+         '<path d="M-330 -40 L-300 -170 L-230 -170 L-210 -40 Z" fill="#cbd5e1"/>',
+         '<path d="M300 -22 Q330 -10 340 0 L300 0 Z" fill="#1f2937"/>',
+         '<rect x="-370" y="-30" width="40" height="60" rx="6" fill="#64748b"/>',
+         '<path d="M-370 -20 L-470 0 L-370 20 Z" fill="#fb923c"/>',
+         '<path d="M-370 -10 L-430 0 L-370 10 Z" fill="#fde047" stroke-width="3"/>']
+    for k in range(4):
+        o.append(f'<rect x="{-120 + k * 70}" y="-24" width="40" height="16" rx="4" fill="#e2e8f0" stroke-width="3"/>')
+    return _g("".join(o)), (-480, -180, 370, 160)
+
+
+def bateria(nivel=0.8, color="#22c55e"):
+    """Pila horizontal con nivel de carga (0 a 1). Origen en el centro."""
+    w = 440 * max(0.05, min(1.0, nivel))
+    o = ['<rect x="-250" y="-120" width="480" height="240" rx="30" fill="#ffffff"/>',
+         '<rect x="230" y="-50" width="40" height="100" rx="10" fill="#ffffff"/>',
+         f'<rect x="-230" y="-100" width="{w}" height="200" rx="18" fill="{color}" stroke-width="4"/>']
+    return _g("".join(o)), (-260, -130, 280, 130)
+
+
+def bascula(texto="", color="#e5e7eb"):
+    """Bascula de piso con pantalla. Ancla en la base: el objeto pesado va encima (y - 90)."""
+    o = [f'<rect x="-260" y="-90" width="520" height="90" rx="22" fill="{color}"/>',
+         '<rect x="-110" y="-74" width="220" height="56" rx="10" fill="#111827"/>']
+    if texto:
+        o.append(_txt(0, -32, texto, 40, "#facc15"))
+    return _g("".join(o)), (-270, -100, 270, 10)
+
+
+def chapa(texto="", sub="", fondo="#1d1d2b", tinta="#f0c448"):
+    """Placa pequena negra y dorada para datos cortos ('11 KG', '1981'). Origen en el centro."""
+    size = 72
+    w = max(len(texto) * size * 0.62, len(sub) * 17) + 80
+    h = 130 if sub else 104
+    o = [f'<rect x="{-w / 2}" y="{-h / 2}" width="{w}" height="{h}" rx="14" fill="{fondo}" stroke="{tinta}" stroke-width="5"/>',
+         _txt(0, (-6 if sub else 24), texto, size, tinta)]
+    if sub:
+        o.append(_txt(0, 44, sub.upper(), 26, "#ffffff", peso=700))
+    return "".join(o), (-w / 2 - 6, -h / 2 - 6, w / 2 + 6, h / 2 + 6)
+
+
+def libro(texto="", color="#7c3aed", abierto=False):
+    """Libro o cuaderno (Dynabook, manuales). Origen en el centro."""
+    if abierto:
+        o = ['<path d="M0 -150 Q-120 -190 -300 -160 L-300 160 Q-120 130 0 170 Z" fill="#ffffff"/>',
+             '<path d="M0 -150 Q120 -190 300 -160 L300 160 Q120 130 0 170 Z" fill="#ffffff"/>']
+        for k in range(5):
+            o.append(f'<path d="M-250 {-100 + k * 50} L-50 {-90 + k * 50}" fill="none" stroke-width="4"/>')
+        if texto:
+            o.append(_txt(150, 20, texto, 46))
+        return _g("".join(o)), (-310, -200, 310, 180)
+    o = [f'<rect x="-200" y="-260" width="400" height="520" rx="18" fill="{color}"/>',
+         '<rect x="-200" y="-260" width="50" height="520" rx="10" fill="#1f2937" stroke-width="5"/>']
+    if texto:
+        o.append(_txt(25, 20, texto, 54, "#ffffff"))
+    return _g("".join(o)), (-210, -270, 210, 270)
+
+
+def nino(camisa="#f59e0b", pelo="#3a2a1e", piel="#f2c49b", cara="feliz", brazos="abajo"):
+    """Persona pequena (nino). Ancla en los pies."""
+    svg, caja = persona(camisa=camisa, pelo=pelo, piel=piel, cara=cara, brazos=brazos)
+    return f'<g transform="scale(0.62)">{svg}</g>', tuple(v * 0.62 for v in caja)
+
+
+PIEZAS.update({"pc_escritorio": pc_escritorio, "maletin_pc": maletin_pc, "laptop_moderna": laptop_moderna,
+               "clamshell": clamshell, "transbordador": transbordador, "bateria": bateria,
+               "bascula": bascula, "chapa": chapa, "libro": libro, "nino": nino})

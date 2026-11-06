@@ -367,6 +367,11 @@ def render(script_path, out_path, voices_dir):
     if os.environ.get("ISH_TTS") == "mudo":
         tts, voice_b = VozMuda(), None
     else:
+        # voz del canal (canales/<canal>.json -> "tts"); el guion puede sobreescribirla con su propio "tts"
+        if canal.get("tts") and "tts" not in spec:
+            spec["tts"] = dict(canal["tts"])
+            if canal["tts"].get("voice") and not os.environ.get("ISH_FORZAR_VOZ"):
+                os.environ["ISH_VOICE"] = canal["tts"]["voice"]
         tts, voice_b = e1.make_tts(spec, voices_dir)
     tmp = tempfile.mkdtemp(prefix="ish4_")
 
