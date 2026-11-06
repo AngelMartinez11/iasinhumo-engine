@@ -1,0 +1,106 @@
+# Manual del motor v4 (guionistas de IA SinHumo e Historias Sin Filtro)
+
+El motor v4 (`engine4.py`) arma cada escena con piezas reutilizables de `piezas.py`.
+El guion NO dibuja SVG: solo nombra piezas, posiciones y tiempos. Eso ahorra tokens
+y hace que todos los videos tengan el mismo estilo.
+
+## 1. Estructura del guion
+
+```json
+{
+  "motor": 4,
+  "canal": "historias",            // o "iasinhumo" (lee canales/<canal>.json)
+  "title": "...", "description": "...", "hashtags": ["#..."], "source_url": "https://...",
+  "scenes": [ { ...escena... } ]
+}
+```
+
+### Escena
+
+| Campo | Que hace |
+|---|---|
+| `lines` | Lista de `{"text": "...", "say": "...", "pausa": 0.3}`. `text` es el subtitulo; `say` (opcional) es como debe pronunciarse; `pausa` agrega silencio despues. |
+| `fondo` | `{"tipo":"rayos","paleta":"lila"}` (paletas: lila, durazno, azul, menta, rojo, oro, gris, cielo), `{"tipo":"split","c":["#cfe0ff","#ffd6d6"]}`, `{"tipo":"noche"}`, `{"tipo":"oficina"}`, `{"tipo":"liso","c":"#e4e4ea"}`. Opcional `"suelo":"no"` o un color. |
+| `items` | Piezas que aparecen (ver seccion 3). |
+| `sigue` | `true` = continua la escena anterior: mismo fondo, mismas piezas ya visibles y camara donde quedo. Asi la escena se va construyendo. |
+| `quita` | Lista de `id` de piezas que se van (se desvanecen) al empezar esta escena. Solo con `sigue`. |
+| `dato` | Tarjeta negra y dorada con numero que cuenta: `{"num": 9094, "pre": "$", "suf": " MILLONES", "texto": "TIENDAS EN 2004", "y": 590, "at": 0, "delay": 1.5, "cuenta": true}`. |
+| `capitulo` | Tarjeta de capitulo a pantalla completa: `{"t": "LA REUNIÓN", "n": 2}` con `"min_dur": 1.7`. |
+| `cam` | Camara: `{"z": [1.0, 1.12], "f": [540, 1100], "x": [0, 0], "y": [0, 0]}`. `z` es el zoom inicial y final (se multiplica por el zoom base del canal), `f` el punto que queda fijo en pantalla, `x`/`y` paneo en pixeles. |
+| `min_dur` | Duracion minima de la escena en segundos. |
+
+### Pieza (item)
+
+```json
+{"p": "persona", "x": 540, "y": 1560, "s": 0.85, "at": 0, "delay": 0.4, "anim": "right", "id": "ceo",
+ "a": {"ropa": "traje", "cara": "risa", "brazos": "cruzados"}}
+```
+
+- `x`, `y`: punto de anclaje en el lienzo de 1080 x 1920. Personas, tiendas, edificios, graficas,
+  bolsas y lapidas se anclan en los PIES (abajo al centro); lo demas en su CENTRO.
+- `s`: escala. `at`: indice de la linea con la que aparece. `delay`: segundos extra. `t`: segundo exacto dentro de la escena (en vez de `at`).
+- `anim`: `up` (default), `pop` (default de etiquetas e iconos), `left`, `right`, `fade`, `drop` (cae rebotando), `crece` (sube desde el suelo: edificios, tiendas, graficas).
+- `flip`: `true` voltea la pieza.
+
+## 2. Zonas del lienzo (1080 x 1920)
+
+- 0 - 240: marca del canal y barra de progreso. No poner nada.
+- 250 - 510: banda del subtitulo. No poner nada importante.
+- 560 - 900: zona alta: etiquetas, rotulos de nombre, tarjetas de dato, iconos.
+- 900 - 1560: zona principal: personajes y objetos grandes.
+- 1560: linea del suelo (los pies van aqui). Debajo solo multitudes de primer plano.
+- El zoom base del canal (1.12) recorta un poco el suelo: usa piezas grandes (personas s 0.8 a 1.2).
+
+## 3. Catalogo de piezas (`p` y sus argumentos `a`)
+
+| Pieza | Argumentos |
+|---|---|
+| `persona` | `camisa`, `pelo`, `piel`, `pantalon`, `cara` (serio, feliz, sorpresa, triste, enojado, risa, preocupado), `brazos` (abajo, arriba, cabeza, senala, cruzados, telefono, saluda, objeto), `ropa` (camiseta, traje, bata), `corbata`, `peinado` (corto, largo, calvo, canoso, gorra), `lentes`, `sandalias` |
+| `multitud` | `n`, `filas`, `semilla`, `ancho`, `escala`, `cara`, `camisa` |
+| `tienda` | `texto`, `letrero`, `letra`, `pared`, `ancho` |
+| `edificio` | `texto`, `pisos`, `color`, `ancho`, `ventana`, `letrero` |
+| `mesa` | `ancho` |
+| `sobre` | `color`, `texto` |
+| `vhs` | `etiqueta`, `color` |
+| `disco`, `globo`, `robot` | (sin argumentos; `robot` es la mascota de IA SinHumo) |
+| `billetes` | `n` |
+| `bolsa_dinero` | `texto` |
+| `reloj` | `hora` |
+| `calendario` | `texto`, `color` |
+| `telefono` | `texto`, `color`, `play` |
+| `tv` | `play`, `color`, `texto` |
+| `laptop` | `texto`, `color` |
+| `avion` | `color` |
+| `grafica` | `tipo` (sube, baja), `color`, `barras` |
+| `lapida` | `texto`, `sub` |
+| `pin` | `texto`, `color` |
+| `icono` | `tipo` (x, check, pregunta, exclamacion), `color` |
+| `flecha` | `color`, `largo`, `rot` |
+| `linea_tiempo` | `pasos` (lista), `activo` (indice) |
+| `etiqueta` | `texto`, `fondo`, `tinta`, `size`, `rot` (etiqueta amarilla inclinada) |
+| `nombre` | `texto`, `sub` (rotulo de persona: "John Antioco / director de Blockbuster") |
+| `texto` | `texto`, `size`, `color`, `contorno` |
+
+Si una historia necesita un objeto que no existe, usa el mas parecido o una `etiqueta`, y anotalo en
+la columna notas para que se agregue a la biblioteca.
+
+## 4. Reglas de estilo (lo que hace que atrape)
+
+1. Algo nuevo en pantalla cada 2 a 3 segundos (una pieza, un dato o un cambio de escena).
+2. Escenas que se construyen: usa `sigue` + `quita` en vez de cortar a cada frase.
+3. Personajes con emocion en casi todas las escenas; protagonista reconocible por ropa y color durante todo el video.
+4. Un dato fuerte por bloque en tarjeta `dato` (numeros verificados).
+5. Cambia la paleta del fondo cuando cambia el tono; `noche` para momentos dramaticos.
+6. Camara: zoom lento hacia la cara en momentos clave; alejarse para revelar.
+7. Personas reales: personajes genericos con su `nombre` en rotulo. Nunca intentar parecido fisico ni poner frases que no dijeron.
+
+## 5. Estructura por canal
+
+**Historias Sin Filtro** (1 video al dia, 1 a 5 minutos, musica de intriga):
+gancho de 1 a 2 frases con el dato mas sorprendente -> pregunta ("¿Como se pierde un imperio asi?") ->
+3 a 5 capitulos con `capitulo` -> cierre con giro final y pregunta para comentarios.
+Temas: caidas y errores de empresas, desastres reales, rescates, misterios con fuentes, inventos,
+politica actual explicada de forma neutral. Cada dato con fuente verificable.
+
+**IA SinHumo** (2 al dia, 40 a 75 s, musica alegre): mismo motor y estilo; mascota `robot` como guia;
+un solo tema de IA por video con dato verificado.
