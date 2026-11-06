@@ -1,0 +1,13 @@
+{
+  "id": "historias",
+  "nombre": "Historias Sin Filtro",
+  "marca": "HISTORIAS SIN FILTRO",
+  "musica": "intriga",
+  "barra": "#f0c448",
+  "acento": "#f0c448",
+  "duracion_objetivo_s": [60, 300],
+  "videos_por_dia": 1,
+  "horas_publicacion": ["19:00"],
+  "hashtags_base": ["#HistoriasSinFiltro", "#historiasreales", "#curiosidades"],
+  "motor": 4
+}
