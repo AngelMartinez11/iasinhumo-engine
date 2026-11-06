@@ -127,22 +127,33 @@ def modo_archivo(ruta):
     subir(files)
 
 
-def modo_muestra():
+VOCES_NARRADOR = ["es-ES-AlvaroNeural", "es-MX-JorgeNeural", "es-US-AlonsoNeural", "es-CO-GonzaloNeural",
+                  "en-US-AndrewMultilingualNeural", "en-US-BrianMultilingualNeural", "fr-FR-RemyMultilingualNeural",
+                  "it-IT-GiuseppeMultilingualNeural", "de-DE-FlorianMultilingualNeural", "en-US-AvaMultilingualNeural",
+                  "en-US-EmmaMultilingualNeural"]
+
+TEXTO_MUESTRA = ("El veinticuatro de noviembre de mil novecientos setenta y uno, un hombre de traje oscuro compra un boleto "
+                 "de ida. Paga en efectivo. Se sienta al fondo del avion, pide un cafe, y le entrega una nota a la azafata. "
+                 "Ella la guarda sin abrirla. Y el hombre se inclina y le dice: mejor leala. Tengo una bomba.")
+
+
+def modo_muestra(voces=""):
+    """Un mp3 por voz con el mismo texto narrativo. 'voces' (opcional) es una lista separada por comas."""
     import engine
+    lista = [v.strip() for v in voces.split(",") if v.strip()] or VOCES_NARRADOR
     files = []
-    for v in VOCES:
-        nombre = v.split("-")[2].replace("Neural", "")
-        try:
-            a, _ = engine.EdgeVoice(v).say(f"Hola, soy {nombre}. Esto es IA Sin Humo: la inteligencia artificial "
-                                           f"explicada sin exageraciones. ¿Humo o real? Te lo cuento en treinta segundos.")
-        except Exception as e:
-            print("voz no disponible:", v, e)
-            continue
-        wav = os.path.join(OUT, f"muestra_{v}.wav")
-        engine.write_wav(wav, a / (abs(a).max() or 1) * 0.9)
-        mp3 = wav[:-4] + ".mp3"
-        sh("ffmpeg", "-v", "error", "-y", "-i", wav, "-b:a", "128k", mp3)
-        files.append(mp3)
+    for v in lista:
+        for rate in ("+0%",):
+            try:
+                a, _ = engine.EdgeVoice(v, rate=rate).say(TEXTO_MUESTRA)
+            except Exception as e:
+                print("voz no disponible:", v, e)
+                continue
+            wav = os.path.join(OUT, f"voz_{v}.wav")
+            engine.write_wav(wav, a / (abs(a).max() or 1) * 0.9)
+            mp3 = wav[:-4] + ".mp3"
+            sh("ffmpeg", "-v", "error", "-y", "-i", wav, "-b:a", "96k", mp3)
+            files.append(mp3)
     subir(files)
 
 
@@ -152,4 +163,4 @@ if __name__ == "__main__":
     voz = sys.argv[2] if len(sys.argv) > 2 else ""
     archivo = sys.argv[3] if len(sys.argv) > 3 else ""
     {"cola": modo_cola, "ejemplo": lambda: modo_ejemplo(voz), "archivo": lambda: modo_archivo(archivo),
-     "muestra_voces": modo_muestra}[modo]()
+     "muestra_voces": lambda: modo_muestra(voz)}[modo]()
