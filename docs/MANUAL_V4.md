@@ -36,6 +36,7 @@ y hace que todos los videos tengan el mismo estilo.
  "a": {"ropa": "traje", "cara": "risa", "brazos": "cruzados"}}
 ```
 
+- La voz sale de `canales/<canal>.json` -> `tts` (hoy `es-ES-AlvaroNeural`). No pongas `tts` en el guion salvo que se pida otra voz.
 - `x`, `y`: punto de anclaje en el lienzo de 1080 x 1920. Personas, tiendas, edificios, graficas,
   bolsas y lapidas se anclan en los PIES (abajo al centro); lo demas en su CENTRO.
 - `s`: escala. `at`: indice de la linea con la que aparece. `delay`: segundos extra. `t`: segundo exacto dentro de la escena (en vez de `at`).
@@ -79,6 +80,17 @@ y hace que todos los videos tengan el mismo estilo.
 | `linea_tiempo` | `pasos` (lista), `activo` (indice) |
 | `etiqueta` | `texto`, `fondo`, `tinta`, `size`, `rot` (etiqueta amarilla inclinada) |
 | `nombre` | `texto`, `sub` (rotulo de persona: "John Antioco / director de Blockbuster") |
+| `chapa` | `texto`, `sub` (placa negra y dorada para datos cortos: "11 KG", "1981"; usa `s` 1.2 a 1.5) |
+| `pc_escritorio` | `texto`, `pantalla`, `tinta`, `torre` (computadora de escritorio de los 80) |
+| `maletin_pc` | `texto`, `color`, `abierto` (computadora "portatil" de maletin: Osborne, IBM 5100) |
+| `clamshell` | `abierto`, `color`, `tinta`, `texto` (laptop de bisagra de los 80) |
+| `laptop_moderna` | `color`, `pantalla`, `texto` |
+| `transbordador` | `color` (nave espacial de lado) |
+| `bateria` | `nivel` (0 a 1), `color` |
+| `bascula` | `texto` (bascula con pantalla; pon el objeto pesado encima, unos 90 px mas arriba) |
+| `libro` | `texto`, `color`, `abierto` (libro, cuaderno, revista abierta) |
+| `nino` | igual que `persona` pero pequeno |
+| `camara`, `rollo`, `celda`, `cama`, `isla`, `balsa`, `cuchara`, `olas` | ver `piezas.py` |
 | `texto` | `texto`, `size`, `color`, `contorno` |
 
 Si una historia necesita un objeto que no existe, usa el mas parecido o una `etiqueta`, y anotalo en
@@ -96,11 +108,18 @@ la columna notas para que se agregue a la biblioteca.
 
 ## 5. Estructura por canal
 
-**Historias Sin Filtro** (1 video al dia, 1 a 5 minutos, musica de intriga):
-gancho de 1 a 2 frases con el dato mas sorprendente -> pregunta ("¿Como se pierde un imperio asi?") ->
-3 a 5 capitulos con `capitulo` -> cierre con giro final y pregunta para comentarios.
-Temas: caidas y errores de empresas, desastres reales, rescates, misterios con fuentes, inventos,
-politica actual explicada de forma neutral. Cada dato con fuente verificable.
+**Historias Sin Filtro** (1 video al dia, FORMATO LARGO de 3 a 5 minutos, 600 a 760 palabras, 50 a 70 escenas, musica de intriga).
+Referencia: el video de D. B. Cooper de Empty (@emptymind63). No basta con contar la historia: hay que INFORMAR.
+1. Gancho (2 a 4 escenas): el contraste o dato mas fuerte ("hoy pesa un kilo; la primera pesaba 25") y una pregunta.
+2. La historia en 3 a 5 capitulos, en orden, con fechas, lugares, cifras y nombres concretos en casi cada escena.
+   Explica COMO funcionaba la cosa (la estructura del avion, por que la pantalla era chica, que tenia adentro).
+3. Un capitulo "DATOS QUE NO SABIAS" con 3 o 4 curiosidades verificadas y numeradas ("Uno...", "Dos...").
+4. "Que paso despues": consecuencias, lo que se descubrio anos despues, el estado actual.
+5. Cierre: vuelve al contraste del gancho y termina con una pregunta personal para comentarios.
+Reglas de informacion: cada cifra con fuente seria (minimo dos para datos clave); si algo se discute, dilo ("segun X", "se discute").
+Datos cortos en `chapa`, datos grandes en `dato`. Usa `say` para nombres en ingles (Osborne -> "Osborn").
+Temas: caidas y errores de empresas, inventos y su historia, desastres reales, rescates, misterios con fuentes, robos,
+megaproyectos, politica actual explicada de forma neutral. Ejemplos de referencia: `ejemplos/hsf_laptop.py` (formato largo) y `ejemplos/hsf_blockbuster.py`.
 
 **IA SinHumo** (2 al dia, 40 a 75 s, musica alegre): mismo motor y estilo; mascota `robot` como guia;
 un solo tema de IA por video con dato verificado.
