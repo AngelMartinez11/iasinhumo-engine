@@ -4,6 +4,7 @@
 Modos:
   cola           renderiza los guiones con estado guion_listo de la bitacora (Google Sheet publicada como CSV)
   ejemplo        renderiza ejemplos/v2_estafas.json con la voz indicada
+  archivo        renderiza el guion indicado en el campo "archivo" (motor v2 o v4 segun el guion)
   muestra_voces  genera un mp3 corto por cada voz en espanol para elegir
 Todo se sube al release "cola" del repositorio.
 """
@@ -44,7 +45,12 @@ def subir(files):
 
 
 def render(js, mp4):
-    sh("python3", os.path.join(ROOT, "engine.py"), js, mp4)
+    """Usa el motor v4 si el guion trae "motor": 4; si no, el motor v2."""
+    try:
+        motor = int(json.load(open(js, encoding="utf-8")).get("motor", 2))
+    except Exception:
+        motor = 2
+    sh("python3", os.path.join(ROOT, "engine4.py" if motor >= 4 else "engine.py"), js, mp4)
     return [mp4, os.path.splitext(mp4)[0] + "_publicacion.txt"]
 
 
@@ -106,6 +112,14 @@ def modo_ejemplo(voz):
     subir(render(os.path.join(ROOT, "ejemplos", "v2_estafas.json"), os.path.join(OUT, name + ".mp4")))
 
 
+def modo_archivo(ruta):
+    """Renderiza un guion del repositorio (por ejemplo ejemplos/hsf_blockbuster.json)."""
+    ruta = ruta or "ejemplos/hsf_blockbuster.json"
+    js = os.path.join(ROOT, ruta)
+    nombre = os.path.splitext(os.path.basename(js))[0]
+    subir(render(js, os.path.join(OUT, nombre + ".mp4")))
+
+
 def modo_muestra():
     import engine
     files = []
@@ -129,4 +143,6 @@ if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     modo = (sys.argv[1] if len(sys.argv) > 1 else "cola") or "cola"
     voz = sys.argv[2] if len(sys.argv) > 2 else ""
-    {"cola": modo_cola, "ejemplo": lambda: modo_ejemplo(voz), "muestra_voces": modo_muestra}[modo]()
+    archivo = sys.argv[3] if len(sys.argv) > 3 else ""
+    {"cola": modo_cola, "ejemplo": lambda: modo_ejemplo(voz), "archivo": lambda: modo_archivo(archivo),
+     "muestra_voces": modo_muestra}[modo]()
