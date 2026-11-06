@@ -1,7 +1,7 @@
 {
   "id": "historias",
-  "nombre": "Historias Sin Filtro",
-  "marca": "HISTORIAS SIN FILTRO",
+  "nombre": "Dato Bomba",
+  "marca": "DATO BOMBA",
   "musica": "intriga",
   "barra": "#f0c448",
   "acento": "#f0c448",
@@ -9,12 +9,13 @@
     150,
     330
   ],
-  "videos_por_dia": 1,
+  "videos_por_dia": 2,
   "horas_publicacion": [
-    "19:00"
+    "12:30",
+    "20:30"
   ],
   "hashtags_base": [
-    "#HistoriasSinFiltro",
+    "#DatoBomba",
     "#historiasreales",
     "#curiosidades"
   ],
@@ -24,5 +25,6 @@
     "voice": "it-IT-GiuseppeMultilingualNeural",
     "rate": "+0%"
   },
-  "capitulos": false
+  "capitulos": false,
+  "tipo": "general"
 }

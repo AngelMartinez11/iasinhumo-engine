@@ -1,27 +1,30 @@
 {
   "id": "iasinhumo",
-  "nombre": "IA SinHumo",
-  "marca": "IA SIN HUMO",
+  "nombre": "Dato Bomba",
+  "marca": "DATO BOMBA",
   "musica": "alegre",
-  "barra": "#3ddcff",
-  "acento": "#3ddcff",
+  "barra": "#f0c448",
+  "acento": "#f0c448",
   "duracion_objetivo_s": [
     40,
     75
   ],
   "videos_por_dia": 2,
   "horas_publicacion": [
-    "12:30",
-    "18:30"
+    "07:30",
+    "17:30"
   ],
   "hashtags_base": [
-    "#IASinHumo",
+    "#DatoBomba",
+    "#tecnologia",
     "#inteligenciaartificial"
   ],
   "motor": 4,
   "tts": {
     "provider": "edge",
-    "voice": "es-ES-AlvaroNeural",
-    "rate": "+6%"
-  }
+    "voice": "it-IT-GiuseppeMultilingualNeural",
+    "rate": "+4%"
+  },
+  "capitulos": false,
+  "tipo": "tecnologia"
 }
