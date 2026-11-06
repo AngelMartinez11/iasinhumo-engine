@@ -1,0 +1,1314 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "Blockbuster pudo comprar Netflix por 50 millones (y casi se ríe)",
+ "description": "En el año 2000, los fundadores de Netflix ofrecieron su empresa a Blockbuster por 50 millones de dólares. La respuesta fue no. Esta es la historia de cómo un imperio de más de 9 mil tiendas terminó con una sola.\nFuentes: libro de Marc Randolph 'That Will Never Work'; libro de Reed Hastings 'No Rules Rules'; datos públicos de Blockbuster.",
+ "hashtags": [
+  "#HistoriasSinFiltro",
+  "#Blockbuster",
+  "#Netflix",
+  "#historiasreales",
+  "#negocios"
+ ],
+ "source_url": "https://marketplace.org/2020/09/08/ceo-reed-hastings-on-how-netflix-beat-blockbuster",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En el año 2000, a Blockbuster le ofrecieron comprar Netflix por 50 millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 320,
+     "y": 1560,
+     "s": 0.72,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "tienda"
+    },
+    {
+     "p": "sobre",
+     "x": 820,
+     "y": 1250,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "NETFLIX"
+     },
+     "anim": "drop",
+     "id": "sobre"
+    }
+   ],
+   "dato": {
+    "num": 50,
+    "pre": "$",
+    "suf": " MILLONES",
+    "texto": "EL PRECIO DE NETFLIX",
+    "y": 560,
+    "delay": 2.6
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "sobre"
+   ],
+   "lines": [
+    {
+     "text": "Y el director de Blockbuster casi se ríe en su cara."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 800,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "risa",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#ef4444",
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "right",
+     "id": "ceo"
+    },
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "¿50 MILLONES?",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Hoy Netflix factura más de 30 mil millones de dólares al año."
+    }
+   ],
+   "items": [
+    {
+     "p": "tv",
+     "x": 540,
+     "y": 1000,
+     "s": 1.05,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "NETFLIX"
+     },
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 30000,
+    "pre": "$",
+    "suf": " MILLONES",
+    "texto": "AL AÑO",
+    "y": 1330,
+    "delay": 0.5
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Y de Blockbuster queda una sola tienda en todo el planeta.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "1 TIENDA",
+      "fondo": "#ffd23f"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.18,
+     1.0
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo se pierde un imperio así? Esta es la historia."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1050,
+     "s": 1.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "EL IMPERIO",
+    "n": 1
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En su mejor momento, en 2004, Blockbuster tenía más de 9 mil tiendas en el mundo."
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 190,
+     "y": 1560,
+     "s": 0.42,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "t1"
+    },
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.42,
+     "at": 0,
+     "delay": 0.35,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "t2"
+    },
+    {
+     "p": "tienda",
+     "x": 890,
+     "y": 1560,
+     "s": 0.42,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "t3"
+    }
+   ],
+   "dato": {
+    "num": 9094,
+    "texto": "TIENDAS EN 2004",
+    "y": 590,
+    "delay": 1.8
+   }
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "t1",
+    "t2",
+    "t3"
+   ],
+   "lines": [
+    {
+     "text": "Y más de 84 mil empleados."
+    }
+   ],
+   "items": [
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1640,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 27,
+      "filas": 3,
+      "escala": 0.36,
+      "ancho": 960
+     },
+     "anim": "up"
+    }
+   ],
+   "dato": {
+    "num": 84300,
+    "texto": "EMPLEADOS",
+    "y": 590,
+    "delay": 0.3
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Los viernes en la noche, millones de familias iban a escoger una película."
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.72,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "persona",
+     "x": 190,
+     "y": 1600,
+     "s": 0.62,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "cara": "feliz",
+      "brazos": "saluda",
+      "camisa": "#f59e0b"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 890,
+     "y": 1600,
+     "s": 0.62,
+     "at": 0,
+     "delay": 0.9,
+     "a": {
+      "cara": "feliz",
+      "brazos": "objeto",
+      "camisa": "#8b5cf6",
+      "peinado": "largo",
+      "pelo": "#1f1f1f"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "vhs",
+     "x": 890,
+     "y": 1395,
+     "s": 0.28,
+     "at": 0,
+     "delay": 1.1,
+     "a": {
+      "etiqueta": "ESTRENO"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.07
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Pero Blockbuster tenía un secreto."
+    },
+    {
+     "text": "Buena parte de su dinero venía de castigar a quien devolvía tarde las películas."
+    }
+   ],
+   "items": [
+    {
+     "p": "reloj",
+     "x": 540,
+     "y": 860,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "hora": 11
+     },
+     "anim": "pop",
+     "id": "reloj"
+    },
+    {
+     "p": "vhs",
+     "x": 540,
+     "y": 1320,
+     "s": 0.95,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "etiqueta": "DEVOLVER"
+     },
+     "anim": "up",
+     "id": "vhs"
+    },
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 1110,
+     "s": 1.0,
+     "at": 1,
+     "delay": 1.2,
+     "a": {
+      "texto": "MULTA",
+      "fondo": "#ef4444",
+      "rot": 8
+     },
+     "id": "multa"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "reloj",
+    "vhs",
+    "multa"
+   ],
+   "lines": [
+    {
+     "text": "Solo en el año 2000, las multas por retraso le dejaron unos 800 millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "billetes",
+     "x": 330,
+     "y": 1450,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 4
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "bolsa_dinero",
+     "x": 760,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.4,
+     "a": {},
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 800,
+    "pre": "$",
+    "suf": " MILLONES",
+    "texto": "EN MULTAS, AÑO 2000",
+    "y": 590,
+    "delay": 1.6
+   }
+  },
+  {
+   "capitulo": {
+    "t": "LA REUNIÓN",
+    "n": 2
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Mientras tanto, en California, una empresa diminuta mandaba películas por correo, en sobres rojos."
+    }
+   ],
+   "items": [
+    {
+     "p": "sobre",
+     "x": 260,
+     "y": 1050,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "drop"
+    },
+    {
+     "p": "sobre",
+     "x": 540,
+     "y": 1260,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.4,
+     "a": {},
+     "anim": "drop"
+    },
+    {
+     "p": "sobre",
+     "x": 820,
+     "y": 1050,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.8,
+     "a": {},
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Sin multas. Se llamaba Netflix."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.05,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "SIN MULTAS",
+      "fondo": "#22c55e",
+      "rot": -6
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1520,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "NETFLIX",
+      "fondo": "#ffffff",
+      "tinta": "#b91c1c",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Pero perdía dinero. Ese año iba camino de perder unos 50 millones."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1500,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "baja"
+     },
+     "anim": "crece"
+    }
+   ],
+   "dato": {
+    "num": 50,
+    "pre": "-$",
+    "suf": " MILLONES",
+    "texto": "PÉRDIDA ESPERADA",
+    "y": 560,
+    "delay": 1.6
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Así que sus fundadores, Reed Hastings y Marc Randolph, buscaron una salida: venderle Netflix a Blockbuster."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "camisa": "#64748b",
+      "sandalias": true,
+      "pelo": "#3a2a1e"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "cara": "serio",
+      "camisa": "#14b8a6",
+      "sandalias": true,
+      "pelo": "#a16207",
+      "lentes": true
+     },
+     "anim": "right"
+    },
+    {
+     "p": "nombre",
+     "x": 300,
+     "y": 690,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "Reed Hastings",
+      "sub": "cofundador de Netflix"
+     }
+    },
+    {
+     "p": "nombre",
+     "x": 780,
+     "y": 850,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "Marc Randolph",
+      "sub": "cofundador de Netflix"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Volaron a Dallas, a las oficinas de Blockbuster."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "pisos": 9,
+      "ancho": 420
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "avion",
+     "x": 540,
+     "y": 640,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1100
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "Llegaron en camiseta y sandalias, a una oficina de traje y corbata."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 210,
+     "y": 1640,
+     "s": 0.78,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "camisa": "#64748b",
+      "sandalias": true,
+      "pelo": "#3a2a1e"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 450,
+     "y": 1640,
+     "s": 0.78,
+     "at": 0,
+     "delay": 0.2,
+     "a": {
+      "cara": "serio",
+      "camisa": "#14b8a6",
+      "sandalias": true,
+      "pelo": "#a16207",
+      "lentes": true
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 850,
+     "y": 1640,
+     "s": 0.82,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#ef4444",
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "right",
+     "id": "ceo"
+    },
+    {
+     "p": "etiqueta",
+     "x": 330,
+     "y": 850,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "CAMISETA",
+      "rot": -6
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 850,
+     "y": 850,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "TRAJE",
+      "fondo": "#ffffff",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Su propuesta: Blockbuster compraba Netflix, y ellos manejaban el negocio en internet."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop",
+     "x": 640,
+     "y": 1250,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ONLINE"
+     },
+     "anim": "pop",
+     "id": "lap"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "lap"
+   ],
+   "lines": [
+    {
+     "text": "Desde Blockbuster les preguntaron cuánto querían."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 720,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop",
+     "id": "preg"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "preg"
+   ],
+   "lines": [
+    {
+     "text": "Y Hastings dijo: 50 millones.",
+     "pausa": 0.3
+    }
+   ],
+   "dato": {
+    "num": 50,
+    "pre": "$",
+    "suf": " MILLONES",
+    "y": 600,
+    "delay": 0.9,
+    "cuenta": false
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "Según Randolph, en ese momento el director, John Antioco, tuvo que aguantarse la risa."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1720,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "risa",
+      "ropa": "traje",
+      "corbata": "#ef4444",
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 680,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "John Antioco",
+      "sub": "director de Blockbuster"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.18
+    ],
+    "f": [
+     540,
+     1000
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "La respuesta fue no.",
+     "pausa": 0.5
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1330,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "texto": "NO, GRACIAS",
+      "fondo": "#ef4444",
+      "tinta": "#1d1d2b",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "capitulo": {
+    "t": "EL GIRO",
+    "n": 3
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Netflix no se rindió. En 2002 salió a la bolsa."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1500,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "sube",
+      "color": "#22c55e"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "calendario",
+     "x": 830,
+     "y": 720,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "2002"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Y años después cambió los sobres por algo que lo cambió todo: el streaming."
+    }
+   ],
+   "items": [
+    {
+     "p": "tv",
+     "x": 540,
+     "y": 1000,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "STREAMING"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "telefono",
+     "x": 870,
+     "y": 1450,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "play": true,
+      "color": "#d81f26"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "laptop",
+     "x": 250,
+     "y": 1500,
+     "s": 0.48,
+     "at": 0,
+     "delay": 1.9,
+     "a": {
+      "texto": "PLAY"
+     },
+     "anim": "left"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Blockbuster reaccionó tarde. En 2004 quitó las multas y lanzó su propio servicio en línea."
+    }
+   ],
+   "items": [
+    {
+     "p": "linea_tiempo",
+     "x": 540,
+     "y": 700,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "pasos": [
+       "2000",
+       "2004",
+       "2010"
+      ],
+      "activo": 1
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.68,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Pero ya iba años por detrás."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 790,
+     "y": 1060,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "TARDE",
+      "fondo": "#ef4444",
+      "rot": 7
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "En 2010, Blockbuster se declaró en bancarrota.",
+     "pausa": 0.4
+    }
+   ],
+   "items": [
+    {
+     "p": "lapida",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "QUIEBRA",
+      "sub": "2010"
+     },
+     "anim": "crece"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.12,
+     1.0
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "capitulo": {
+    "t": "LA ÚLTIMA TIENDA",
+    "n": 4
+   },
+   "min_dur": 1.7
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Hoy solo queda una tienda Blockbuster en el mundo: en Bend, Oregón."
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 470,
+     "y": 1560,
+     "s": 0.78,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "BLOCKBUSTER",
+      "letrero": "#1e3a8a",
+      "letra": "#ffffff"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "pin",
+     "x": 860,
+     "y": 900,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "BEND, OREGÓN"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y la gente viaja hasta allá solo para tomarse una foto."
+    }
+   ],
+   "items": [
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1730,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 9,
+      "filas": 1,
+      "escala": 0.36,
+      "ancho": 1000,
+      "cara": "feliz"
+     },
+     "anim": "up"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "La empresa que pudo comprar Netflix por 50 millones terminó siendo un recuerdo.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "vhs",
+     "x": 540,
+     "y": 1050,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "etiqueta": "2000 - 2010"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1050
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "¿Tú alcanzaste a rentar en Blockbuster? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1460,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "¿Y TÚ?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}
