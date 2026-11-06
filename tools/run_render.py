@@ -11,6 +11,7 @@ import csv
 import io
 import json
 import os
+import re
 import subprocess
 import sys
 import urllib.request
@@ -47,12 +48,36 @@ def render(js, mp4):
     return [mp4, os.path.splitext(mp4)[0] + "_publicacion.txt"]
 
 
+def bajar_csv(url):
+    """Descarga la bitacora como CSV. Prueba la exportacion normal y, si Google la rechaza,
+    el endpoint gviz (funciona con hojas compartidas por enlace)."""
+    m = re.search(r"/d/([A-Za-z0-9_-]+)", url)
+    g = re.search(r"gid=(\d+)", url)
+    sid, gid = (m.group(1) if m else ""), (g.group(1) if g else "0")
+    candidatos = [url,
+                  f"https://docs.google.com/spreadsheets/d/{sid}/gviz/tq?tqx=out:csv&gid={gid}",
+                  f"https://docs.google.com/spreadsheets/d/{sid}/export?format=csv&gid={gid}"]
+    for u in candidatos:
+        try:
+            req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) iasinhumo-render"})
+            data = urllib.request.urlopen(req, timeout=60).read().decode("utf-8")
+            if data.lstrip().startswith("<"):
+                print("respuesta HTML (sin acceso) en", u, flush=True)
+                continue
+            print("bitacora descargada desde", u, flush=True)
+            return data
+        except Exception as e:
+            print("fallo", u, "->", e, flush=True)
+    sys.exit("No se pudo leer la bitacora. Revisa que este compartida como 'Cualquier persona con el enlace: Lector'.")
+
+
 def modo_cola():
     url = os.environ.get("SHEET_CSV_URL", "")
     if not url:
         sys.exit("Falta la variable SHEET_CSV_URL (Settings > Secrets and variables > Actions > Variables)")
-    data = urllib.request.urlopen(url, timeout=60).read().decode("utf-8")
+    data = bajar_csv(url)
     rows = list(csv.DictReader(io.StringIO(data)))
+    print("filas en la bitacora:", len(rows), "| columnas:", list(rows[0].keys()) if rows else [], flush=True)
     hechos = assets_existentes()
     files = []
     for r in rows:
