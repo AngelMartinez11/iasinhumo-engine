@@ -21,7 +21,8 @@
   "motor": 4,
   "tts": {
     "provider": "edge",
-    "voice": "es-ES-AlvaroNeural",
-    "rate": "+8%"
-  }
+    "voice": "it-IT-GiuseppeMultilingualNeural",
+    "rate": "+0%"
+  },
+  "capitulos": false
 }
