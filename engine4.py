@@ -369,6 +369,18 @@ def render(script_path, out_path, voices_dir):
         spec["scenes"] = [sc for sc in spec["scenes"] if not (sc.get("capitulo") and not sc.get("lines"))]
         for sc in spec["scenes"]:
             sc.pop("capitulo", None)
+    corto = os.environ.get("ISH_CORTO") == "1"
+    if corto:
+        # version Short (<3 min): se omiten las escenas marcadas "corto": false
+        # y una escena puede traer "lines_corto" para reemplazar sus lineas en el Short
+        spec["scenes"] = [sc for sc in spec["scenes"] if sc.get("corto", True) is not False]
+        for sc in spec["scenes"]:
+            if sc.get("lines_corto"):
+                sc["lines"] = sc["lines_corto"]
+        if spec.get("title_corto"):
+            spec["title"] = spec["title_corto"]
+        spec["description"] = (spec.get("description", "") + "\n\nLa historia completa esta en el canal.").strip()
+        spec["hashtags"] = list(spec.get("hashtags", [])) + ["#Shorts"]
     if os.environ.get("ISH_TTS") == "mudo":
         tts, voice_b = VozMuda(), None
     else:
@@ -605,6 +617,10 @@ def render(script_path, out_path, voices_dir):
         f.write("HASHTAGS:\n" + " ".join(spec.get("hashtags", [])) + "\n\n")
         f.write("FUENTE:\n" + spec.get("source_url", "") + "\n")
         f.write(f"\nDURACION: {total:.1f} s\n")
+        if corto and total > 178:
+            f.write("AVISO: el Short pasa de 3 minutos; YouTube lo tomara como video normal\n")
+    if corto and total > 178:
+        print(f"AVISO: version corta de {total:.1f}s (> 178s)", flush=True)
     return total
 
 
