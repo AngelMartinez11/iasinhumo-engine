@@ -128,3 +128,16 @@ megaproyectos, politica actual explicada de forma neutral. Ejemplos de referenci
 
 **IA SinHumo** (2 al dia, 40 a 75 s, musica alegre): mismo motor y estilo; mascota `robot` como guia;
 un solo tema de IA por video con dato verificado.
+
+## 6. Version Short para YouTube (generales)
+
+YouTube solo toma como Short un video vertical de 3 minutos o menos. Un general largo (3.5-5 min)
+sube como video normal, asi que cada general genera tambien una version corta automatica:
+
+- En las escenas que sobran para el Short se agrega `"corto": false` (se omiten en la version corta).
+- Una escena puede traer `"lines_corto": [...]` para decir lo mismo en menos lineas dentro del Short.
+- Opcional: `"title_corto"` con un titulo distinto para el Short.
+- Meta: la version corta debe durar entre 120 y 170 s (nunca mas de 178 s). Debe conservar el gancho,
+  el giro principal y el cierre; se recortan los bloques de contexto y curiosidades.
+- El render produce `<id>.mp4` (largo) y `<id>_short.mp4` (Short) con su `_publicacion.txt`.
+  Si el Short pasa de 178 s, el archivo de publicacion trae un AVISO.
