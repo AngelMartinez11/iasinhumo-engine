@@ -51,7 +51,28 @@ def render(js, mp4):
     except Exception:
         motor = 2
     sh("python3", os.path.join(ROOT, "engine4.py" if motor >= 4 else "engine.py"), js, mp4)
-    return [mp4, os.path.splitext(mp4)[0] + "_publicacion.txt"]
+    out = [mp4, os.path.splitext(mp4)[0] + "_publicacion.txt"]
+    if motor >= 4 and tiene_corto(js):
+        # generales: ademas del video largo, una version Short (<3 min) para YouTube Shorts
+        corto = os.path.splitext(mp4)[0] + "_short.mp4"
+        os.environ["ISH_CORTO"] = "1"
+        try:
+            sh("python3", os.path.join(ROOT, "engine4.py"), js, corto)
+            out += [corto, os.path.splitext(corto)[0] + "_publicacion.txt"]
+        except Exception as e:
+            print("FALLO version corta", js, e, flush=True)
+        finally:
+            os.environ.pop("ISH_CORTO", None)
+    return out
+
+
+def tiene_corto(js):
+    """El guion pide version Short si alguna escena trae "corto": false o "lines_corto"."""
+    try:
+        sc = json.load(open(js, encoding="utf-8")).get("scenes", [])
+    except Exception:
+        return False
+    return any(x.get("corto") is False or x.get("lines_corto") for x in sc)
 
 
 def bajar_csv(url):
@@ -103,7 +124,7 @@ def modo_cola():
         except Exception as e:
             print("FALLO", rid, e, flush=True)
     subir(files)
-    print("renderizados:", len(files) // 3)
+    print("archivos subidos:", len(files))
 
 
 def modo_ejemplo(voz):
