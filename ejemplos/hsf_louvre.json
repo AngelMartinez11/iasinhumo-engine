@@ -1,0 +1,2828 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "Robaron 8 joyas de la corona del Louvre en 7 minutos... y siguen sin aparecer",
+ "description": "19 de octubre de 2025: cuatro hombres con un camion elevador entraron a la Galeria de Apolo del Louvre y se llevaron ocho joyas de la corona francesa valuadas en unos 88 millones de euros. Se les cayo la corona de Eugenia, detuvieron a los sospechosos... y a un ano del robo las joyas siguen sin aparecer.\nFuentes: AP (cronologia del robo y detenciones); Reuters; AFP (via Express Tribune y Daily Sabah, octubre de 2026); Al Jazeera; NBC News; CBS News; Smithsonian Magazine; The Irish Times; The Local; Euronews (22/07/2026); Sortiraparis; Cyprus Mail (25/02/2026); Washington Times y Tom's Hardware (sobre Liberation); Insurance Journal; louvre.fr.",
+ "hashtags": [
+  "#DatoBomba",
+  "#Louvre",
+  "#robo",
+  "#Paris",
+  "#joyas"
+ ],
+ "source_url": "https://wtop.com/world/2025/10/a-timeline-of-the-jewel-heist-at-the-louvre-in-paris-2",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Domingo 19 de octubre de 2025. El Louvre, en París, acababa de abrir."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "LOUVRE",
+      "pisos": 5,
+      "ancho": 620,
+      "color": "#e7dcc4",
+      "ventana": "#bfdbfe",
+      "letrero": "#1d1d2b"
+     },
+     "anim": "crece",
+     "id": "museo"
+    },
+    {
+     "p": "calendario",
+     "x": 870,
+     "y": 760,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "19 OCT"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1700,
+     "s": 1.0,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "n": 14,
+      "filas": 1,
+      "ancho": 900,
+      "escala": 0.3
+     },
+     "anim": "up"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1300
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "En unos siete minutos, ocho joyas de la corona de Francia desaparecieron."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 210.0,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 430.0,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.35,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 650.0,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": " ",
+      "fondo": "#3b82f6",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    },
+    {
+     "p": "etiqueta",
+     "x": 870.0,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 1.0499999999999998,
+     "a": {
+      "texto": " ",
+      "fondo": "#fde7c7",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g3"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 800,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "~7 MIN"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.0
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "g0",
+    "g1",
+    "g2",
+    "g3"
+   ],
+   "lines": [
+    {
+     "text": "Valían, según la fiscalía, unos ochenta y ocho millones de euros."
+    }
+   ],
+   "items": [
+    {
+     "p": "bolsa_dinero",
+     "x": 540,
+     "y": 1560,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "€"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 88,
+    "pre": "",
+    "suf": " M€",
+    "texto": "MILLONES DE EUROS",
+    "y": 680,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y más de un año después, siguen sin aparecer.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 830,
+     "y": 1250,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo se roba el Louvre a plena luz del día, en menos de diez minutos?"
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "LOUVRE",
+      "pisos": 5,
+      "ancho": 620,
+      "color": "#e7dcc4",
+      "ventana": "#bfdbfe",
+      "letrero": "#1d1d2b"
+     },
+     "anim": "crece",
+     "id": "museo"
+    },
+    {
+     "p": "reloj",
+     "x": 540,
+     "y": 780,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "hora": 9.5
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Todo empezó nueve días antes, el 10 de octubre."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "10 OCT"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Según la fiscalía, dos hombres reservaron un camión con elevador de muebles, fingiendo una mudanza."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 230,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "brazos": "telefono",
+      "camisa": "#facc15",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1f2937"
+     },
+     "anim": "left",
+     "id": "l1"
+    },
+    {
+     "p": "persona",
+     "x": 850,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "camisa": "#facc15",
+      "pelo": "#3a2a1e",
+      "peinado": "gorra",
+      "pantalon": "#1f2937",
+      "piel": "#c68a5c"
+     },
+     "anim": "right",
+     "id": "l2",
+     "flip": true
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "MUDANZA",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Cuando llegó el dueño, lo amenazaron y se llevaron el camión."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "sorpresa",
+      "brazos": "arriba",
+      "camisa": "#64748b"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "flecha",
+     "x": 760,
+     "y": 1000,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "largo": 300,
+      "color": "#ef4444"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "icono",
+     "x": 760,
+     "y": 760,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Una canasta que sube por una escalera extensible, para meter muebles por las ventanas."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 380,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "",
+      "pisos": 5,
+      "ancho": 420,
+      "color": "#e7dcc4"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "flecha",
+     "x": 800,
+     "y": 1180,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "rot": -90,
+      "largo": 640,
+      "color": "#f59e0b"
+     },
+     "anim": "crece",
+     "id": "elev"
+    },
+    {
+     "p": "etiqueta",
+     "x": 800,
+     "y": 1480,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "ELEVADOR",
+      "fondo": "#ffffff",
+      "rot": 0
+     },
+     "id": "elevt"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     700,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "El 19 de octubre, a las nueve y media, lo estacionaron junto al Sena, al pie del museo."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 380,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "LOUVRE",
+      "pisos": 5,
+      "ancho": 620,
+      "color": "#e7dcc4",
+      "ventana": "#bfdbfe",
+      "letrero": "#1d1d2b"
+     },
+     "anim": "crece",
+     "id": "museo"
+    },
+    {
+     "p": "flecha",
+     "x": 860,
+     "y": 1180,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "rot": -90,
+      "largo": 640,
+      "color": "#f59e0b"
+     },
+     "anim": "crece",
+     "id": "elev"
+    },
+    {
+     "p": "etiqueta",
+     "x": 860,
+     "y": 1480,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "ELEVADOR",
+      "fondo": "#ffffff",
+      "rot": 0
+     },
+     "id": "elevt"
+    },
+    {
+     "p": "reloj",
+     "x": 860,
+     "y": 700,
+     "s": 0.5,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "hora": 9.5
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Pusieron conos de tráfico para que pareciera una obra."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 380,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "OBRA",
+      "fondo": "#f97316",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Iban disfrazados de trabajadores, con chalecos amarillos."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 320,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "camisa": "#facc15",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1f2937"
+     },
+     "anim": "left",
+     "id": "l1"
+    },
+    {
+     "p": "persona",
+     "x": 760,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "camisa": "#facc15",
+      "pelo": "#3a2a1e",
+      "peinado": "gorra",
+      "pantalon": "#1f2937",
+      "piel": "#c68a5c"
+     },
+     "anim": "right",
+     "id": "l2",
+     "flip": true
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "CHALECOS AMARILLOS",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Dos de ellos subieron en la canasta hasta un balcón del primer piso."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 380,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "LOUVRE",
+      "pisos": 5,
+      "ancho": 620,
+      "color": "#e7dcc4",
+      "ventana": "#bfdbfe",
+      "letrero": "#1d1d2b"
+     },
+     "anim": "crece",
+     "id": "museo"
+    },
+    {
+     "p": "flecha",
+     "x": 860,
+     "y": 1180,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "rot": -90,
+      "largo": 640,
+      "color": "#f59e0b"
+     },
+     "anim": "crece",
+     "id": "elev"
+    },
+    {
+     "p": "etiqueta",
+     "x": 860,
+     "y": 1480,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "ELEVADOR",
+      "fondo": "#ffffff",
+      "rot": 0
+     },
+     "id": "elevt"
+    },
+    {
+     "p": "persona",
+     "x": 860,
+     "y": 1000,
+     "s": 0.45,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "camisa": "#facc15",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1f2937"
+     },
+     "anim": "up"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     800,
+     1000
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Detrás estaba la Galería de Apolo, donde se exhiben las joyas de la corona francesa."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "GALERÍA DE APOLO",
+      "fondo": "#ffffff",
+      "rot": -3
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 310.0,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540.0,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.5499999999999998,
+     "a": {
+      "texto": " ",
+      "fondo": "#3b82f6",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 770.0,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.9,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "A las nueve y treinta y cuatro rompieron la ventana con cortadoras de disco."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1100,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "9:34",
+      "sub": "entran"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1450,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "La alarma sonó de inmediato."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.2,
+     "a": {
+      "texto": "ALARMA",
+      "fondo": "#ef4444",
+      "tinta": "#1d1d2b",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Amenazaron a los vigilantes, y el personal evacuó la sala."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "sorpresa",
+      "brazos": "arriba",
+      "camisa": "#1e3a8a",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1e293b"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "multitud",
+     "x": 760,
+     "y": 1600,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "n": 8,
+      "filas": 2,
+      "ancho": 420,
+      "escala": 0.3,
+      "cara": "sorpresa"
+     },
+     "anim": "right"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Cortaron dos vitrinas y sacaron las joyas."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1500,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "barrotes": 1,
+      "ancho": 600,
+      "alto": 420
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "etiqueta",
+     "x": 310.0,
+     "y": 1300,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540.0,
+     "y": 1300,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0.95,
+     "a": {
+      "texto": " ",
+      "fondo": "#3b82f6",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 770.0,
+     "y": 1300,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.2999999999999998,
+     "a": {
+      "texto": " ",
+      "fondo": "#fde7c7",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Adentro estuvieron menos de cuatro minutos."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.45,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "texto": "< 4 MIN",
+      "sub": "dentro de la sala"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "A las nueve y treinta y ocho salieron por la misma ventana."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 380,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "LOUVRE",
+      "pisos": 5,
+      "ancho": 620,
+      "color": "#e7dcc4",
+      "ventana": "#bfdbfe",
+      "letrero": "#1d1d2b"
+     },
+     "anim": "crece",
+     "id": "museo"
+    },
+    {
+     "p": "flecha",
+     "x": 860,
+     "y": 1180,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "rot": -90,
+      "largo": 640,
+      "color": "#f59e0b"
+     },
+     "anim": "crece",
+     "id": "elev"
+    },
+    {
+     "p": "etiqueta",
+     "x": 860,
+     "y": 1480,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "ELEVADOR",
+      "fondo": "#ffffff",
+      "rot": 0
+     },
+     "id": "elevt"
+    },
+    {
+     "p": "chapa",
+     "x": 860,
+     "y": 700,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "9:38",
+      "sub": "salen"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Abajo los esperaban dos cómplices en motos scooter de alta potencia."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "brazos": "senala",
+      "camisa": "#1f2937",
+      "peinado": "gorra"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "camisa": "#334155",
+      "peinado": "gorra"
+     },
+     "anim": "right",
+     "flip": true
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "2 MOTOS",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Intentaron quemar el camión para borrar pruebas, pero no lo lograron."
+    }
+   ],
+   "items": [
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1180,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "rot": -90,
+      "largo": 640,
+      "color": "#f59e0b"
+     },
+     "anim": "crece",
+     "id": "elev"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1480,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "ELEVADOR",
+      "fondo": "#ffffff",
+      "rot": 0
+     },
+     "id": "elevt"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 760,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "En la huida se les cayó una pieza: la corona de la emperatriz Eugenia."
+    }
+   ],
+   "items": [
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "Corona de Eugenia",
+      "sub": "hecha para la Exposicion de 1855"
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 350,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1060,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 730,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Tiene mil trescientos cincuenta y cuatro diamantes, cincuenta y seis esmeraldas y ocho águilas de oro."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 260,
+     "y": 1420,
+     "s": 1.05,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1.354",
+      "sub": "diamantes"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1420,
+     "s": 1.05,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "56",
+      "sub": "esmeraldas"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 820,
+     "y": 1420,
+     "s": 1.05,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "8",
+      "sub": "aguilas"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Quedó aplastada, pero se puede restaurar."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1200,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1500,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "SE PUEDE RESTAURAR",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Las otras ocho piezas sí se fueron."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1150,
+     "s": 1.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "8",
+      "sub": "piezas robadas"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Entre ellas, el collar que Napoleón le regaló a María Luisa por su boda en 1810: treinta y dos esmeraldas y más de mil cien diamantes."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 170.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 355.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.35,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    },
+    {
+     "p": "etiqueta",
+     "x": 725.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.0499999999999998,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g3"
+    },
+    {
+     "p": "etiqueta",
+     "x": 910.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g4"
+    },
+    {
+     "p": "chapa",
+     "x": 300,
+     "y": 1430,
+     "s": 1.15,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "32",
+      "sub": "esmeraldas"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 780,
+     "y": 1430,
+     "s": 1.15,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "1.138",
+      "sub": "diamantes"
+     }
+    },
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 780,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "1810",
+      "color": "#22c55e"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "La diadema de perlas de Eugenia, con doscientas doce perlas y casi dos mil diamantes."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 170.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#fde7c7",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 355.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.35,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": " ",
+      "fondo": "#fde7c7",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    },
+    {
+     "p": "etiqueta",
+     "x": 725.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.0499999999999998,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g3"
+    },
+    {
+     "p": "etiqueta",
+     "x": 910.0,
+     "y": 1130,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": " ",
+      "fondo": "#fde7c7",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g4"
+    },
+    {
+     "p": "chapa",
+     "x": 300,
+     "y": 1430,
+     "s": 1.15,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "212",
+      "sub": "perlas"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 780,
+     "y": 1430,
+     "s": 1.15,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "~2.000",
+      "sub": "diamantes"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Joyas de zafiros que usaron las reinas María Amelia y Hortensia, y un broche y un gran moño de diamantes."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 310.0,
+     "y": 1200,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#3b82f6",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540.0,
+     "y": 1200,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0.35,
+     "a": {
+      "texto": " ",
+      "fondo": "#3b82f6",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 770.0,
+     "y": 1200,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1500,
+     "s": 0.8,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "ZAFIROS + BROCHE + MOÑO",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "La fiscal de París, Laure Beccuau, citó el cálculo del museo: ochenta y ocho millones de euros.",
+     "say": "La fiscal de París, Lor Bekó, citó el cálculo del museo: ochenta y ocho millones de euros."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#1d1d2b",
+      "pelo": "#a16207",
+      "peinado": "largo",
+      "piel": "#f5d0b0"
+     },
+     "anim": "up",
+     "id": "fiscal"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 720,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "Laure Beccuau",
+      "sub": "fiscal de Paris"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y según el gobierno, ninguna tenía seguro privado."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 1150,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "SIN SEGURO",
+      "fondo": "#ef4444",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "Días después, la presidenta del museo, Laurence des Cars, declaró ante el Senado francés.",
+     "say": "Días después, la presidenta del museo, Lorans de Car, declaró ante el Senado francés."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1640,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "ropa": "traje",
+      "corbata": "#7c3aed",
+      "pelo": "#6b4423",
+      "peinado": "largo",
+      "lentes": true
+     },
+     "anim": "up",
+     "id": "dir"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 720,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "Laurence des Cars",
+      "sub": "presidenta del Louvre"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Admitió que la cámara más cercana apuntaba hacia el oeste y no cubría el balcón por donde entraron."
+    }
+   ],
+   "items": [
+    {
+     "p": "camara",
+     "x": 860,
+     "y": 1150,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "tipo": "digital"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 860,
+     "y": 900,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     700,
+     1200
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Ofreció su renuncia. Se la rechazaron.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "sobre",
+     "x": 230,
+     "y": 1150,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "color": "#f8fafc",
+      "texto": "RENUNCIA",
+      "disco": false
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Mientras tanto, unos cien investigadores trabajaban en el caso."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "brazos": "telefono",
+      "camisa": "#1e3a8a",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1e293b"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "brazos": "senala",
+      "camisa": "#1e3a8a",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1e293b"
+     },
+     "anim": "right",
+     "flip": true
+    }
+   ],
+   "dato": {
+    "num": 100,
+    "pre": "~",
+    "suf": "",
+    "texto": "INVESTIGADORES",
+    "y": 680,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Revisaron cámaras y unas ciento cincuenta muestras del camión y del museo."
+    }
+   ],
+   "items": [
+    {
+     "p": "tv",
+     "x": 540,
+     "y": 1250,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "play": false,
+      "texto": "CCTV"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1520,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "150",
+      "sub": "muestras"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Seis días después del robo detuvieron a un sospechoso en el aeropuerto Charles de Gaulle.",
+     "say": "Seis días después del robo detuvieron a un sospechoso en el aeropuerto Charl de Gol."
+    }
+   ],
+   "items": [
+    {
+     "p": "avion",
+     "x": 540,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "cara": "preocupado",
+      "camisa": "#facc15",
+      "pelo": "#3a2a1e",
+      "peinado": "gorra",
+      "pantalon": "#1f2937",
+      "piel": "#c68a5c"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "brazos": "senala",
+      "camisa": "#1e3a8a",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1e293b"
+     },
+     "anim": "right",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Tenía un boleto solo de ida a Argelia."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.2,
+     "a": {
+      "texto": "SOLO IDA",
+      "fondo": "#ffffff",
+      "rot": -5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "El ADN llevó a otros. En pocas semanas cayeron los cuatro hombres que, según la policía, formaban el comando."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1560,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "barrotes": 7,
+      "ancho": 760,
+      "alto": 620
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "persona",
+     "x": 400,
+     "y": 1560,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "cara": "serio",
+      "camisa": "#facc15",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra",
+      "pantalon": "#1f2937"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "persona",
+     "x": 680,
+     "y": 1560,
+     "s": 0.7,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "cara": "serio",
+      "camisa": "#facc15",
+      "pelo": "#3a2a1e",
+      "peinado": "gorra",
+      "pantalon": "#1f2937",
+      "piel": "#c68a5c"
+     },
+     "anim": "up",
+     "flip": true
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 2.8,
+     "a": {
+      "texto": "4",
+      "sub": "detenidos del comando"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "La fiscal los describió como delincuentes locales, no como una red de crimen organizado."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "senala",
+      "ropa": "traje",
+      "corbata": "#1d1d2b",
+      "pelo": "#a16207",
+      "peinado": "largo",
+      "piel": "#f5d0b0"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "DELINCUENTES LOCALES",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Algunos admitieron en parte su participación. Pero ninguno dijo dónde están las joyas.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 1100,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Y ahora, cosas que casi nadie sabe."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "¿SABÍAS?",
+      "rot": -5
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Uno. Según la fiscalía, el camión lo robaron en un pueblo al norte de París que se llama Louvres."
+    }
+   ],
+   "items": [
+    {
+     "p": "pin",
+     "x": 540,
+     "y": 1450,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#ef4444",
+      "texto": "LOUVRES"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.3,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "LOUVRES",
+      "sub": "con S al final"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Dos. Según el diario francés Libération, en una auditoría de 2014 la contraseña del servidor de videovigilancia era LOUVRE.",
+     "say": "Dos. Según el diario francés Liberasión, en una auditoría de 2014 la contraseña del servidor de videovigilancia era Louvre."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop",
+     "x": 540,
+     "y": 1450,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "LOUVRE",
+      "color": "#4ade80"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.3,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "2014",
+      "sub": "auditoria"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Tres. Los ladrones dejaron en su lugar el Regente, un diamante de ciento cuarenta quilates de la misma galería."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1200,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "140 QUILATES",
+      "sub": "el Regente"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Cuatro. En 1887, Francia vendió casi todas sus joyas de la corona. El collar de María Luisa recién volvió al Louvre en 2004."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 300,
+     "y": 1150,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1887"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1150,
+     "s": 0.4,
+     "at": 0,
+     "delay": 1.6,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "calendario",
+     "x": 780,
+     "y": 1150,
+     "s": 0.7,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "2004",
+      "color": "#22c55e"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "¿Y qué pasó después?"
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1150,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En febrero de 2026, Laurence des Cars renunció. La reemplazó Christophe Leribault, que dirigía el Palacio de Versalles.",
+     "say": "En febrero de 2026, Lorans de Car renunció. La reemplazó Cristóf Leribó, que dirigía el Palacio de Versalles."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "triste",
+      "ropa": "traje",
+      "corbata": "#7c3aed",
+      "pelo": "#6b4423",
+      "peinado": "largo",
+      "lentes": true
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "cara": "serio",
+      "ropa": "traje",
+      "corbata": "#f0c448",
+      "pelo": "#c9c9c9",
+      "peinado": "calvo",
+      "lentes": true
+     },
+     "anim": "right",
+     "flip": true
+    },
+    {
+     "p": "nombre",
+     "x": 700,
+     "y": 720,
+     "s": 0.85,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "Christophe Leribault",
+      "sub": "nuevo presidente"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "El 22 de julio de 2026, la Galería de Apolo volvió a abrir. Pero sin vitrinas y sin joyas."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 1150,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "22 JUL"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1450,
+     "s": 0.85,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "SIN JOYAS",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Las piezas que no se robaron se llevaron a un lugar más seguro."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 790,
+     "y": 1560,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "barrotes": 4,
+      "ancho": 360,
+      "alto": 420
+     },
+     "anim": "fade"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "A un año del robo, las ocho piezas siguen en la base de datos de obras robadas de Interpol."
+    }
+   ],
+   "items": [
+    {
+     "p": "globo",
+     "x": 540,
+     "y": 1250,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "pop",
+     "id": "globo"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "INTERPOL: ROBADAS",
+      "fondo": "#ef4444",
+      "rot": -3
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "globo"
+   ],
+   "lines": [
+    {
+     "text": "Lo último que se sabe: un video las muestra en una bodega subterránea de Aubervilliers, al norte de París.",
+     "say": "Lo último que se sabe: un video las muestra en una bodega subterránea de Obervilié, al norte de París."
+    }
+   ],
+   "items": [
+    {
+     "p": "tv",
+     "x": 540,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "play": false,
+      "texto": "ÚLTIMO VIDEO"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Los expertos temen que el oro se funda y las piedras se recorten para venderlas."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 310.0,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540.0,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.35,
+     "a": {
+      "texto": " ",
+      "fondo": "#3b82f6",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 770.0,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": " ",
+      "fondo": "#f8fafc",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 780,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Siete minutos para llevárselas. Más de un año buscándolas."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 1150,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "7 MIN",
+      "sub": "el robo"
+     }
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1150,
+     "s": 0.35,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 1150,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "+1 AÑO",
+      "sub": "buscandolas"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Tú crees que algún día van a aparecer, o ya no existen como joyas? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 310.0,
+     "y": 1300,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": " ",
+      "fondo": "#22c55e",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g0"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540.0,
+     "y": 1300,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.35,
+     "a": {
+      "texto": " ",
+      "fondo": "#3b82f6",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g1"
+    },
+    {
+     "p": "etiqueta",
+     "x": 770.0,
+     "y": 1300,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": " ",
+      "fondo": "#fde7c7",
+      "rot": 45,
+      "size": 64
+     },
+     "anim": "pop",
+     "id": "g2"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "¿Y TÚ?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}

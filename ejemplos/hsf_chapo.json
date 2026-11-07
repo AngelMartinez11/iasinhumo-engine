@@ -1,0 +1,1952 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "Un túnel de 1.5 km hasta una regadera: así fue la fuga de El Chapo del Altiplano",
+ "description": "El 11 de julio de 2015, Joaquín Guzmán escapó del penal del Altiplano por un hueco de 50 x 50 cm en la regadera conectado a un túnel de unos 1.5 km con luz, ventilación y una moto sobre rieles. Cómo se construyó, qué fallas de seguridad lo permitieron, su recaptura en Los Mochis y su condena a cadena perpetua en Estados Unidos.\nFuentes: Departamento de Justicia de EE.UU. (sentencia, 17/07/2019); PBS Frontline; CBS News / AP; NPR; Al Jazeera; El Financiero; Excélsior; Zeta Tijuana; Expansión; Christian Science Monitor; Xataka; The Mob Museum.",
+ "hashtags": [
+  "#DatoBomba",
+  "#ElChapo",
+  "#Altiplano",
+  "#Mexico",
+  "#historiasreales"
+ ],
+ "source_url": "https://www.justice.gov/opa/pr/joaquin-el-chapo-guzman-sinaloa-cartel-leader-sentenced-life-prison-plus-30-years",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Una cárcel federal de máxima seguridad, vigilada con cámaras día y noche."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ALTIPLANO",
+      "pisos": 5,
+      "ancho": 760,
+      "color": "#94a3b8"
+     },
+     "anim": "crece",
+     "id": "penal"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "MÁXIMA SEGURIDAD",
+      "fondo": "#ef4444",
+      "rot": -4
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Y un hueco de cincuenta por cincuenta centímetros, escondido en la regadera de una celda."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1560,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1420,
+     "s": 1.45,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "50 x 50 CM",
+      "sub": "el hueco"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1400
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Por ahí escapó el narcotraficante más buscado de México."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "camisa": "#c8b48a",
+      "pantalon": "#a8956b",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "up",
+     "id": "reo"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 700,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "Joaquín Guzmán Loera",
+      "sub": "alias El Chapo"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1050
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo se cava un túnel de un kilómetro y medio hasta una celda vigilada, sin que nadie lo note?"
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1250,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1.5 KM",
+      "sub": "de túnel"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Antes, algo claro: esta no es una historia de héroes."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "camisa": "#c8b48a",
+      "pantalon": "#a8956b",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "fade"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Guzmán dirigía el cártel de Sinaloa y hoy cumple cadena perpetua."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "CADENA PERPETUA",
+      "fondo": "#ef4444",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Y no era su primera fuga. El 19 de enero de 2001 escapó del penal de Puente Grande, en Jalisco."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 300,
+     "y": 1250,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "2001"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "pin",
+     "x": 790,
+     "y": 1300,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "JALISCO"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Según la versión oficial, salió escondido en un carrito de lavandería."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "LAVANDERÍA",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Pasó trece años prófugo, hasta que lo detuvieron en Mazatlán, en febrero de 2014."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "13 AÑOS",
+      "sub": "prófugo"
+     }
+    },
+    {
+     "p": "pin",
+     "x": 540,
+     "y": 1450,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "MAZATLÁN",
+      "color": "#3b82f6"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Lo encerraron en el Altiplano, en Almoloya de Juárez, Estado de México."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ALTIPLANO",
+      "pisos": 5,
+      "ancho": 760,
+      "color": "#94a3b8"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "pin",
+     "x": 870,
+     "y": 800,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "EDOMEX"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Ocupaba la celda veinte del pasillo dos, en la zona de tratamientos especiales."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 380,
+     "y": 700,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "CELDA 20"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 380,
+     "y": 860,
+     "s": 0.95,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "PASILLO 2"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Casi año y medio después, el sábado 11 de julio de 2015, el día parecía normal."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "11 JUL"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1480,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "2015"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "A las ocho y cincuenta y dos de la noche, una cámara lo grabó entrando al área de la regadera."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1560,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "fade",
+     "id": "celda"
+    },
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1540,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "cara": "serio",
+      "camisa": "#c8b48a",
+      "pantalon": "#a8956b",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "right",
+     "id": "reo2"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 720,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "20:52",
+      "sub": "última imagen"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Era el único rincón de la celda que las cámaras no alcanzaban a ver."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 680,
+     "y": 960,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "PUNTO CIEGO",
+      "fondo": "#ef4444",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "reo2"
+   ],
+   "lines": [
+    {
+     "text": "Y ya no volvió a salir.",
+     "pausa": 0.4
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.15
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Cuando los guardias entraron, encontraron el hueco."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 230,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "sorpresa",
+      "brazos": "cabeza",
+      "camisa": "#334155",
+      "pantalon": "#1f2937",
+      "pelo": "#3a2a1e",
+      "peinado": "gorra"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "icono",
+     "x": 700,
+     "y": 1100,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y debajo, un pozo de unos diez metros con escalera."
+    }
+   ],
+   "items": [
+    {
+     "p": "flecha",
+     "x": 700,
+     "y": 1350,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "rot": 90,
+      "color": "#ffd23f"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "chapa",
+     "x": 700,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "10 M",
+      "sub": "de profundidad"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "liso",
+    "c": "#6b4f3a",
+    "suelo": "no"
+   },
+   "lines": [
+    {
+     "text": "Abajo empezaba un túnel de alrededor de un kilómetro y medio."
+    }
+   ],
+   "items": [
+    {
+     "p": "linea_tiempo",
+     "x": 540,
+     "y": 1250,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "pasos": [
+       "CELDA",
+       "TÚNEL",
+       "CASA"
+      ],
+      "activo": 0,
+      "ancho": 620
+     },
+     "anim": "fade"
+    }
+   ],
+   "dato": {
+    "num": 1500,
+    "pre": "",
+    "suf": " M",
+    "texto": "METROS DE TÚNEL",
+    "y": 640,
+    "delay": 1.0,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Medía entre un metro y medio y un metro setenta de alto, y unos ochenta centímetros de ancho."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 1500,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1.7 M",
+      "sub": "de alto"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 1500,
+     "s": 1.25,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "80 CM",
+      "sub": "de ancho"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "liso",
+    "c": "#6b4f3a",
+    "suelo": "no"
+   },
+   "lines": [
+    {
+     "text": "Tenía luz eléctrica a lo largo del recorrido y una tubería de PVC para ventilar.",
+     "say": "Tenía luz eléctrica a lo largo del recorrido y una tubería de pe ve ce para ventilar."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 300,
+     "y": 1000,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "LUZ",
+      "rot": -6
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 1250,
+     "s": 0.95,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "AIRE",
+      "fondo": "#7dd3fc",
+      "rot": 5
+     }
+    },
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1600,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "cara": "serio",
+      "camisa": "#c8b48a",
+      "pantalon": "#a8956b",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "up"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Y lo más llamativo: una motocicleta adaptada para correr sobre rieles."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "MOTO SOBRE RIELES",
+      "rot": -4
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1400,
+     "s": 1.2,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "largo": 420
+     },
+     "anim": "left"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Según las autoridades, servía para sacar tierra y meter herramientas. Esa noche también sirvió para huir."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "TIERRA",
+      "sub": "y herramientas"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "El túnel terminaba en una casa en obra negra, al suroeste del penal, en la colonia Santa Juanita."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "OBRA NEGRA",
+      "pisos": 2,
+      "ancho": 560,
+      "color": "#a8a29e",
+      "ventana": "#57534e"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "pin",
+     "x": 840,
+     "y": 1230,
+     "s": 0.6,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "STA. JUANITA"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Ahí había tanques de oxígeno, combustible y un generador eléctrico."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 700,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "OXÍGENO"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 860,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "GENERADOR"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Expertos calculan que una obra así toma entre dieciocho meses y dos años."
+    }
+   ],
+   "items": [
+    {
+     "p": "reloj",
+     "x": 540,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "hora": 10
+     },
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 18,
+    "pre": "",
+    "suf": " MESES",
+    "texto": "MESES O MÁS",
+    "y": 640,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Él llevaba unos dieciséis meses preso, así que algunos creen que empezaron a cavar antes de que llegara."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "SE DISCUTE",
+      "fondo": "#ffffff",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "¿Y cómo atinaron justo a la regadera? Según especialistas, tuvieron que conocer los planos del penal."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1200,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "texto": "PLANOS"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 860,
+     "y": 800,
+     "s": 0.8,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Las fallas quedaron a la vista. Dieciocho empleados del penal fueron llevados a declarar."
+    }
+   ],
+   "items": [
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1600,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 12,
+      "filas": 2,
+      "escala": 0.6,
+      "cara": "preocupado",
+      "camisa": "#334155"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "18",
+      "sub": "empleados a declarar"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y el gobierno destituyó a tres altos funcionarios de prisiones, entre ellos el director del penal."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 860,
+     "y": 1000,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Se instalaron retenes en las carreteras y se suspendieron los vuelos en el aeropuerto de Toluca."
+    }
+   ],
+   "items": [
+    {
+     "p": "avion",
+     "x": 540,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1150,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "La Procuraduría ofreció sesenta millones de pesos de recompensa."
+    }
+   ],
+   "items": [
+    {
+     "p": "bolsa_dinero",
+     "x": 540,
+     "y": 1560,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "$"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 60,
+    "pre": "",
+    "suf": " MILLONES",
+    "texto": "PESOS DE RECOMPENSA",
+    "y": 640,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Unos tres millones ochocientos mil dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1050,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "~3.8 MDD",
+      "sub": "en dólares"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "La búsqueda duró ciento ochenta y dos días."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 1250,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "182"
+     },
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 182,
+    "pre": "",
+    "suf": "",
+    "texto": "DÍAS PRÓFUGO",
+    "y": 640,
+    "delay": 0.8,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "El 8 de enero de 2016, marinos entraron a una casa en Los Mochis, Sinaloa."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "senala",
+      "camisa": "#4b5d3a",
+      "pantalon": "#3f4d31",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 520,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "cara": "serio",
+      "camisa": "#4b5d3a",
+      "pantalon": "#3f4d31",
+      "pelo": "#1f1f1f",
+      "peinado": "gorra"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "pin",
+     "x": 840,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "LOS MOCHIS"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Hubo un enfrentamiento: murieron cinco personas y un marino resultó herido."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "5 MUERTOS"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Y otra vez, un túnel: escondido detrás de un espejo en un clóset, conectaba con el drenaje."
+    }
+   ],
+   "items": [
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1150,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "rot": 90
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1450,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "DRENAJE",
+      "fondo": "#94a3b8",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Salió por una alcantarilla, robó un auto y la Policía Federal lo detuvo en una carretera."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 830,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "cara": "triste",
+      "brazos": "arriba",
+      "camisa": "#c8b48a",
+      "pantalon": "#a8956b",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "right",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Y ahora, cosas que casi nadie sabe."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "¿SABÍAS?",
+      "fondo": "#f0c448",
+      "rot": -4
+     },
+     "anim": "pop"
+    }
+   ],
+   "min_dur": 2.0
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Uno. En el penal llevaba un brazalete electrónico."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "camisa": "#c8b48a",
+      "pantalon": "#a8956b",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "BRAZALETE"
+     },
+     "id": "braz"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "braz"
+   ],
+   "lines": [
+    {
+     "text": "Pero según el gobierno no tenía GPS: fuera de la cárcel no se le podía rastrear.",
+     "say": "Pero según el gobierno no tenía ge pe ese: fuera de la cárcel no se le podía rastrear."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "SIN GPS",
+      "fondo": "#ef4444",
+      "rot": -5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Dos. La luz y el aire del túnel dependían de un generador que, según el Christian Science Monitor, era del tamaño de un auto pequeño."
+    }
+   ],
+   "items": [
+    {
+     "p": "bateria",
+     "x": 540,
+     "y": 1200,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "nivel": 0.9,
+      "color": "#facc15"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "GENERADOR",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Tres. Nadie cobró los sesenta millones."
+    }
+   ],
+   "items": [
+    {
+     "p": "bolsa_dinero",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "$"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "icono",
+     "x": 800,
+     "y": 1050,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Según la Procuraduría, la llamada que lo ubicó era para reportar el robo de un auto, no para denunciarlo."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.25,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "AUTO ROBADO"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Y cuatro. Fue extraditado a Estados Unidos el 19 de enero de 2017."
+    }
+   ],
+   "items": [
+    {
+     "p": "avion",
+     "x": 540,
+     "y": 1100,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 760,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "2017"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Dieciséis años exactos después de su fuga de Puente Grande."
+    }
+   ],
+   "items": [
+    {
+     "p": "linea_tiempo",
+     "x": 540,
+     "y": 1400,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "pasos": [
+       "2001",
+       "2017"
+      ],
+      "activo": 1,
+      "ancho": 460
+     },
+     "anim": "fade"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Lo juzgaron en Nueva York."
+    }
+   ],
+   "items": [
+    {
+     "p": "pin",
+     "x": 540,
+     "y": 1150,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "NUEVA YORK"
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "El 12 de febrero de 2019, un jurado lo declaró culpable de diez cargos."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1640,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "senala",
+      "ropa": "traje",
+      "corbata": "#1e3a8a",
+      "pelo": "#3a2a1e"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1640,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "cara": "triste",
+      "camisa": "#c8b48a",
+      "pantalon": "#a8956b",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "right",
+     "flip": true
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "10 CARGOS"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Entre ellos, narcotráfico, uso de armas y lavado de dinero."
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "El 17 de julio de 2019 recibió cadena perpetua más treinta años."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1560,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "drop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.35,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "PERPETUA + 30",
+      "sub": "17 de julio de 2019"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Y el juez ordenó decomisarle doce mil seiscientos millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "billetes",
+     "x": 540,
+     "y": 1300,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 4
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 12600,
+    "pre": "$",
+    "suf": " MILLONES",
+    "texto": "DÓLARES A DECOMISAR",
+    "y": 640,
+    "delay": 1.0,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Hoy está en la prisión ADX Florence, en Colorado, donde los reos pasan unas veintidós horas al día en su celda.",
+     "say": "Hoy está en la prisión A D X Flórens, en Colorado, donde los reos pasan unas veintidós horas al día en su celda."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 1.05,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ADX FLORENCE",
+      "pisos": 3,
+      "ancho": 720,
+      "color": "#cbd5e1",
+      "ventana": "#334155"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.35,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "22 H",
+      "sub": "al día en la celda"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "La violencia de su organización dejó miles de muertos en México."
+    }
+   ],
+   "items": [
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1600,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 12,
+      "filas": 2,
+      "escala": 0.6,
+      "cara": "triste"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "s": 0.85,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "MILES DE MUERTOS",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y la fuga expuso las fallas del sistema penitenciario."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 860,
+     "y": 1000,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Cámaras, guardias, un brazalete y muros de concreto. Y bastó un punto ciego de cincuenta centímetros."
+    }
+   ],
+   "items": [
+    {
+     "p": "celda",
+     "x": 540,
+     "y": 1560,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1400,
+     "s": 1.45,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "50 CM"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1350
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Qué falla te parece más grave: el punto ciego, el brazalete sin GPS o que alguien conociera los planos? Te leo en los comentarios.",
+     "say": "¿Qué falla te parece más grave: el punto ciego, el brazalete sin ge pe ese o que alguien conociera los planos? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1100,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "PUNTO CIEGO"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1270,
+     "s": 1.2,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "SIN GPS"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1440,
+     "s": 1.2,
+     "at": 0,
+     "delay": 3.8,
+     "a": {
+      "texto": "PLANOS"
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 5.0,
+     "a": {
+      "texto": "¿TÚ QUÉ OPINAS?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2549 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "Yahoo pudo comprar Google y Facebook… y terminó vendida por una fracción",
+ "description": "Yahoo nació en 1994 como una lista de webs de dos estudiantes de Stanford y en el año 2000 llegó a valer unos 125.000 millones de dólares. Dejó pasar a Google (1998 y 2002) y a Facebook (2006), rechazó 44.600 millones de Microsoft en 2008 y en 2017 vendió su negocio principal a Verizon por unos 4.480 millones.\nFuentes: NPR y Al Jazeera (oferta de Microsoft, 2008); CNN Money y MediaPost (venta a Verizon, 2017); Wired, citado por John Naughton (oferta por Google, 2002); TechSpot; The Week; Business Insider y Betanews (oferta por Facebook, 2006); Encyclopedia.com y Reference for Business (origen en Stanford); Euronews (Alphabet, 2025); Wikipedia como apoyo.",
+ "hashtags": [
+  "#DatoBomba",
+  "#Yahoo",
+  "#Google",
+  "#negocios",
+  "#historiadeinternet"
+ ],
+ "source_url": "https://www.techspot.com/article/2744-yahoo-what-went-wrong",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "En el año 2000, Yahoo llegó a valer unos 125 mil millones de dólares.",
+     "say": "En el año 2000, Yahoo llegó a valer unos ciento veinticinco mil millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 1.05,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "pisos": 7,
+      "color": "#ddd6fe",
+      "letrero": "#7c3aed",
+      "ancho": 420
+     },
+     "anim": "crece",
+     "id": "ed"
+    }
+   ],
+   "dato": {
+    "num": 125000,
+    "pre": "$",
+    "suf": "",
+    "texto": "MILLONES DE DÓLARES (2000)",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Diecisiete años después, su negocio principal se vendió por menos de cinco mil millones."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "pisos": 7,
+      "color": "#a1a1aa",
+      "letrero": "#7c3aed",
+      "ancho": 420
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1640,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "VENDIDA EN 2017",
+      "fondo": "#ef4444",
+      "rot": -4
+     }
+    }
+   ],
+   "dato": {
+    "num": 4480,
+    "pre": "$",
+    "suf": "",
+    "texto": "MILLONES DE DÓLARES (2017)",
+    "y": 640,
+    "delay": 2.2,
+    "cuenta": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.0
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Y en el camino tuvo la oportunidad de comprar Google."
+    },
+    {
+     "text": "Y también Facebook."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 900,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "GOOGLE",
+      "fondo": "#ffffff",
+      "rot": -5
+     }
+    },
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 820,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1250,
+     "s": 1.15,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "texto": "FACEBOOK",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    },
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 1180,
+     "s": 0.7,
+     "at": 1,
+     "delay": 0.8,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo deja pasar una empresa los dos mejores negocios de internet?"
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "brazos": "cabeza",
+      "ropa": "traje",
+      "corbata": "#7c3aed",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 700,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1000
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Enero de 1994. Universidad de Stanford, en California."
+    }
+   ],
+   "items": [
+    {
+     "p": "pin",
+     "x": 540,
+     "y": 1400,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "STANFORD",
+      "color": "#7c3aed"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "1994"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Dos estudiantes de doctorado, Jerry Yang y David Filo, tenían que escribir su tesis.",
+     "say": "Dos estudiantes de doctorado, Yérri Yang y Déivid Fáilo, tenían que escribir su tesis."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "camisa": "#7c3aed",
+      "pelo": "#1f1f1f",
+      "peinado": "corto",
+      "lentes": true
+     },
+     "anim": "left",
+     "id": "jerry"
+    },
+    {
+     "p": "nombre",
+     "x": 300,
+     "y": 690,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "Jerry Yang",
+      "sub": "estudiante de Stanford"
+     }
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "cara": "serio",
+      "camisa": "#f0c448",
+      "pelo": "#3a2a1e",
+      "peinado": "largo"
+     },
+     "anim": "right",
+     "id": "david"
+    },
+    {
+     "p": "nombre",
+     "x": 780,
+     "y": 860,
+     "s": 0.8,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "David Filo",
+      "sub": "estudiante de Stanford"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Pero en vez de eso, armaban una lista con sus páginas web favoritas."
+    }
+   ],
+   "items": [
+    {
+     "p": "pc_escritorio",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "LISTA"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "SUS WEBS FAVORITAS",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Trabajaban en un tráiler dentro del campus."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "TRÁILER",
+      "pisos": 2,
+      "ancho": 640,
+      "color": "#f1f5f9",
+      "letrero": "#475569"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "persona",
+     "x": 860,
+     "y": 1640,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "cara": "feliz",
+      "camisa": "#7c3aed",
+      "pelo": "#1f1f1f",
+      "peinado": "corto",
+      "lentes": true
+     },
+     "anim": "right"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "La lista se llamaba la Guía de Jerry y David para la World Wide Web.",
+     "say": "La lista se llamaba la Guía de Yérri y Déivid para la Uórld Uáid Ueb."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1200,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "texto": "GUÍA"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "1994",
+      "sub": "Jerry and David's Guide"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "No había buscadores como los de hoy: ellos ordenaban cada página a mano, por categorías."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 300,
+     "y": 760,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "DEPORTES",
+      "fondo": "#ffffff",
+      "rot": -5
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 900,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "texto": "CIENCIA",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 330,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "MÚSICA",
+      "fondo": "#ffffff",
+      "rot": 3
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 770,
+     "y": 1330,
+     "s": 0.8,
+     "at": 0,
+     "delay": 2.1,
+     "a": {
+      "texto": "NOTICIAS",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Ese mismo año le pusieron un nombre más corto: Yahoo."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 1.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "fondo": "#ddd6fe",
+      "rot": -6
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Dicen que son unas siglas en inglés."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1450,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "Y.A.H.O.O.",
+      "sub": "siglas en ingles"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Pero lo eligieron por otra razón: en Los viajes de Gulliver, un yahoo es alguien rudo y sin modales.",
+     "say": "Pero lo eligieron por otra razón: en Los viajes de Gúliver, un yajú es alguien rudo y sin modales."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "GULLIVER",
+      "color": "#b45309"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "RUDO Y SIN MODALES",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En marzo de 1995 se convirtieron en empresa."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "pisos": 7,
+      "color": "#ddd6fe",
+      "letrero": "#7c3aed",
+      "ancho": 420
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "1995"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Y en abril de 1996 salieron a la bolsa, a trece dólares por acción."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1540,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "sube",
+      "color": "#7c3aed"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "chapa",
+     "x": 300,
+     "y": 760,
+     "s": 1.35,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "$13",
+      "sub": "precio de salida"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "El primer día la acción llegó a cuarenta y tres."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 760,
+     "s": 1.35,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "$43",
+      "sub": "el mismo dia"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "A finales de los noventa, Yahoo era la puerta de entrada a internet: correo, noticias, chat, juegos."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop",
+     "x": 540,
+     "y": 1450,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "color": "#c4b5fd"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 250,
+     "y": 760,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "CORREO",
+      "fondo": "#ffffff",
+      "rot": -5
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 900,
+     "s": 0.7,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "NOTICIAS",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 830,
+     "y": 760,
+     "s": 0.7,
+     "at": 0,
+     "delay": 2.8,
+     "a": {
+      "texto": "CHAT",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Hacia el año 2000, era el sitio más visitado de internet."
+    }
+   ],
+   "items": [
+    {
+     "p": "multitud",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 24,
+      "filas": 3,
+      "semilla": 4,
+      "cara": "feliz"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "Nº 1 EN VISITAS",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Mientras tanto, en Stanford, otros dos estudiantes tenían otra idea."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "camisa": "#3b82f6",
+      "pelo": "#3a2a1e",
+      "peinado": "corto"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "nombre",
+     "x": 300,
+     "y": 700,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "Larry Page",
+      "sub": "fundador de Google"
+     }
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "camisa": "#22c55e",
+      "pelo": "#1f1f1f",
+      "peinado": "corto"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "nombre",
+     "x": 780,
+     "y": 860,
+     "s": 0.8,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "Sergey Brin",
+      "sub": "fundador de Google"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Su buscador no ordenaba las páginas a mano."
+    },
+    {
+     "text": "Las ordenaba según cuántas otras páginas las enlazaban. Lo llamaron PageRank.",
+     "say": "Las ordenaba según cuántas otras páginas las enlazaban. Lo llamaron Péich Rank."
+    }
+   ],
+   "items": [
+    {
+     "p": "pc_escritorio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "torre": false,
+      "texto": "WEB"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "flecha",
+     "x": 230,
+     "y": 900,
+     "s": 0.6,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "rot": 30
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "flecha",
+     "x": 850,
+     "y": 900,
+     "s": 0.6,
+     "at": 1,
+     "delay": 0.4,
+     "a": {
+      "rot": 150
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 1,
+     "delay": 1.6,
+     "a": {
+      "texto": "PAGERANK",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Según varios relatos, en 1998 ofrecieron esa tecnología por alrededor de un millón de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "bolsa_dinero",
+     "x": 540,
+     "y": 1560,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "$"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 1,
+    "pre": "~$",
+    "suf": "",
+    "texto": "MILLÓN DE DÓLARES (1998)",
+    "y": 640,
+    "delay": 1.6,
+    "cuenta": false
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y Yahoo dijo que no, aunque los detalles de esa oferta se discuten.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 1150,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1000,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "SE DISCUTE",
+      "fondo": "#ffffff",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Yahoo confiaba en su directorio, que ya funcionaba. Lo de Google era una apuesta."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 300,
+     "y": 1250,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "texto": "YAHOO"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "icono",
+     "x": 300,
+     "y": 820,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "tipo": "check"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "pc_escritorio",
+     "x": 800,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "torre": false,
+      "texto": "?"
+     },
+     "anim": "right"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Y en el 2000, lo irónico: Yahoo eligió a Google como buscador de su portal."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop",
+     "x": 540,
+     "y": 1450,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "color": "#c4b5fd"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 800,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "BUSCA CON GOOGLE",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "En 2001 llegó un nuevo director a Yahoo: Terry Semel.",
+     "say": "En 2001 llegó un nuevo director a Yahoo: Térri Semél."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1640,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#7c3aed",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso"
+     },
+     "anim": "up",
+     "id": "semel"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 700,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "Terry Semel",
+      "sub": "director de Yahoo desde 2001"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y en el verano de 2002 intentó comprar Google."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 830,
+     "y": 1000,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "GOOGLE",
+      "fondo": "#ffffff",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Según la revista Wired, ofreció unos tres mil millones de dólares.",
+     "say": "Según la revista Uáired, ofreció unos tres mil millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "billetes",
+     "x": 540,
+     "y": 1400,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 4
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 3000,
+    "pre": "$",
+    "suf": "",
+    "texto": "MILLONES: LA OFERTA (2002)",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Pero le dijeron que Google valía por lo menos cinco mil millones."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1680,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "$5.000 M",
+      "sub": "lo que valia, segun Wired"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Otras fuentes dan cifras distintas. Pero no hubo trato."
+    }
+   ],
+   "items": [
+    {
+     "p": "mesa",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "sobre",
+     "x": 540,
+     "y": 1270,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "color": "#64748b",
+      "texto": "OFERTA",
+      "disco": false
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Dos años después, en 2004, Google salió a la bolsa."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1540,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "sube",
+      "color": "#22c55e"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "2004"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "En 2025, la dueña de Google superó los tres billones de dólares: tres millones de millones."
+    }
+   ],
+   "dato": {
+    "num": 3,
+    "pre": "$",
+    "suf": "",
+    "texto": "BILLONES DE DÓLARES (2025)",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": false
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En 2006 apareció otra oportunidad: una red social universitaria llamada Facebook."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop_moderna",
+     "x": 540,
+     "y": 1500,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "FACEBOOK",
+      "pantalla": "#1e40af"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Su creador, Mark Zuckerberg, tenía apenas 22 años.",
+     "say": "Su creador, Mark Súkerberg, tenía apenas veintidós años."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "camisa": "#9ca3af",
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "up",
+     "id": "mark"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 700,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "Mark Zuckerberg",
+      "sub": "creador de Facebook"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "En junio de 2006, Yahoo ofreció unos mil millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "bolsa_dinero",
+     "x": 300,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "drop"
+    },
+    {
+     "p": "bolsa_dinero",
+     "x": 780,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.4,
+     "a": {},
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 1000,
+    "pre": "$",
+    "suf": "",
+    "texto": "MILLONES POR FACEBOOK",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Zuckerberg no quiso vender.",
+     "say": "Súkerberg no quiso vender."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "camisa": "#9ca3af",
+      "pelo": "#6b4423",
+      "peinado": "corto"
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "icono",
+     "x": 830,
+     "y": 820,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Según el Wall Street Journal y el New York Times, después la oferta bajó a unos 900 millones.",
+     "say": "Según el Uól Strit Yúrnal y el Niu Iork Táims, después la oferta bajó a unos novecientos millones."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 830,
+     "y": 1300,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "$900 M",
+      "sub": "nueva oferta"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Tampoco funcionó. Facebook nunca se vendió.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "NO SE VENDIÓ",
+      "fondo": "#ef4444",
+      "rot": -5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Y luego llegó la oferta más grande. Esta vez, para comprar a Yahoo."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "pisos": 7,
+      "color": "#ddd6fe",
+      "letrero": "#7c3aed",
+      "ancho": 420
+     },
+     "anim": "crece"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "El 1 de febrero de 2008, Microsoft ofreció 44.600 millones de dólares.",
+     "say": "El primero de febrero de 2008, Máicrosoft ofreció cuarenta y cuatro mil seiscientos millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1640,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "risa",
+      "brazos": "senala",
+      "ropa": "traje",
+      "corbata": "#0ea5e9",
+      "pelo": "#c9c9c9",
+      "peinado": "calvo"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "nombre",
+     "x": 800,
+     "y": 1040,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "Steve Ballmer",
+      "sub": "director de Microsoft"
+     }
+    }
+   ],
+   "dato": {
+    "num": 44600,
+    "pre": "$",
+    "suf": "",
+    "texto": "MILLONES DE DÓLARES",
+    "y": 640,
+    "delay": 1.8,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Eran 31 dólares por acción: un 62 por ciento más que en la bolsa."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 300,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "$31",
+      "sub": "por accion"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "+62%",
+      "sub": "sobre la bolsa"
+     }
+    },
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1540,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "tipo": "sube",
+      "color": "#22c55e"
+     },
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "El 11 de febrero, la junta de Yahoo la rechazó por unanimidad: dijo que era muy poco."
+    }
+   ],
+   "items": [
+    {
+     "p": "mesa",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "cara": "enojado",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#7c3aed",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.7,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#64748b"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 780,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Microsoft subió a 33 dólares por acción. Yahoo pedía 37."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 300,
+     "y": 900,
+     "s": 1.45,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "$33",
+      "sub": "Microsoft"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 900,
+     "s": 1.45,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "$37",
+      "sub": "lo que pedia Yahoo"
+     }
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1300,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "fade"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "En mayo de 2008, Microsoft retiró la oferta.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "sobre",
+     "x": 540,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#64748b",
+      "texto": "OFERTA",
+      "disco": false
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "RETIRADA",
+      "fondo": "#ef4444",
+      "rot": -5
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.1,
+     1.0
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Después vinieron los hackeos. En 2016, Yahoo reveló dos robos de datos enormes."
+    }
+   ],
+   "items": [
+    {
+     "p": "laptop",
+     "x": 540,
+     "y": 1450,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "HACKEO",
+      "color": "#ef4444"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 800,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "En 2017 confirmó que uno había afectado a todas sus cuentas: tres mil millones."
+    }
+   ],
+   "dato": {
+    "num": 3000,
+    "pre": "",
+    "suf": "",
+    "texto": "MILLONES DE CUENTAS",
+    "y": 640,
+    "delay": 2.2,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En julio de 2016, la telefónica Verizon había acordado comprarle su negocio principal por 4.830 millones.",
+     "say": "En julio de 2016, la telefónica Verizon había acordado comprarle su negocio principal por cuatro mil ochocientos treinta millones."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 300,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "VERIZON",
+      "pisos": 6,
+      "color": "#fecaca",
+      "letrero": "#b91c1c",
+      "ancho": 380
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1250,
+     "s": 0.4,
+     "at": 0,
+     "delay": 1.4,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "edificio",
+     "x": 790,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "YAHOO!",
+      "pisos": 7,
+      "color": "#ddd6fe",
+      "letrero": "#7c3aed",
+      "ancho": 420
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "$4.830 M",
+      "sub": "precio acordado"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Por los hackeos, en febrero de 2017 le bajaron el precio en 350 millones."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 960,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "-$350 M",
+      "fondo": "#ef4444",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "En junio de 2017 se cerró la venta: unos 4.480 millones de dólares.",
+     "say": "En junio de 2017 se cerró la venta: unos cuatro mil cuatrocientos ochenta millones de dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "lapida",
+     "x": 540,
+     "y": 1560,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO",
+      "sub": "1994-2017"
+     },
+     "anim": "crece"
+    }
+   ],
+   "dato": {
+    "num": 4480,
+    "pre": "$",
+    "suf": "",
+    "texto": "MILLONES: LA VENTA",
+    "y": 640,
+    "delay": 1.6,
+    "cuenta": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.0
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Lo que quedó de la vieja empresa pasó a llamarse Altaba."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1680,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "ALTABA",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Era menos del cuatro por ciento de lo que valía en el 2000."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1540,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "baja",
+      "color": "#ef4444"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.45,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "< 4%",
+      "sub": "del valor del 2000"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Y ahora, cosas que casi nadie sabe.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1150,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "exclamacion",
+      "color": "#f0c448"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Uno. Yahoo creció tan rápido que saturó la red de Stanford, y tuvo que irse del campus."
+    }
+   ],
+   "items": [
+    {
+     "p": "pc_escritorio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ERROR",
+      "tinta": "#ef4444"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "RED SATURADA",
+      "fondo": "#ef4444",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Netscape, la empresa del navegador, les prestó sus computadoras.",
+     "say": "Nétscape, la empresa del navegador, les prestó sus computadoras."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 960,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "NETSCAPE",
+      "fondo": "#ffffff",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Dos. Su mejor apuesta fue en China: en 2005 pagó mil millones de dólares por el 40 por ciento de Alibaba."
+    }
+   ],
+   "items": [
+    {
+     "p": "globo",
+     "x": 540,
+     "y": 1250,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 300,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "$1.000 M",
+      "sub": "2005"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "40%",
+      "sub": "de Alibaba"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Tres. En 1999 compró GeoCities, un sitio de páginas personales, por unos 3.600 millones. Años después lo cerró.",
+     "say": "Tres. En 1999 compró Yío Cítis, un sitio de páginas personales, por unos tres mil seiscientos millones. Años después lo cerró."
+    }
+   ],
+   "items": [
+    {
+     "p": "pc_escritorio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "GEO",
+      "tinta": "#facc15"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "$3.600 M",
+      "sub": "GeoCities, 1999"
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 830,
+     "y": 1000,
+     "s": 0.8,
+     "at": 0,
+     "delay": 3.4,
+     "a": {
+      "texto": "CERRADO",
+      "fondo": "#ef4444",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "¿Y qué pasó después? Verizon juntó Yahoo con AOL en una empresa llamada Oath.",
+     "say": "¿Y qué pasó después? Verizon juntó Yahoo con A O L en una empresa llamada Ouz."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 300,
+     "y": 1560,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "YAHOO!",
+      "pisos": 7,
+      "color": "#ddd6fe",
+      "letrero": "#7c3aed",
+      "ancho": 420
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "edificio",
+     "x": 790,
+     "y": 1560,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "AOL",
+      "pisos": 6,
+      "color": "#bfdbfe",
+      "letrero": "#1e3a8a",
+      "ancho": 380
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "OATH",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "En 2021 vendió el 90 por ciento al fondo Apollo, por unos cinco mil millones. Y la empresa volvió a llamarse Yahoo."
+    }
+   ],
+   "items": [
+    {
+     "p": "bolsa_dinero",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "$"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "chapa",
+     "x": 320,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "$5.000 M",
+      "sub": "Apollo, 2021"
+     }
+    },
+    {
+     "p": "edificio",
+     "x": 790,
+     "y": 1560,
+     "s": 0.75,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "YAHOO!",
+      "pisos": 7,
+      "color": "#ddd6fe",
+      "letrero": "#7c3aed",
+      "ancho": 420
+     },
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Pudo comprar Google por un millón y Facebook por mil millones."
+    },
+    {
+     "text": "Rechazó 44.600 millones.",
+     "say": "Rechazó cuarenta y cuatro mil seiscientos millones."
+    },
+    {
+     "text": "Y terminó vendida por menos de cinco mil."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "GOOGLE",
+      "sub": "~$1 M"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "FACEBOOK",
+      "sub": "~$1.000 M"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1050,
+     "s": 1.3,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "texto": "$44.600 M",
+      "sub": "rechazados"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1350,
+     "s": 1.3,
+     "at": 2,
+     "delay": 0,
+     "a": {
+      "texto": "$4.480 M",
+      "sub": "venta final"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ],
+    "f": [
+     540,
+     1000
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Tú habrías aceptado la oferta de Microsoft? Te leo en los comentarios.",
+     "say": "¿Tú habrías aceptado la oferta de Máicrosoft? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "brazos": "cabeza",
+      "camisa": "#7c3aed",
+      "pelo": "#1f1f1f",
+      "peinado": "corto",
+      "lentes": true
+     },
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "¿SÍ O NO?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}

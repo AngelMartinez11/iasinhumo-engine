@@ -1,0 +1,2418 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "El microondas nació por un chocolate derretido: la historia de Percy Spencer",
+ "description": "En 1945, el ingeniero Percy Spencer notó que un chocolate se derritió en su bolsillo junto a un magnetrón de radar. De ahí salió el Radarange de 1947 (unos 340 kilos, enfriado con agua) y, en 1967, el microondas de mesa de Amana por 495 dólares. Además: cómo funciona y tres mitos desmentidos.\nFuentes: National Inventors Hall of Fame; American Physical Society (APS News); IEEE Spectrum; NPR; History.com; Lemelson-MIT; Mass Moments (Mass Humanities); MIT Technology Review; FDA y EPA (seguridad del microondas); Harvard Health (nutrientes); Encyclopaedia Britannica; The Saturday Evening Post; Ingenium (museo de Canadá); The Henry Ford.",
+ "hashtags": [
+  "#DatoBomba",
+  "#microondas",
+  "#inventos",
+  "#ciencia",
+  "#historia"
+ ],
+ "source_url": "https://www.invent.org/inductees/percy-l-spencer",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Hoy calientas tu café en un minuto, con un aparato que cabe en cualquier cocina."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "1 MIN",
+      "sub": "un cafe"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Pero el primer horno de microondas pesaba unos 340 kilos.",
+     "say": "Pero el primer horno de microondas pesaba unos trescientos cuarenta kilos."
+    }
+   ],
+   "items": [
+    {
+     "p": "bascula",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "340 KG"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1470,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "RADARANGE",
+      "pisos": 4,
+      "ancho": 340,
+      "color": "#cbd5e1",
+      "ventana": "#cbd5e1",
+      "letrero": "#334155"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 340,
+    "pre": "",
+    "suf": " KG",
+    "texto": "KILOS",
+    "y": 640,
+    "delay": 2.0,
+    "cuenta": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.0
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Y todo empezó con una barra de chocolate derretida en un bolsillo."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "CHOCOLATE",
+      "fondo": "#7c4a2d",
+      "tinta": "#1d1d2b",
+      "rot": -5
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1400,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "DERRETIDO",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo una pieza del radar de guerra terminó calentando tus sobras?"
+    }
+   ],
+   "items": [
+    {
+     "p": "avion",
+     "x": 300,
+     "y": 1000,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "left"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1250,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.8,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 790,
+     "y": 1520,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Esta historia empieza con un hombre que nunca terminó la escuela: Percy Spencer.",
+     "say": "Esta historia empieza con un hombre que nunca terminó la escuela: Pérsi Spénser."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#b45309",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso",
+      "lentes": true
+     },
+     "anim": "up",
+     "id": "spencer"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 700,
+     "s": 0.95,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "Percy Spencer",
+      "sub": "ingeniero de Raytheon"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1100
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Nació en 1894 en Howland, un pueblo de Maine, en Estados Unidos.",
+     "say": "Nació en 1894 en Jáuland, un pueblo de Méin, en Estados Unidos."
+    }
+   ],
+   "items": [
+    {
+     "p": "pin",
+     "x": 540,
+     "y": 1400,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "MAINE, EE. UU."
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.35,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "1894",
+      "sub": "nace Spencer"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Su padre murió cuando él tenía año y medio, y lo criaron sus tíos."
+    }
+   ],
+   "items": [
+    {
+     "p": "nino",
+     "x": 540,
+     "y": 1560,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "triste",
+      "camisa": "#94a3b8"
+     },
+     "anim": "up"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Dejó la escuela en quinto grado para trabajar."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "5º GRADO",
+      "sub": "dejo la escuela"
+     }
+    },
+    {
+     "p": "icono",
+     "x": 840,
+     "y": 1150,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "A los 16 años ayudó a electrificar una fábrica de papel, y aprendió leyendo libros de noche.",
+     "say": "A los dieciséis años ayudó a electrificar una fábrica de papel, y aprendió leyendo libros de noche."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 300,
+     "y": 1200,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "texto": "VOLTS"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "reloj",
+     "x": 800,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "hora": 11
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "16 AÑOS"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Luego fue operador de radio en la Marina, y estudió solo cálculo, física y química."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "brazos": "objeto",
+      "camisa": "#f8fafc",
+      "peinado": "corto",
+      "pelo": "#6b4423"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 900,
+     "s": 0.75,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "CÁLCULO",
+      "fondo": "#ffffff",
+      "rot": -5
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 1100,
+     "s": 0.75,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "FÍSICA",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 1300,
+     "s": 0.75,
+     "at": 0,
+     "delay": 2.8,
+     "a": {
+      "texto": "QUÍMICA",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "En 1925 entró a una pequeña empresa de Massachusetts: Raytheon.",
+     "say": "En 1925 entró a una pequeña empresa de Masachúsets: Réizion."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "RAYTHEON",
+      "pisos": 5,
+      "ancho": 480
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "1925"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Llegó la Segunda Guerra Mundial, y con ella, el radar."
+    }
+   ],
+   "items": [
+    {
+     "p": "avion",
+     "x": 540,
+     "y": 1000,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#94a3b8"
+     },
+     "anim": "left"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1000
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "El corazón del radar era el magnetrón: un tubo que produce microondas, ondas de radio muy cortas."
+    }
+   ],
+   "items": [
+    {
+     "p": "disco",
+     "x": 540,
+     "y": 1200,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "pop",
+     "id": "mag"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "MAGNETRÓN",
+      "rot": -4
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "En 1941 se hacían unos 17 al día, según el Salón de la Fama de los Inventores."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1600,
+     "s": 1.35,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "17",
+      "sub": "por dia, 1941"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Spencer cambió el método: en vez de tallar cobre sólido, apiló láminas delgadas de metal."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "brazos": "senala",
+      "ropa": "traje",
+      "corbata": "#b45309",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso",
+      "lentes": true
+     },
+     "anim": "left"
+    },
+    {
+     "p": "disco",
+     "x": 800,
+     "y": 1000,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.4,
+     "a": {},
+     "anim": "drop"
+    },
+    {
+     "p": "disco",
+     "x": 800,
+     "y": 1150,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.8,
+     "a": {},
+     "anim": "drop"
+    },
+    {
+     "p": "disco",
+     "x": 800,
+     "y": 1300,
+     "s": 0.5,
+     "at": 0,
+     "delay": 2.2,
+     "a": {},
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "La producción subió a 2.600 por día.",
+     "say": "La producción subió a dos mil seiscientos por día."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1540,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "sube",
+      "color": "#22c55e"
+     },
+     "anim": "crece"
+    }
+   ],
+   "dato": {
+    "num": 2600,
+    "pre": "",
+    "suf": "",
+    "texto": "MAGNETRONES AL DÍA",
+    "y": 640,
+    "delay": 1.0,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y la Marina le dio su máximo premio para un civil.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "PREMIO",
+      "sub": "Marina de EE. UU."
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Cerca de 1945, Spencer estaba junto a un magnetrón encendido."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 330,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "ropa": "traje",
+      "corbata": "#b45309",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso",
+      "lentes": true
+     },
+     "anim": "left",
+     "id": "sp"
+    },
+    {
+     "p": "disco",
+     "x": 800,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.8,
+     "a": {},
+     "anim": "pop",
+     "id": "mag2"
+    },
+    {
+     "p": "calendario",
+     "x": 800,
+     "y": 760,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "1945"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "sp"
+   ],
+   "lines": [
+    {
+     "text": "Y notó que la barra de chocolate que llevaba en el bolsillo se había derretido."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 330,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "sorpresa",
+      "ropa": "traje",
+      "corbata": "#b45309",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso",
+      "lentes": true
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "etiqueta",
+     "x": 330,
+     "y": 1250,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "¡CHOCOLATE!",
+      "fondo": "#7c4a2d",
+      "rot": 6
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     330,
+     1000
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "En vez de ignorarlo, hizo una prueba: puso granos de maíz frente al magnetrón."
+    }
+   ],
+   "items": [
+    {
+     "p": "disco",
+     "x": 300,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 790,
+     "y": 1150,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "MAÍZ",
+      "fondo": "#fde68a",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y se convirtieron en palomitas."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 700,
+     "y": 850,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "POP",
+      "fondo": "#ffffff",
+      "rot": 8
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 900,
+     "y": 1000,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "texto": "POP",
+      "fondo": "#ffffff",
+      "rot": -8
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 760,
+     "y": 1400,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "POP",
+      "fondo": "#ffffff",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Después probó con un huevo."
+    },
+    {
+     "text": "Según la Sociedad Americana de Física, el huevo explotó y salpicó a un colega que miraba de cerca."
+    }
+   ],
+   "items": [
+    {
+     "p": "disco",
+     "x": 300,
+     "y": 1150,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 300,
+     "y": 820,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "HUEVO",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.85,
+     "at": 1,
+     "delay": 0,
+     "a": {
+      "cara": "sorpresa",
+      "brazos": "cabeza",
+      "ropa": "bata",
+      "pelo": "#3a2a1e",
+      "peinado": "corto"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 1000,
+     "s": 1.0,
+     "at": 1,
+     "delay": 1.6,
+     "a": {
+      "texto": "¡PLAF!",
+      "fondo": "#fde047",
+      "rot": 7
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Ojo: algunos historiadores dicen que fueron varias observaciones, no un solo momento."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1150,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "exclamacion",
+      "color": "#f0c448"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1450,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "SE DISCUTE",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Lo seguro: el 8 de octubre de 1945, Raytheon pidió la patente."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "PATENTE",
+      "color": "#1e3a8a"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 760,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "1945"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Pero, ¿cómo calienta la comida?"
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "pop",
+     "id": "mic"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop",
+     "id": "preg"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "preg"
+   ],
+   "lines": [
+    {
+     "text": "Adentro hay un magnetrón que produce ondas de unos 2.450 megahercios.",
+     "say": "Adentro hay un magnetrón que produce ondas de unos dos mil cuatrocientos cincuenta megahercios."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "2.450 MHz"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "Las paredes de metal hacen rebotar las ondas, y la comida las absorbe."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "flecha",
+     "x": 300,
+     "y": 900,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "rot": 30
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "flecha",
+     "x": 780,
+     "y": 900,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "rot": 150
+     },
+     "anim": "fade"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Las moléculas de agua tienen un lado positivo y otro negativo. Las ondas las hacen vibrar sin parar."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 330,
+     "y": 1000,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "+",
+      "fondo": "#ef4444",
+      "rot": 0
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 750,
+     "y": 1000,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "−",
+      "fondo": "#3b82f6",
+      "rot": 0
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1350,
+     "s": 1.0,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "H₂O",
+      "fondo": "#bfdbfe",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Ese movimiento produce fricción, y la fricción produce calor."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "CALOR",
+      "fondo": "#fb923c",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Por eso lo que tiene más agua, como las verduras, se calienta antes."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "VERDURAS",
+      "fondo": "#86efac",
+      "rot": -4
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "+ AGUA",
+      "sub": "mas rapido"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "La rejilla de metal de la puerta tiene agujeros mucho más chicos que las ondas, que miden unos doce centímetros."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.35,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "12 CM",
+      "sub": "cada onda"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     400,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "La luz sale y puedes ver tu comida. Las microondas, no.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 850,
+     "y": 1000,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "check"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "En 1947 salió a la venta el primer horno de microondas: el Radarange.",
+     "say": "En 1947 salió a la venta el primer horno de microondas: el Rádar Reinch."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "RADARANGE",
+      "pisos": 4,
+      "ancho": 340,
+      "color": "#cbd5e1",
+      "ventana": "#cbd5e1",
+      "letrero": "#334155"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "1947"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Era del tamaño de un refrigerador: de un metro setenta a un metro ochenta, según la fuente."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 830,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "sorpresa",
+      "ropa": "bata",
+      "pelo": "#3a2a1e",
+      "peinado": "corto"
+     },
+     "anim": "right"
+    },
+    {
+     "p": "chapa",
+     "x": 330,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "1,7-1,8 M",
+      "sub": "de alto"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "liso",
+    "c": "#e4e4ea"
+   },
+   "lines": [
+    {
+     "text": "Pesaba unos 340 kilos. Y se enfriaba con agua, por tuberías.",
+     "say": "Pesaba unos trescientos cuarenta kilos. Y se enfriaba con agua, por tuberías."
+    }
+   ],
+   "items": [
+    {
+     "p": "bascula",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "340 KG"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1470,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "texto": "RADARANGE",
+      "pisos": 4,
+      "ancho": 340,
+      "color": "#cbd5e1",
+      "ventana": "#cbd5e1",
+      "letrero": "#334155"
+     },
+     "anim": "drop"
+    }
+   ],
+   "dato": {
+    "num": 340,
+    "pre": "",
+    "suf": " KG",
+    "texto": "EL RADARANGE, 1947",
+    "y": 640,
+    "delay": 1.0,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Y costaba entre dos mil y cinco mil dólares, según la fuente."
+    }
+   ],
+   "items": [
+    {
+     "p": "billetes",
+     "x": 540,
+     "y": 1400,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "n": 4
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.35,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "$2.000-5.000",
+      "sub": "segun la fuente"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Lo compraban restaurantes, barcos, trenes y hospitales."
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "RESTAURANTE",
+      "letrero": "#b91c1c",
+      "letra": "#ffffff"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "etiqueta",
+     "x": 250,
+     "y": 760,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "BARCOS",
+      "fondo": "#ffffff",
+      "rot": -5
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 900,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "TRENES",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    },
+    {
+     "p": "etiqueta",
+     "x": 830,
+     "y": 760,
+     "s": 0.7,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "HOSPITALES",
+      "fondo": "#ffffff",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Hasta hubo una máquina de hot dogs calentados con microondas: la Speedy Weeny.",
+     "say": "Hasta hubo una máquina de jot dogs calentados con microondas: la Spídi Uíni."
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "HOT DOGS",
+      "letrero": "#facc15",
+      "letra": "#1d1d2b",
+      "ancho": 480
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "SPEEDY WEENY",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En 1955, la empresa Tappan sacó el primero para la casa. Costaba 1.295 dólares.",
+     "say": "En 1955, la empresa Tápan sacó el primero para la casa. Costaba mil doscientos noventa y cinco dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "texto": "$1.295",
+      "sub": "Tappan, 1955"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "El primer año fabricaron solo 34.",
+     "say": "El primer año fabricaron solo treinta y cuatro."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 960,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "SOLO 34",
+      "fondo": "#ef4444",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "A mediados de los sesenta, Raytheon compró Amana, que hacía refrigeradores.",
+     "say": "A mediados de los sesenta, Réizion compró Amána, que hacía refrigeradores."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 300,
+     "y": 1560,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "RAYTHEON",
+      "pisos": 5,
+      "ancho": 380
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1250,
+     "s": 0.35,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "tienda",
+     "x": 790,
+     "y": 1560,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "AMANA",
+      "ancho": 480
+     },
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Y en 1967 llegó el que lo cambió todo: el Radarange de mesa de Amana.",
+     "say": "Y en 1967 llegó el que lo cambió todo: el Rádar Reinch de mesa de Amána."
+    }
+   ],
+   "items": [
+    {
+     "p": "mesa",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {},
+     "anim": "up"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1330,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 720,
+     "s": 0.55,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "1967"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Cabía sobre la mesa de la cocina y costaba 495 dólares.",
+     "say": "Cabía sobre la mesa de la cocina y costaba cuatrocientos noventa y cinco dólares."
+    }
+   ],
+   "dato": {
+    "num": 495,
+    "pre": "$",
+    "suf": "",
+    "texto": "AMANA, 1967",
+    "y": 640,
+    "delay": 1.4,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Con la inflación, hoy serían unos cuatro mil dólares."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 480,
+     "y": 900,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "HOY: ~$4.000",
+      "fondo": "#ffffff",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "En 1975, en Estados Unidos ya se vendían más microondas que estufas de gas."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 300,
+     "y": 1520,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "icono",
+     "x": 300,
+     "y": 900,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "tipo": "check"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 1100,
+     "s": 1.35,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "1975",
+      "sub": "supera al gas"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Y ahora, cosas que casi nadie sabe.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1150,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "exclamacion",
+      "color": "#f0c448"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Uno. Spencer tuvo más de cien patentes, pero Raytheon solo le pagaba el bono normal: dos dólares por cada una."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "ropa": "traje",
+      "corbata": "#b45309",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso",
+      "lentes": true
+     },
+     "anim": "left"
+    },
+    {
+     "p": "libro",
+     "x": 790,
+     "y": 1200,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "100+",
+      "color": "#1e3a8a"
+     },
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 2,
+    "pre": "$",
+    "suf": "",
+    "texto": "POR PATENTE",
+    "y": 640,
+    "delay": 3.0,
+    "cuenta": false
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Dos. Las microondas no cocinan de adentro hacia afuera."
+    },
+    {
+     "text": "Entran apenas uno o dos centímetros; el centro se calienta porque el calor se va pasando."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1150,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.35,
+     "at": 1,
+     "delay": 0.8,
+     "a": {
+      "texto": "1-2 CM",
+      "sub": "lo que entran"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Por eso conviene dejarla reposar un poco."
+    }
+   ],
+   "items": [
+    {
+     "p": "reloj",
+     "x": 850,
+     "y": 1450,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "hora": 1
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Tres. La comida no se vuelve radiactiva. Las microondas no son como los rayos X: solo producen calor."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "NO RADIACTIVA",
+      "fondo": "#86efac",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Y cuatro. No destruye más nutrientes que otros métodos. Como es rápido y usa poca agua, puede conservar más vitamina C."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "VITAMINA C",
+      "fondo": "#fdba74",
+      "rot": 4
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 840,
+     "y": 820,
+     "s": 0.8,
+     "at": 0,
+     "delay": 2.0,
+     "a": {
+      "tipo": "check"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "¿Y qué pasó después? Entre 1986 y 2001, los hogares de Estados Unidos con microondas pasaron del 25 por ciento a más del 90."
+    }
+   ],
+   "items": [
+    {
+     "p": "grafica",
+     "x": 540,
+     "y": 1540,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "sube",
+      "color": "#3b82f6"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "chapa",
+     "x": 300,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "25%",
+      "sub": "1986"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "+90%",
+      "sub": "2001"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Spencer llegó a vicepresidente de Raytheon. Murió en 1970, a los 76 años.",
+     "say": "Spénser llegó a vicepresidente de Réizion. Murió en 1970, a los setenta y seis años."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "ropa": "traje",
+      "corbata": "#b45309",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso",
+      "lentes": true
+     },
+     "anim": "up"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 700,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "1894-1970"
+     },
+     "id": "anios"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "anios"
+   ],
+   "lines": [
+    {
+     "text": "Y en 1999 entró al Salón Nacional de la Fama de los Inventores.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 740,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "SALÓN DE LA FAMA",
+      "fondo": "#f0c448",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "De 340 kilos y enfriada con agua, a una caja que cabe en cualquier cocina.",
+     "say": "De trescientos cuarenta kilos y enfriada con agua, a una caja que cabe en cualquier cocina."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 270,
+     "y": 1560,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "RADARANGE",
+      "pisos": 4,
+      "ancho": 340,
+      "color": "#cbd5e1",
+      "ventana": "#cbd5e1",
+      "letrero": "#334155"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1300,
+     "s": 0.4,
+     "at": 0,
+     "delay": 1.0,
+     "a": {},
+     "anim": "fade"
+    },
+    {
+     "p": "maletin_pc",
+     "x": 810,
+     "y": 1520,
+     "s": 0.45,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "right"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1300
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Todo por un chocolate que se derritió en el bolsillo de un hombre curioso.",
+     "pausa": 0.2
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "risa",
+      "ropa": "traje",
+      "corbata": "#b45309",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso",
+      "lentes": true
+     },
+     "anim": "up"
+    },
+    {
+     "p": "etiqueta",
+     "x": 780,
+     "y": 1100,
+     "s": 0.85,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "CHOCOLATE",
+      "fondo": "#7c4a2d",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Y tú? ¿Qué es lo más raro que has calentado en el microondas? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "maletin_pc",
+     "x": 540,
+     "y": 1520,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": false,
+      "color": "#f1f5f9",
+      "pantalla": "#334155"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "¿QUÉ CALENTASTE?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}

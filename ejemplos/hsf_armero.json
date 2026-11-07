@@ -1,0 +1,2815 @@
+{
+ "motor": 4,
+ "canal": "historias",
+ "title": "El volcán avisó, los científicos avisaron... y Armero desapareció igual",
+ "description": "13 de noviembre de 1985: la erupción del Nevado del Ruiz derritió parte de sus glaciares y los lahares borraron Armero, en Colombia. Un mes antes ya existía un mapa de amenaza que marcaba el peligro. En memoria de las victimas y de Omayra Sanchez.\nFuentes: Servicio Geologico Colombiano (GeoFlash 2015 y 'Cinco lecciones que la tragedia de Armero nos dejo'); USGS (Volcano Watch y ficha de lahares del Ruiz); NOAA NGDC; EARTH Magazine; Scientific American; BBC News Mundo (2025); AP (2025); El Heraldo; Vaticano (oracion en Armero, 6/7/1986); World Press Photo.",
+ "hashtags": [
+  "#DatoBomba",
+  "#Armero",
+  "#NevadodelRuiz",
+  "#Colombia",
+  "#historiasreales"
+ ],
+ "source_url": "https://www2.sgc.gov.co/Noticias/Paginas/Cinco-lecciones-que-la-tragedia-de-Armero-nos-dejo.aspx",
+ "scenes": [
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Un mes antes de la tragedia ya existía un mapa que marcaba en peligro al valle de Armero."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "color": "#166534",
+      "texto": "MAPA"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "pin",
+     "x": 640,
+     "y": 1180,
+     "s": 0.45,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "color": "#ef4444"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 0.95,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "ZONA DE PELIGRO",
+      "fondo": "#ef4444",
+      "rot": -4
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1200
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y aun así, la noche del 13 de noviembre de 1985, nadie evacuó."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1985"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 230,
+     "y": 1500,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Esa noche, en un solo pueblo, murieron más de veinte mil personas."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 200,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "",
+      "pisos": 3,
+      "ancho": 300
+     },
+     "anim": "crece",
+     "id": "casa1"
+    },
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0.2,
+     "a": {
+      "texto": "ARMERO",
+      "letrero": "#166534",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "casa2"
+    },
+    {
+     "p": "edificio",
+     "x": 880,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "",
+      "pisos": 4,
+      "ancho": 280,
+      "color": "#fde68a"
+     },
+     "anim": "crece",
+     "id": "casa3"
+    }
+   ],
+   "dato": {
+    "num": 20000,
+    "pre": "+",
+    "suf": "",
+    "texto": "MUERTOS SOLO EN ARMERO",
+    "y": 680,
+    "delay": 1.4,
+    "cuenta": true
+   },
+   "cam": {
+    "z": [
+     1.1,
+     1.0
+    ],
+    "f": [
+     540,
+     1300
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Cómo desaparece un pueblo al que avisaron el volcán y los científicos?"
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 0.875,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1428.75,
+     "s": 0.6649999999999999,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1329.0,
+     "s": 0.476,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1257.6,
+     "s": 0.294,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Armero era un pueblo del Tolima, en Colombia, de unos veintinueve mil habitantes."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 200,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "",
+      "pisos": 3,
+      "ancho": 300
+     },
+     "anim": "crece",
+     "id": "casa1"
+    },
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0.2,
+     "a": {
+      "texto": "ARMERO",
+      "letrero": "#166534",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "casa2"
+    },
+    {
+     "p": "edificio",
+     "x": 880,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "",
+      "pisos": 4,
+      "ancho": 280,
+      "color": "#fde68a"
+     },
+     "anim": "crece",
+     "id": "casa3"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "29.000",
+      "sub": "habitantes"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1300
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "A menos de cincuenta kilómetros estaba el Nevado del Ruiz."
+    }
+   ],
+   "items": [
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1160,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "rot": 0
+     },
+     "anim": "fade"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1000,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "< 50 KM",
+      "rot": 4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Un volcán de cinco mil trescientos ochenta y nueve metros, con la cima cubierta de glaciares."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 1.25,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1372.5,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1230.0,
+     "s": 0.68,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1128.0,
+     "s": 0.42,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "5.389 M",
+      "sub": "Nevado del Ruiz"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1350
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Llevaba unos ciento cuarenta años sin una erupción grande."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1000,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "texto": "140 AÑOS EN CALMA",
+      "fondo": "#ffffff",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Pero en 1845 un flujo de lodo bajó por el río Lagunillas y mató a cientos de personas."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 900,
+     "s": 0.7,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1845",
+      "color": "#7c5a3a"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1380,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "color": "#7c5a3a"
+     },
+     "anim": "left"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Y Armero creció justo encima de ese lodo."
+    }
+   ],
+   "items": [
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1440,
+     "s": 0.45,
+     "at": 0,
+     "delay": 0.3,
+     "a": {
+      "texto": "ARMERO",
+      "letrero": "#166534",
+      "letra": "#ffffff"
+     },
+     "anim": "crece"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1350
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En noviembre de 1984 el volcán despertó: empezaron los sismos."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0625,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1400.625,
+     "s": 0.8075,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1279.5,
+     "s": 0.5780000000000001,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1192.8,
+     "s": 0.357,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 780,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "1984"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 230,
+     "y": 780,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "En marzo de 1985, un experto que asesoraba a la UNESCO recomendó dos cosas.",
+     "say": "En marzo de 1985, un experto que asesoraba a la Unesco recomendó dos cosas."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "senala",
+      "ropa": "bata",
+      "lentes": true,
+      "pelo": "#3a2a1e",
+      "peinado": "corto",
+      "camisa": "#e5e7eb"
+     },
+     "anim": "up",
+     "id": "tomblin"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 720,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "John Tomblin",
+      "sub": "vulcanologo, asesor de la UNESCO"
+     },
+     "id": "ntom"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "ntom"
+   ],
+   "lines": [
+    {
+     "text": "Instalar sismógrafos y hacer un mapa de amenazas."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 760,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "1",
+      "sub": "sismografos"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 790,
+     "y": 760,
+     "s": 1.2,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "texto": "2",
+      "sub": "mapa de amenazas"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "El 11 de septiembre llegó la primera señal fuerte: una erupción menor que duró siete horas."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 1.0625,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1400.625,
+     "s": 0.8075,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1279.5,
+     "s": 0.5780000000000001,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1192.8,
+     "s": 0.357,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.35,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "11 SEPT",
+      "sub": "7 horas de erupcion"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1350
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Días después, un comité asesor pidió con urgencia el mapa de amenaza."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#ef4444",
+      "pelo": "#1f1f1f",
+      "peinado": "canoso"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "sobre",
+     "x": 780,
+     "y": 1150,
+     "s": 0.7,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "color": "#ef4444",
+      "texto": "URGENTE",
+      "disco": false
+     },
+     "anim": "drop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Geólogos de Ingeominas, hoy Servicio Geológico Colombiano, trabajaron contrarreloj.",
+     "say": "Geólogos de Inyeominas, hoy Servicio Geológico Colombiano, trabajaron contrarreloj."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 280,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "brazos": "objeto",
+      "ropa": "bata",
+      "lentes": true,
+      "pelo": "#3a2a1e",
+      "peinado": "corto",
+      "camisa": "#e5e7eb"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 800,
+     "y": 1560,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "cara": "serio",
+      "brazos": "senala",
+      "ropa": "bata",
+      "pelo": "#1f1f1f",
+      "peinado": "largo",
+      "camisa": "#e5e7eb",
+      "piel": "#c68a5c"
+     },
+     "anim": "right",
+     "flip": true
+    },
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1160,
+     "s": 0.6,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "abierto": true,
+      "color": "#166534",
+      "texto": ""
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "El 7 de octubre de 1985 el mapa quedó oficializado."
+    }
+   ],
+   "items": [
+    {
+     "p": "calendario",
+     "x": 540,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "7 OCT",
+      "color": "#166534"
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "1985",
+      "sub": "mapa oficial"
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Fue uno de los primeros mapas de amenaza volcánica de Colombia."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1450,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "DE LOS PRIMEROS",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "Y mostraba peligro de flujos de lodo justo en el valle donde estaba Armero."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 540,
+     "y": 1250,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "color": "#166534",
+      "texto": "MAPA"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "pin",
+     "x": 640,
+     "y": 1180,
+     "s": 0.45,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "color": "#ef4444",
+      "texto": "ARMERO"
+     },
+     "anim": "drop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     600,
+     1200
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Pero el mapa casi no circuló, y muchos lo ignoraron o lo entendieron mal."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 780,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "IGNORADO",
+      "fondo": "#ffffff",
+      "rot": 6
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Miércoles 13 de noviembre. Pasadas las tres de la tarde, el volcán lanzó columnas de ceniza."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 1.125,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1391.25,
+     "s": 0.855,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1263.0,
+     "s": 0.6120000000000001,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1171.2,
+     "s": 0.378,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "reloj",
+     "x": 860,
+     "y": 780,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "hora": 3
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1000,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "texto": "CENIZA",
+      "fondo": "#94a3b8",
+      "rot": -3
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1350
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Cayó ceniza sobre Armero, pero a la gente le pidieron calma y quedarse en casa."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "preocupado",
+      "brazos": "cabeza",
+      "camisa": "#ec4899",
+      "pelo": "#3a2a1e",
+      "peinado": "largo",
+      "piel": "#e0a878"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "telefono",
+     "x": 800,
+     "y": 1200,
+     "s": 0.65,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "RADIO",
+      "color": "#64748b"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 800,
+     "y": 820,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.6,
+     "a": {
+      "texto": "CALMA",
+      "fondo": "#ffffff",
+      "rot": 5
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "El alcalde y el párroco aseguraron que no había peligro esa noche."
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 300,
+     "y": 760,
+     "s": 0.8,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "tipo": "exclamacion"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "oficina"
+   },
+   "lines": [
+    {
+     "text": "Esa tarde se reunió un comité de emergencia. No ordenó evacuar esa noche."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1640,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "serio",
+      "brazos": "cruzados",
+      "ropa": "traje",
+      "corbata": "#ef4444",
+      "pelo": "#1f1f1f",
+      "peinado": "canoso"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1640,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "cara": "preocupado",
+      "ropa": "bata",
+      "lentes": true,
+      "pelo": "#3a2a1e",
+      "peinado": "corto",
+      "camisa": "#e5e7eb"
+     },
+     "anim": "right",
+     "flip": true
+    },
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 800,
+     "s": 0.9,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Por la noche llovía, y una tormenta tapaba la cima del volcán."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 1.125,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1391.25,
+     "s": 0.855,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1263.0,
+     "s": 0.6120000000000001,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1171.2,
+     "s": 0.378,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "TORMENTA",
+      "fondo": "#64748b",
+      "tinta": "#ffffff",
+      "rot": 0
+     }
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "A las nueve y ocho minutos de la noche, el Ruiz entró en erupción.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1100,
+     "s": 1.5,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "21:08",
+      "sub": "13 de noviembre"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.12
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "rojo"
+   },
+   "lines": [
+    {
+     "text": "El calor derritió parte del hielo, y el agua se mezcló con ceniza, rocas y tierra."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 1.125,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1391.25,
+     "s": 0.855,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1263.0,
+     "s": 0.6120000000000001,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1171.2,
+     "s": 0.378,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1420,
+     "s": 1.0,
+     "at": 0,
+     "delay": 2.2,
+     "a": {
+      "color": "#7c5a3a"
+     },
+     "anim": "up"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Así nacieron los lahares: ríos de lodo que crecían al arrastrar todo a su paso."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 860,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "LAHAR",
+      "fondo": "#f0c448",
+      "rot": -5
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Bajaron por los cañones a hasta unos cincuenta kilómetros por hora."
+    }
+   ],
+   "items": [
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1350,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#7c5a3a"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "flecha",
+     "x": 540,
+     "y": 1100,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "rot": 0
+     },
+     "anim": "left"
+    }
+   ],
+   "dato": {
+    "num": 50,
+    "pre": "",
+    "suf": " KM/H",
+    "texto": "VELOCIDAD ESTIMADA",
+    "y": 680,
+    "delay": 1.6,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "liso",
+    "c": "#e4e4ea"
+   },
+   "lines": [
+    {
+     "text": "En los cañones más estrechos, el lodo superó los cuarenta metros de alto."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "",
+      "pisos": 12,
+      "ancho": 260
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "+40 M",
+      "sub": "altura del lodo"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "En Armero se fue la luz, y las alertas no llegaron."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 200,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "",
+      "pisos": 3,
+      "ancho": 300
+     },
+     "anim": "crece",
+     "id": "casa1"
+    },
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0.2,
+     "a": {
+      "texto": "ARMERO",
+      "letrero": "#166534",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "casa2"
+    },
+    {
+     "p": "edificio",
+     "x": 880,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "",
+      "pisos": 4,
+      "ancho": 280,
+      "color": "#fde68a"
+     },
+     "anim": "crece",
+     "id": "casa3"
+    },
+    {
+     "p": "telefono",
+     "x": 540,
+     "y": 900,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "SIN SEÑAL",
+      "color": "#475569"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "icono",
+     "x": 780,
+     "y": 760,
+     "s": 0.6,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "tipo": "x"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Hacia las once y media, dos horas y media después de la erupción, llegó el lodo."
+    }
+   ],
+   "items": [
+    {
+     "p": "reloj",
+     "x": 540,
+     "y": 1100,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "hora": 11.5
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1460,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "23:30",
+      "sub": "llega el lodo"
+     }
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.1
+    ],
+    "f": [
+     540,
+     1150
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Primero entró agua fría. Unos diez minutos después llegó la oleada más grande."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 200,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "texto": "",
+      "pisos": 3,
+      "ancho": 300
+     },
+     "anim": "crece",
+     "id": "casa1"
+    },
+    {
+     "p": "tienda",
+     "x": 540,
+     "y": 1560,
+     "s": 0.5,
+     "at": 0,
+     "delay": 0.2,
+     "a": {
+      "texto": "ARMERO",
+      "letrero": "#166534",
+      "letra": "#ffffff"
+     },
+     "anim": "crece",
+     "id": "casa2"
+    },
+    {
+     "p": "edificio",
+     "x": 880,
+     "y": 1560,
+     "s": 0.55,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "",
+      "pisos": 4,
+      "ancho": 280,
+      "color": "#fde68a"
+     },
+     "anim": "crece",
+     "id": "casa3"
+    },
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1500,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "color": "#475569"
+     },
+     "anim": "left",
+     "id": "agua1"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "agua1"
+   ],
+   "lines": [
+    {
+     "text": "En diez a veinte minutos destruyó la mayoría de los edificios.",
+     "pausa": 0.3
+    }
+   ],
+   "items": [
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#7c5a3a"
+     },
+     "anim": "left"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.08
+    ],
+    "f": [
+     540,
+     1350
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Siguieron más oleadas hasta pasada la una de la madrugada."
+    }
+   ],
+   "items": [
+    {
+     "p": "reloj",
+     "x": 540,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "hora": 1
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1480,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.0,
+     "a": {
+      "color": "#7c5a3a"
+     },
+     "anim": "left"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Murieron cerca de tres de cada cuatro habitantes de Armero."
+    }
+   ],
+   "items": [
+    {
+     "p": "lapida",
+     "x": 540,
+     "y": 1560,
+     "s": 1.15,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ARMERO",
+      "sub": "1985"
+     },
+     "anim": "crece"
+    }
+   ],
+   "dato": {
+    "num": 75,
+    "pre": "",
+    "suf": " %",
+    "texto": "DE LOS HABITANTES",
+    "y": 680,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "En total, más de veintitrés mil muertos; se estima que cerca de veinticinco mil."
+    }
+   ],
+   "dato": {
+    "num": 25000,
+    "pre": "~",
+    "suf": "",
+    "texto": "VÍCTIMAS ESTIMADAS",
+    "y": 680,
+    "delay": 1.0,
+    "cuenta": true
+   },
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1300
+    ]
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "Hubo unos cinco mil heridos y más de cinco mil viviendas destruidas."
+    }
+   ],
+   "items": [
+    {
+     "p": "chapa",
+     "x": 290,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "5.000",
+      "sub": "heridos"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 800,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "+5.000",
+      "sub": "viviendas"
+     }
+    },
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.6,
+     "at": 0,
+     "delay": 0.6,
+     "a": {
+      "texto": "",
+      "pisos": 3,
+      "ancho": 320,
+      "color": "#94a3b8"
+     },
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Entre los sobrevivientes atrapados estaba Omayra Sánchez, una niña de trece años."
+    }
+   ],
+   "items": [
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 760,
+     "s": 1.05,
+     "at": 0,
+     "delay": 0.8,
+     "a": {
+      "texto": "Omayra Sánchez",
+      "sub": "13 años"
+     },
+     "id": "nomy"
+    },
+    {
+     "p": "olas",
+     "x": 540,
+     "y": 1420,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "color": "#1e3a8a"
+     },
+     "anim": "up"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.05
+    ],
+    "f": [
+     540,
+     1100
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "nomy"
+   ],
+   "lines": [
+    {
+     "text": "Quedó atrapada entre escombros y agua durante unas sesenta horas."
+    }
+   ],
+   "items": [
+    {
+     "p": "reloj",
+     "x": 540,
+     "y": 1180,
+     "s": 0.85,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "hora": 6
+     },
+     "anim": "pop"
+    }
+   ],
+   "dato": {
+    "num": 60,
+    "pre": "",
+    "suf": " H",
+    "texto": "HORAS",
+    "y": 680,
+    "delay": 1.2,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Rescatistas y vecinos la acompañaron, y la televisión lo transmitió todo."
+    }
+   ],
+   "items": [
+    {
+     "p": "camara",
+     "x": 300,
+     "y": 1150,
+     "s": 0.75,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "digital"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "tv",
+     "x": 780,
+     "y": 1180,
+     "s": 0.75,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "play": false,
+      "texto": "EN VIVO"
+     },
+     "anim": "right"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Murió tres días después de la avalancha. Su historia dio la vuelta al mundo.",
+     "pausa": 0.4
+    }
+   ],
+   "items": [
+    {
+     "p": "globo",
+     "x": 540,
+     "y": 1450,
+     "s": 0.45,
+     "at": 0,
+     "delay": 1.4,
+     "a": {},
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "durazno"
+   },
+   "lines": [
+    {
+     "text": "Y ahora, cosas que casi nadie sabe."
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 1150,
+     "s": 1.2,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "¿SABÍAS?",
+      "rot": -5
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "cielo"
+   },
+   "lines": [
+    {
+     "text": "Uno. La erupción derritió apenas cerca del diez por ciento del hielo del volcán. Eso bastó."
+    }
+   ],
+   "items": [
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1560,
+     "s": 1.125,
+     "at": 0,
+     "delay": 0.0,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan0"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1391.25,
+     "s": 0.855,
+     "at": 0,
+     "delay": 0.12,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan1"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1263.0,
+     "s": 0.6120000000000001,
+     "at": 0,
+     "delay": 0.24,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan2"
+    },
+    {
+     "p": "isla",
+     "x": 540,
+     "y": 1171.2,
+     "s": 0.378,
+     "at": 0,
+     "delay": 0.36,
+     "a": {
+      "edificio": false,
+      "faro": false
+     },
+     "anim": "crece",
+     "id": "volcan3"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 780,
+     "s": 1.5,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "~10 %",
+      "sub": "del hielo"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Dos. La foto de Omayra, del francés Frank Fournier, ganó el World Press Photo de 1986.",
+     "say": "Dos. La foto de Omayra, del francés Frank Furnié, ganó el World Press Photo de 1986."
+    }
+   ],
+   "items": [
+    {
+     "p": "camara",
+     "x": 540,
+     "y": 1250,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "antigua"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 760,
+     "s": 0.95,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "Frank Fournier",
+      "sub": "fotografo"
+     }
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1560,
+     "s": 1.2,
+     "at": 0,
+     "delay": 3.0,
+     "a": {
+      "texto": "1986",
+      "sub": "World Press Photo"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Tres. Según el Servicio Geológico Colombiano, con una alerta a tiempo habrían tenido al menos dos horas para salir."
+    }
+   ],
+   "items": [
+    {
+     "p": "reloj",
+     "x": 540,
+     "y": 1150,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "hora": 2
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 1500,
+     "s": 1.3,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "2 HORAS",
+      "sub": "para salir"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "Cuatro. El 6 de julio de 1986, el papa Juan Pablo II rezó en Armero, frente a una cruz donde estaba la iglesia."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.95,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "triste",
+      "brazos": "objeto",
+      "ropa": "bata",
+      "camisa": "#f8fafc",
+      "pelo": "#c9c9c9",
+      "peinado": "canoso"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "nombre",
+     "x": 540,
+     "y": 720,
+     "s": 0.95,
+     "at": 0,
+     "delay": 1.4,
+     "a": {
+      "texto": "Juan Pablo II",
+      "sub": "papa"
+     }
+    },
+    {
+     "p": "calendario",
+     "x": 870,
+     "y": 1050,
+     "s": 0.5,
+     "at": 0,
+     "delay": 2.4,
+     "a": {
+      "texto": "1986"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "gris"
+   },
+   "lines": [
+    {
+     "text": "¿Y qué pasó después?"
+    }
+   ],
+   "items": [
+    {
+     "p": "icono",
+     "x": 540,
+     "y": 1150,
+     "s": 1.1,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "tipo": "pregunta"
+     },
+     "anim": "pop"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Armero nunca se reconstruyó. Hoy es un camposanto de ruinas, tumbas y maleza."
+    }
+   ],
+   "items": [
+    {
+     "p": "lapida",
+     "x": 300,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ARMERO"
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "lapida",
+     "x": 780,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "texto": "1985"
+     },
+     "anim": "crece"
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "lila"
+   },
+   "lines": [
+    {
+     "text": "Según la BBC, su tumba es el lugar más visitado: la rodean flores y tarjetas de agradecimiento."
+    }
+   ],
+   "items": [
+    {
+     "p": "sobre",
+     "x": 300,
+     "y": 1250,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "color": "#ec4899",
+      "texto": "GRACIAS",
+      "disco": false
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "sobre",
+     "x": 780,
+     "y": 1250,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "color": "#f59e0b",
+      "texto": "GRACIAS",
+      "disco": false
+     },
+     "anim": "drop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 820,
+     "s": 0.9,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "FLORES Y MENSAJES",
+      "fondo": "#fbcfe8",
+      "rot": -3
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "azul"
+   },
+   "lines": [
+    {
+     "text": "En 1988, Colombia creó un sistema nacional para prevenir y atender desastres."
+    }
+   ],
+   "items": [
+    {
+     "p": "edificio",
+     "x": 540,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "PREVENCIÓN",
+      "pisos": 6,
+      "ancho": 480
+     },
+     "anim": "crece"
+    },
+    {
+     "p": "calendario",
+     "x": 860,
+     "y": 760,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.2,
+     "a": {
+      "texto": "1988"
+     },
+     "anim": "pop",
+     "id": "cal88"
+    }
+   ]
+  },
+  {
+   "sigue": true,
+   "quita": [
+    "cal88"
+   ],
+   "lines": [
+    {
+     "text": "Y hoy el Servicio Geológico vigila en tiempo real veinticinco volcanes."
+    }
+   ],
+   "items": [],
+   "dato": {
+    "num": 25,
+    "pre": "",
+    "suf": "",
+    "texto": "VOLCANES VIGILADOS",
+    "y": 680,
+    "delay": 1.0,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Y hay una herida abierta: una fundación ha documentado unos quinientos ochenta niños desaparecidos."
+    }
+   ],
+   "items": [
+    {
+     "p": "nino",
+     "x": 300,
+     "y": 1560,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "triste",
+      "camisa": "#22c55e"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "nino",
+     "x": 780,
+     "y": 1560,
+     "s": 1.4,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "cara": "triste",
+      "camisa": "#f59e0b"
+     },
+     "anim": "right",
+     "flip": true
+    }
+   ],
+   "dato": {
+    "num": 580,
+    "pre": "",
+    "suf": "",
+    "texto": "NIÑOS DESAPARECIDOS",
+    "y": 680,
+    "delay": 1.8,
+    "cuenta": true
+   }
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "menta"
+   },
+   "lines": [
+    {
+     "text": "Algunos fueron dados en adopción. Gracias a pruebas de ADN, han encontrado a cuatro con vida."
+    }
+   ],
+   "items": [
+    {
+     "p": "persona",
+     "x": 300,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "cara": "feliz",
+      "brazos": "saluda",
+      "camisa": "#ec4899",
+      "pelo": "#3a2a1e",
+      "peinado": "largo",
+      "piel": "#e0a878"
+     },
+     "anim": "left"
+    },
+    {
+     "p": "persona",
+     "x": 780,
+     "y": 1560,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0.5,
+     "a": {
+      "cara": "feliz",
+      "brazos": "saluda",
+      "camisa": "#f59e0b",
+      "pelo": "#1f1f1f",
+      "piel": "#c68a5c"
+     },
+     "anim": "right",
+     "flip": true
+    },
+    {
+     "p": "chapa",
+     "x": 540,
+     "y": 760,
+     "s": 1.4,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "texto": "4",
+      "sub": "reencuentros"
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "noche"
+   },
+   "lines": [
+    {
+     "text": "Había un mapa. Había científicos. Había dos horas."
+    }
+   ],
+   "items": [
+    {
+     "p": "libro",
+     "x": 230,
+     "y": 1150,
+     "s": 0.45,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "abierto": true,
+      "color": "#166534",
+      "texto": "MAPA"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "persona",
+     "x": 540,
+     "y": 1560,
+     "s": 0.8,
+     "at": 0,
+     "delay": 0.9,
+     "a": {
+      "cara": "preocupado",
+      "ropa": "bata",
+      "lentes": true,
+      "pelo": "#3a2a1e",
+      "peinado": "corto",
+      "camisa": "#e5e7eb"
+     },
+     "anim": "up"
+    },
+    {
+     "p": "reloj",
+     "x": 850,
+     "y": 1150,
+     "s": 0.5,
+     "at": 0,
+     "delay": 1.8,
+     "a": {
+      "hora": 2
+     },
+     "anim": "pop"
+    }
+   ],
+   "cam": {
+    "z": [
+     1.0,
+     1.06
+    ],
+    "f": [
+     540,
+     1250
+    ]
+   }
+  },
+  {
+   "sigue": true,
+   "lines": [
+    {
+     "text": "Lo que faltó fue que el aviso llegara a tiempo.",
+     "pausa": 0.4
+    }
+   ],
+   "items": [
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 0.4,
+     "a": {
+      "texto": "EL AVISO NO LLEGÓ",
+      "fondo": "#ef4444",
+      "rot": -4
+     }
+    }
+   ]
+  },
+  {
+   "fondo": {
+    "tipo": "rayos",
+    "paleta": "oro"
+   },
+   "lines": [
+    {
+     "text": "¿Tú sabrías qué hacer si en tu ciudad sonara una alerta así? Te leo en los comentarios."
+    }
+   ],
+   "items": [
+    {
+     "p": "telefono",
+     "x": 540,
+     "y": 1200,
+     "s": 0.9,
+     "at": 0,
+     "delay": 0,
+     "a": {
+      "texto": "ALERTA",
+      "color": "#ef4444"
+     },
+     "anim": "pop"
+    },
+    {
+     "p": "etiqueta",
+     "x": 540,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "delay": 1.6,
+     "a": {
+      "texto": "¿Y TÚ?",
+      "rot": -5
+     }
+    }
+   ]
+  }
+ ]
+}
