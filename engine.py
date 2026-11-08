@@ -11,6 +11,7 @@ Kokoro (sherpa-onnx). Subtitulos palabra por palabra dibujados por el motor.
 """
 import argparse
 import asyncio
+import time
 import base64
 import io
 import json
@@ -117,9 +118,12 @@ class EdgeVoice:
         import edge_tts  # noqa: F401
         self.voice, self.rate, self.pitch = voice, rate, pitch
 
-    async def _run(self, text, voice):
+    async def _run(self, text, voice, boundary="WordBoundary", rate=None):
         import edge_tts
-        comm = edge_tts.Communicate(text, voice, rate=self.rate, pitch=self.pitch, boundary="WordBoundary")
+        kw = {"rate": rate or self.rate, "pitch": self.pitch}
+        if boundary:
+            kw["boundary"] = boundary
+        comm = edge_tts.Communicate(text, voice, **kw)
         audio, words = bytearray(), []
         async for ch in comm.stream():
             if ch["type"] == "audio":
@@ -129,14 +133,19 @@ class EdgeVoice:
         return bytes(audio), words
 
     def say(self, text, voice=None):
-        for intento in range(4):
+        v = voice or self.voice
+        # intentos: normal, normal, sin marcas de palabra, velocidad neutra (cortes de red o rechazos del servicio)
+        variantes = [("WordBoundary", None), ("WordBoundary", None), (None, None), ("SentenceBoundary", "+0%")]
+        for intento, (bnd, rate) in enumerate(variantes):
             try:
-                data, words = asyncio.run(self._run(text, voice or self.voice))
+                data, words = asyncio.run(self._run(text, v, bnd, rate))
                 return decode_audio(data), words
-            except Exception as e:  # reintento ante cortes de red
-                if intento == 3:
+            except Exception as e:
+                print(f"edge-tts reintento {intento + 1}: {e} | voz={v} rate={rate or self.rate} "
+                      f"pitch={self.pitch} boundary={bnd} texto={text[:80]!r}", file=sys.stderr, flush=True)
+                if intento == len(variantes) - 1:
                     raise
-                print("edge-tts reintento:", e, file=sys.stderr)
+                time.sleep(2 + 3 * intento)
 
 
 class ElevenVoice:
