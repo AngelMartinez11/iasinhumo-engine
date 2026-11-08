@@ -110,7 +110,9 @@ def modo_cola():
     for r in rows:
         rid = (r.get("id") or "").strip()
         guion = "".join((r.get(k) or "") for k in ("guion_json", "guion_json2", "guion_json3")).strip()
-        if (r.get("estado") or "").strip() != "guion_listo" or not guion:
+        # "falta_video": el render programado de GitHub a veces corre con horas de retraso y la
+        # subida de la madrugada ya marco la fila; se renderiza igual para no perder el guion
+        if (r.get("estado") or "").strip() not in ("guion_listo", "falta_video") or not guion:
             continue
         if f"{rid}.mp4" in hechos:
             print("ya renderizado:", rid)
