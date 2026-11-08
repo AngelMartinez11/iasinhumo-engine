@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "30 5 * * *"   # 23:30 hora de Guatemala
     - cron: "30 7 * * *"   # 01:30 hora de Guatemala (reintento de pendientes)
+    - cron: "15 9 * * *"   # 03:15 hora de Guatemala (reintento; GitHub suele atrasar los programados)
   workflow_dispatch:
     inputs:
       modo:
