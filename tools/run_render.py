@@ -50,8 +50,11 @@ def render(js, mp4):
         motor = int(json.load(open(js, encoding="utf-8")).get("motor", 2))
     except Exception:
         motor = 2
-    sh("python3", os.path.join(ROOT, "engine4.py" if motor >= 4 else "engine.py"), js, mp4)
-    out = [mp4, os.path.splitext(mp4)[0] + "_publicacion.txt"]
+    solo_corto = os.environ.get("ISH_SOLO_CORTO") == "1"
+    out = []
+    if not solo_corto:
+        sh("python3", os.path.join(ROOT, "engine4.py" if motor >= 4 else "engine.py"), js, mp4)
+        out = [mp4, os.path.splitext(mp4)[0] + "_publicacion.txt"]
     if motor >= 4 and tiene_corto(js):
         # generales: ademas del video largo, una version Short (<3 min) para YouTube Shorts
         corto = os.path.splitext(mp4)[0] + "_short.mp4"
@@ -136,8 +139,11 @@ def modo_ejemplo(voz):
     subir(render(os.path.join(ROOT, "ejemplos", "v2_estafas.json"), os.path.join(OUT, name + ".mp4")))
 
 
-def modo_archivo(ruta):
+def modo_archivo(ruta, voz=""):
     """Renderiza un guion del repositorio (por ejemplo ejemplos/hsf_blockbuster.json)."""
+    if voz == "solo_corto":
+        # solo la version Short de cada guion (para generales ya publicados en largo)
+        os.environ["ISH_SOLO_CORTO"] = "1"
     rutas = [r.strip() for r in (ruta or "ejemplos/hsf_blockbuster.json").split(",") if r.strip()]
     files = []
     for r in rutas:
@@ -185,5 +191,5 @@ if __name__ == "__main__":
     modo = (sys.argv[1] if len(sys.argv) > 1 else "cola") or "cola"
     voz = sys.argv[2] if len(sys.argv) > 2 else ""
     archivo = sys.argv[3] if len(sys.argv) > 3 else ""
-    {"cola": modo_cola, "ejemplo": lambda: modo_ejemplo(voz), "archivo": lambda: modo_archivo(archivo),
+    {"cola": modo_cola, "ejemplo": lambda: modo_ejemplo(voz), "archivo": lambda: modo_archivo(archivo, voz),
      "muestra_voces": lambda: modo_muestra(voz)}[modo]()
