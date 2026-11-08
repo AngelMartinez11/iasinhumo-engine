@@ -439,7 +439,8 @@
      },
      "anim": "right"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -478,7 +479,8 @@
       "sub": "Jerry and David's Guide"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -543,7 +545,8 @@
       "rot": -3
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -580,7 +583,8 @@
      540,
      1150
     ]
-   }
+   },
+   "corto": false
   },
   {
    "sigue": true,
@@ -602,7 +606,8 @@
       "sub": "siglas en ingles"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -642,7 +647,8 @@
       "rot": 4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -683,7 +689,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -721,7 +728,8 @@
       "sub": "precio de salida"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -743,7 +751,8 @@
       "sub": "el mismo dia"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1142,7 +1151,8 @@
       "rot": -4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1351,7 +1361,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1368,7 +1379,8 @@
     "y": 640,
     "delay": 1.4,
     "cuenta": false
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {
@@ -1437,7 +1449,8 @@
       "sub": "creador de Facebook"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1707,7 +1720,8 @@
      },
      "anim": "crece"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1821,7 +1835,8 @@
      "a": {},
      "anim": "fade"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1909,7 +1924,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1926,7 +1942,8 @@
     "y": 640,
     "delay": 2.2,
     "cuenta": true
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {
@@ -1994,7 +2011,8 @@
       "sub": "precio acordado"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -2017,7 +2035,8 @@
       "rot": 4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2150,7 +2169,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2189,7 +2209,8 @@
       "rot": -4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -2213,7 +2234,8 @@
       "rot": 5
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2260,7 +2282,8 @@
       "sub": "de Alibaba"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2312,7 +2335,8 @@
       "rot": 6
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2370,7 +2394,8 @@
       "rot": -4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2423,7 +2448,8 @@
      },
      "anim": "crece"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2500,7 +2526,8 @@
      540,
      1000
     ]
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {

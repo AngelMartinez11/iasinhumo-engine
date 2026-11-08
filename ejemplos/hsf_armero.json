@@ -657,7 +657,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -713,7 +714,8 @@
      540,
      1150
     ]
-   }
+   },
+   "corto": false
   },
   {
    "sigue": true,
@@ -750,7 +752,8 @@
       "sub": "mapa de amenazas"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -840,7 +843,8 @@
      540,
      1350
     ]
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {
@@ -884,7 +888,8 @@
      },
      "anim": "drop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -949,7 +954,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1587,7 +1593,8 @@
     "y": 680,
     "delay": 1.6,
     "cuenta": true
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {
@@ -1626,7 +1633,8 @@
       "sub": "altura del lodo"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1899,7 +1907,8 @@
      },
      "anim": "left"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2012,7 +2021,8 @@
      },
      "anim": "crece"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2060,7 +2070,8 @@
      540,
      1100
     ]
-   }
+   },
+   "corto": false
   },
   {
    "sigue": true,
@@ -2094,7 +2105,8 @@
     "y": 680,
     "delay": 1.2,
     "cuenta": true
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {
@@ -2132,7 +2144,8 @@
      },
      "anim": "right"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -2153,7 +2166,8 @@
      "a": {},
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2179,7 +2193,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2260,7 +2275,8 @@
       "sub": "del hielo"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2310,7 +2326,8 @@
       "sub": "World Press Photo"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2347,7 +2364,8 @@
       "sub": "para salir"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2401,7 +2419,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2426,7 +2445,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -2460,7 +2480,8 @@
      },
      "anim": "crece"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2514,7 +2535,8 @@
       "rot": -3
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -2554,7 +2576,8 @@
      "anim": "pop",
      "id": "cal88"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -2575,7 +2598,8 @@
     "y": 680,
     "delay": 1.0,
     "cuenta": true
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {
@@ -2623,7 +2647,8 @@
     "y": 680,
     "delay": 1.8,
     "cuenta": true
-   }
+   },
+   "corto": false
   },
   {
    "fondo": {
@@ -2682,7 +2707,8 @@
       "sub": "reencuentros"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {

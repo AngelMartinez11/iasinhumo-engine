@@ -207,7 +207,8 @@
       "sub": "farmacéutico de Atlanta"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -228,7 +229,8 @@
       "texto": "99 AÑOS"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -364,7 +366,8 @@
       "texto": "18.8 %"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -636,7 +639,8 @@
       "texto": "- ÁCIDA"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1032,7 +1036,8 @@
       "sub": "cartas"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1162,7 +1167,8 @@
      },
      "anim": "drop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1335,7 +1341,8 @@
       "rot": -3
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1363,7 +1370,8 @@
      "anim": "pop"
     }
    ],
-   "min_dur": 2.0
+   "min_dur": 2.0,
+   "corto": false
   },
   {
    "fondo": {
@@ -1401,7 +1409,8 @@
       "rot": 4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1424,7 +1433,8 @@
       "sub": "presidente de Coca-Cola"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1465,7 +1475,8 @@
      "a": {},
      "anim": "up"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1487,7 +1498,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1514,7 +1526,8 @@
      },
      "anim": "drop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1536,7 +1549,8 @@
       "sub": "ave extinta"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1574,7 +1588,8 @@
       "sub": "presentador de ABC"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1598,7 +1613,8 @@
       "rot": 4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1637,7 +1653,8 @@
       "texto": "AÑOS 90"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1659,7 +1676,8 @@
      },
      "anim": "pop"
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1696,7 +1714,8 @@
       "texto": "2019"
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "sigue": true,
@@ -1718,7 +1737,8 @@
       "rot": -4
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
@@ -1758,7 +1778,8 @@
       "rot": 5
      }
     }
-   ]
+   ],
+   "corto": false
   },
   {
    "fondo": {
